@@ -1,0 +1,231 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/templates/zapsum/page_base.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/js/helper/helper",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_linux/notes.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/settings.py",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/urls.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/manage.py",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/linux/lessons_mint/virtualenv/venv_for_pythons/venv_theory.txt",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/linux/lessons_mint/bash/editor/default_editor.txt",
+		"/media/kalinins/Windows7_OS/Users/1/Desktop/q.txt",
+		"/home/kalinins/Рабочий стол/misc.txt",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/notes.txt",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/git/git_for_linux/index.txt",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_hosting/pythonanywhere.com/index.txt",
+		"/home/kalinins/Рабочий стол/db.sqlite3",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/page_base.html",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/page_index.html",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/.git/keykey.pub",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/static/css/styles.css",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/user/user_path_glory.html",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/part_nav_edit.html",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk.txt",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/fixtures/ini",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/fixtures/initial_data.json",
+		"/home/kalinins/Рабочий стол/initial_data.json",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_modules_add.txt",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass_money.txt",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/static/css/styles.css",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/templates/page_base.html",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/templates/page_index.html",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/app_drummersaransk/fixtures/initial_data.json",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/settings.py",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/templates/right_col/right_col.html",
+		"/home/kalinins/Рабочий стол/settings.py",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/pr_solution/pr_solution_pass.txt",
+		"/home/kalinins/Рабочий стол/manage.py",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_hosting/locum/notes_locum.txt",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_hosting/hostfabrica.ru/hostfabrica.txt",
+		"/home/kalinins/Рабочий стол/django.wsgi",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/django.wsgi",
+		"/home/kalinins/VINT/web/misc/locum/work/1/django.wsgi",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/upgrade_pass/pass_upgrade.txt",
+		"/home/kalinins/VINT/web/misc/fab/.htaccess",
+		"/home/kalinins/VINT/web/misc/fab/passenger_wsgi.py",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/passenger_wsgi.py",
+		"/home/kalinins/VINT/web/misc/locum/BU/2_default/django_wsgi.py",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/.htaccess",
+		"/home/kalinins/VINT/web/misc/locum/BU/2_default/manage.py",
+		"/home/kalinins/VINT/web/misc/locum/BU/2_default/restart.txt",
+		"/home/kalinins/VINT/web/misc/locum/BU/2_default/wsgi_virtualenv.req",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/index.wsgi",
+		"/home/kalinins/VINT/web/misc/index.html",
+		"/home/kalinins/VINT/web/misc/urls.py",
+		"/home/kalinins/VINT/web/misc/settings.py",
+		"/home/kalinins/.pip/pip.log",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_common_functional_and_native_modules.txt",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/templates/part_nav_basic.html",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/templatetags/tags_drummersaransk.py",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/app_drummersaransk/models.py",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/linux/lessons_mint/envs/envs.txt",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk.txt",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/git/notes.txt",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/.git/keykey.pub",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/.git/config",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/urls.py",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_basic.txt",
+		"/home/kalinins/.profile",
+		"/media/kalinins/Windows7_OS/bootmgr",
+		"/media/kalinins/Windows7_OS/Documents and Settings/1/Desktop/theme/to_alena.txt"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"h1",
+			"stack",
+			"footer_inner_top",
+			"myadmi",
+			"capth"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "zapsum.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 195.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
