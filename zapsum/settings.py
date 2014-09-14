@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_zapsum',
+    'app_accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -45,7 +46,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',   
 )
 
 ROOT_URLCONF = 'zapsum.urls'
@@ -101,6 +102,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 TEMPLATE_DIRS = (
         os.path.join(BASE_DIR, 'zapsum/templates/'),
-        os.path.join(BASE_DIR, 'zapsum/templates/zapsum/'),
-        os.path.join(BASE_DIR, 'zapsum/templates/app_zapsum/'),
+        os.path.join(BASE_DIR, 'app_zapsum/templates/'),
+        os.path.join(BASE_DIR, 'app_accounts/templates/'),
 )

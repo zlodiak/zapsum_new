@@ -10,42 +10,42 @@ def custom_proc(request):
 
 
 def rules(request):	
-	t = loader.get_template('app_zapsum/page_rules.html')
+	t = loader.get_template('page_rules.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
 
 
 def search_author(request):	
-	t = loader.get_template('app_zapsum/page_search_author.html')
+	t = loader.get_template('page_search_author.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
 
 
 def search_record(request):	
-	t = loader.get_template('app_zapsum/page_search_record.html')
+	t = loader.get_template('page_search_record.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 		
 
 
 def most_popular_authors(request):	
-	t = loader.get_template('app_zapsum/page_most_popular_authors.html')
+	t = loader.get_template('page_most_popular_authors.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 		
 
 
 def last_records(request):	
-	t = loader.get_template('app_zapsum/page_last_records.html')
+	t = loader.get_template('page_last_records.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
 
 
 def new_authors(request):	
-	t = loader.get_template('app_zapsum/page_new_authors.html')
+	t = loader.get_template('page_new_authors.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 				

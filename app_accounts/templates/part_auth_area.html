@@ -1,0 +1,13 @@
+{% if is_authenticated %}
+	<li>
+		<a href="/accounts/logout/">Выйти</a>
+	</li>
+{% else %}
+	<li>
+		<a href="/accounts/authentication/">Войти</a>
+	</li>
+	
+	<li>
+		<a href="/accounts/registration/">Зарегистрироваться</a>
+	</li>
+{% endif %}	
