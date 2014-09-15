@@ -35,6 +35,8 @@
 	},
 	"file_history":
 	[
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/part_message_buttons_area.html",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_basic.txt",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py",
 		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass.txt",
@@ -103,14 +105,13 @@
 		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/.git/keykey.pub",
 		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/.git/config",
 		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/drummersaransk/urls.py",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_basic.txt",
 		"/home/kalinins/.profile",
 		"/media/kalinins/Windows7_OS/bootmgr",
 		"/media/kalinins/Windows7_OS/Documents and Settings/1/Desktop/theme/to_alena.txt"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -124,6 +125,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"это поле",
 			"h1",
 			"stack",
 			"footer_inner_top",
@@ -223,7 +225,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 195.0,
+	"side_bar_width": 258.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

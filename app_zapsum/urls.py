@@ -12,6 +12,7 @@ urlpatterns = patterns('app_zapsum',
     url(r'^last_records/$', 'views.last_records', name='last_records'),
     url(r'^most_popular_authors/$', 'views.most_popular_authors', name='most_popular_authors'),
     url(r'^new_authors/$', 'views.new_authors', name='new_authors'),
+    url(r'^my_records/$', 'views.my_records', name='my_records'),
 )
 
 

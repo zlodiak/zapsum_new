@@ -1,6 +1,8 @@
 from django.http import HttpResponse, HttpResponseRedirect, Http404, HttpResponseForbidden
 from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
+from django.contrib.auth.decorators import login_required
+
 
 
 def custom_proc(request):
@@ -48,4 +50,12 @@ def new_authors(request):
 	t = loader.get_template('page_new_authors.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 				
+	return HttpResponse(t.render(c)) 			
+
+
+@login_required
+def my_records(request):	
+	t = loader.get_template('page_my_records.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 	

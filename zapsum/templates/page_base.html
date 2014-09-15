@@ -15,7 +15,7 @@
 		<link href="{% static 'zapsum/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
 		<link href="{% static 'zapsum/css/bootstrap/sticky-footer-navbar.css' %}" rel="stylesheet">
 		<link href="{% static 'zapsum/css/styles.css' %}" rel="stylesheet">
-		
+
 		<link href="{% static 'app_accounts/css/styles.css' %}" rel="stylesheet">
 
 		<!--[if lt IE 9]><script src="zapsum/js/bootstrap/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -46,19 +46,43 @@
 
 				<div class="collapse navbar-collapse">
 				  <ul class="nav navbar-nav">
-					<li class="active"><a href="{% url 'rules' %}">Правила</a></li>
+					<li><a href="{% url 'rules' %}">Правила</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Дневники<span class="caret"></span></a>
 
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="{% url 'search_author' %}">Поиск по автору</a></li>
-							<li><a href="{% url 'search_record' %}">Поиск по записям</a></li>
-							<li class="divider"></li>						
+						<ul class="dropdown-menu" role="menu">												
 							<li><a href="{% url 'most_popular_authors' %}">Популярные дневники</a></li>
 							<li><a href="{% url 'new_authors' %}">Новые дневники</a></li>
 							<li><a href="{% url 'last_records' %}">Последние записи</a></li>
+							<li class="divider"></li>	
+							<li><a href="{% url 'search_author' %}">Поиск по автору</a></li>
+							<li><a href="{% url 'search_record' %}">Поиск по записям</a></li>							
 						</ul>
 					</li>
+
+					{% if request.user.is_authenticated %}
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мой профиль<span class="caret"></span></a>
+
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{% url 'search_author' %}">Аватар</a></li>
+							<li><a href="{% url 'search_record' %}">Пароль</a></li>					
+							<li><a href="{% url 'most_popular_authors' %}">Имя</a></li>
+							<li><a href="{% url 'new_authors' %}">Доп.информация</a></li>
+							<li class="divider"></li>	
+							<li><a href="{% url 'last_records' %}">Удалить профиль</a></li>
+						</ul>
+					</li>
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мой дневник<span class="caret"></span></a>
+
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="{% url 'my_records' %}">Мои записи</a></li>
+							<li><a href="{% url 'search_record' %}">Добавить запись</a></li>					
+						</ul>
+					</li>
+					{% endif %}
 				  </ul>
 
 				<ul class="nav navbar-nav navbar-right">
