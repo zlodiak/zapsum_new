@@ -8,6 +8,10 @@ class UserProfile(User):
 		('1', 'Ж', ),
 	)
 		
+	nickname = models.CharField(
+		max_length=50, 
+		blank=False,
+	)		
 	gender = models.CharField(
 		max_length=10, 
 		choices=CHOICES_gender, 
@@ -18,10 +22,6 @@ class UserProfile(User):
 		blank=False,
 	)
 	skype = models.CharField(
-		max_length=50, 
-		blank=False,
-	)
-	email_address = models.EmailField(
 		max_length=50, 
 		blank=False,
 	)	

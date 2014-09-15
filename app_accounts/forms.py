@@ -7,8 +7,15 @@ from app_accounts.models import UserProfile
 
 
 class registrationForm(UserCreationForm):	
-	username = forms.CharField(
-		label='Логин',
+	username = forms.EmailField(
+		label='Email',
+		help_text='',
+		max_length=50, 
+		required=True,
+	)	
+
+	nickname = forms.CharField(
+		label='Отображаемое имя',
 		help_text='',
 		required=True,
 	)
@@ -21,7 +28,7 @@ class registrationForm(UserCreationForm):
 	)	
 	
 	password2 = forms.CharField(
-		label='Подтверждение пароля',
+		label='Подтверждение пароля:',
 		help_text='',
 		required=True,
 		widget=forms.PasswordInput,
@@ -29,8 +36,9 @@ class registrationForm(UserCreationForm):
 
 	class Meta:
 		model = UserProfile
-		fields = (
-			'username',   
+		fields = (  
+			'username',    
+			'nickname',    
 			'password1', 
 			'password2',
 		)
@@ -38,7 +46,7 @@ class registrationForm(UserCreationForm):
 
 class authenticationCustomForm(AuthenticationForm):
 	username = forms.CharField(
-		label='Логин',
+		label='Email',
 		widget=forms.TextInput(),		
 	)
 

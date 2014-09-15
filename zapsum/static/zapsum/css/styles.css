@@ -1,0 +1,99 @@
+/*
+INFO: 
+	project: zapsum
+	browsers: opera/chrome/FF/ie9/safari
+	width: adaptive. 
+	columns: ?
+	markup: Sergey Kalinin 09/2014 (prozaik81-2@yandex.ru)
+	use: jq
+	desc: 	zapsum. проект онлайн-дневников Записки Сумасшедшего
+	version 1
+	
+COLORS:
+
+
+TABLE OF CONTENTS:
+	FONTS
+	COMMON_STYLES
+	GLOBAL_blocks	
+	PLUGINS	& WIDJETS
+*/
+
+/*************************************************************************************************************** FONTS */
+
+
+/*************************************************************************************************************** COMMON_STYLES */
+html, body, div, h1, h2, h3, h4, h5, h6, a, a img, p, ul, ol, li, span, fieldset , form, dl, dd, dt, table, tr, td, img{ 
+	border: none;
+	margin: 0; 
+	outline: none;	
+	padding: 0;
+}
+
+html{
+    height:100%;	
+}
+
+body{	
+    height:100%;	
+	margin: 0 auto;
+	
+	font: normal 13px arial, sans-serif;
+	color: #444;
+}	
+
+a{
+	color: #cc6633;
+}
+
+a:hover{
+	text-decoration: none;
+}
+
+ul{
+	list-style-type: none;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus { outline: none; }
+
+textarea{
+	resize: none;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	zoom:1;
+}
+
+.clear{
+	clear: both;
+}	
+	
+.hide{
+	display: none;
+}
+
+.wrapped{
+	width: 940px;
+	margin: 0 auto;
+}
+
+input::-webkit-input-placeholder {
+	color: #0096ef;
+}
+
+input:-moz-placeholder {
+	color: #0096ef;
+}
+
+
+/*************************************************************************************************************** GLOBAL_blocks : foot_right */
+
+
+
+/*************************************************************************************************************** PLUGINS : nivo_slider */		

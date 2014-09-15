@@ -85,8 +85,7 @@ STATIC_URL = '/static/'
 
 
 STATICFILES_DIRS = (
-        (os.path.join(BASE_DIR, "zapsum/static/")),
-
+    (os.path.join(BASE_DIR, "zapsum/static/")),
 )
 
 STATICFILES_FINDERS = (
