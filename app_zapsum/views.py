@@ -59,3 +59,51 @@ def my_records(request):
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def add_records(request):	
+	t = loader.get_template('page_add_records.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def change_avatar(request):	
+	t = loader.get_template('page_change_avatar.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def change_password(request):	
+	t = loader.get_template('page_change_password.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def change_email(request):	
+	t = loader.get_template('page_change_email.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def change_info(request):	
+	t = loader.get_template('page_change_info.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 				
+
+
+def privacy_policy(request):	
+	t = loader.get_template('page_privacy_policy.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 	
+

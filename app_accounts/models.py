@@ -7,11 +7,7 @@ class UserProfile(User):
 		('0', 'М', ),
 		('1', 'Ж', ),
 	)
-		
-	nickname = models.CharField(
-		max_length=50, 
-		blank=False,
-	)		
+			
 	gender = models.CharField(
 		max_length=10, 
 		choices=CHOICES_gender, 

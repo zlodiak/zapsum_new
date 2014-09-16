@@ -3,7 +3,7 @@ from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
 from django.contrib import auth
 
-from app_accounts.forms import registrationForm, authenticationCustomForm
+from app_accounts.forms import RegistrationForm, AuthenticationCustomForm
 
 
 def custom_proc(request):
@@ -13,10 +13,10 @@ def custom_proc(request):
 
 
 def registration(request):
-	form = registrationForm()
+	form = RegistrationForm()
 	
 	if request.method == 'POST':
-		form = registrationForm(request.POST)	
+		form = RegistrationForm(request.POST)	
 		if form.is_valid():
 			new_user = form.save()
 			
@@ -38,10 +38,10 @@ def registration_success(request):
 
 
 def authentication(request):
-	form = authenticationCustomForm()	
+	form = AuthenticationCustomForm()	
 
 	if(request.method == "POST"):
-		form = authenticationCustomForm(data=request.POST)		
+		form = AuthenticationCustomForm(data=request.POST)		
 		if form.is_valid():			
 			username = request.POST.get('username', '')
 			password = request.POST.get('password', '')

@@ -7,16 +7,16 @@ import re
 from app_accounts.models import UserProfile
 
 
-class registrationForm(UserCreationForm):	
-	username = forms.EmailField(
-		label='Email',
+class RegistrationForm(UserCreationForm):	
+	username = forms.CharField(
+		label='Отображаемое имя',
 		help_text='',
 		max_length=50, 
 		required=True,
 	)	
 
-	nickname = forms.CharField(
-		label='Отображаемое имя',
+	email = forms.EmailField(
+		label='Email',
 		help_text='',
 		required=True,
 	)
@@ -39,7 +39,7 @@ class registrationForm(UserCreationForm):
 		model = UserProfile
 		fields = (  
 			'username',    
-			'nickname',    
+			'email',    
 			'password1', 
 			'password2',
 		)
@@ -52,27 +52,18 @@ class registrationForm(UserCreationForm):
 
 		return password1	
 		
-	def clean_nickname(self):
-		nickname = self.cleaned_data['nickname']
-		q_letters = len(nickname)
-		if q_letters < 3:
-			raise forms.ValidationError("Логин не может быть короче 3 символов.")		
-
-		return nickname		
-
 	def clean_username(self):
 		username = self.cleaned_data['username']
-		if username == 'www@www.ru':
-			pass
-		else:
-			raise forms.ValidationError("Введите корректный email.")
+		q_letters = len(username)
+		if q_letters < 3:
+			raise forms.ValidationError("Логин не может быть короче 3 символов.")		
 
 		return username		
 
 
-class authenticationCustomForm(AuthenticationForm):
+class AuthenticationCustomForm(AuthenticationForm):
 	username = forms.CharField(
-		label='Email',
+		label='Отображаемое имя',
 		widget=forms.TextInput(),		
 	)
 
@@ -80,3 +71,4 @@ class authenticationCustomForm(AuthenticationForm):
 		label='Пароль', 
 		widget=forms.PasswordInput(),
 	)
+
