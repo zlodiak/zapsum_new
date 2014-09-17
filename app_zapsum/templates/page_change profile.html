@@ -1,0 +1,43 @@
+{% extends "page_base.html" %}
+
+{% block title %}Изменить профиль{% endblock %}
+
+{% block content %}
+	<section class="section profile">
+		<div class="page-header">
+			<h2>Изменить профиль</h2>
+		</div>
+
+		<form action="" method="post" novalidate>
+			{% csrf_token %}	
+			
+			<div class="cell input_outer">
+				<label class="label">{{ form.phone.label }}</label>
+				
+				{{ form.phone }}
+				
+				{{ form.phone.errors }}
+			</div>		
+
+			<div class="cell input_outer">
+				<label class="label">{{ form.skype.label }}</label>
+				
+				{{ form.skype }}
+				
+				{{ form.skype.errors }}
+			</div>						
+
+			<div class="cell input_outer">
+				<label class="label">{{ form.other.label }}</label>
+				
+				{{ form.other }}
+				
+				{{ form.other.errors }}
+			</div>	
+			
+			<div class="cell submit_outer">
+				<input class="btn btn-default" type="submit" value="Зарегистрироваться">
+			</div>
+		</form>
+	</section>
+{% endblock %}

@@ -49,6 +49,8 @@ class RegistrationForm(UserCreationForm):
 		q_letters = len(password1)
 		if q_letters < 6:
 			raise forms.ValidationError("Пароль не может быть короче 6 символов.")		
+		if q_letters > 30:
+			raise forms.ValidationError("Пароль не может быть длиннее 30 символов.")	
 
 		return password1	
 		
@@ -57,6 +59,8 @@ class RegistrationForm(UserCreationForm):
 		q_letters = len(username)
 		if q_letters < 3:
 			raise forms.ValidationError("Логин не может быть короче 3 символов.")		
+		if q_letters > 30:
+			raise forms.ValidationError("Логин не может быть длиннее 30 символов.")				
 
 		return username		
 
@@ -71,4 +75,28 @@ class AuthenticationCustomForm(AuthenticationForm):
 		label='Пароль', 
 		widget=forms.PasswordInput(),
 	)
+
+class ProfileForm(ModelForm):
+	phone = forms.CharField(
+		label='Номер телефона',
+		widget=forms.TextInput(),		
+	)
+
+	skype = forms.CharField(
+		label='Skype',
+		widget=forms.TextInput(),		
+	)
+
+	other = forms.CharField(
+		label='Доп.информация',
+		widget=forms.Textarea,		
+	)	
+
+	class Meta:
+		model = UserProfile
+		fields = (  
+			'phone',    
+			'skype',    
+			'other', 
+		)
 

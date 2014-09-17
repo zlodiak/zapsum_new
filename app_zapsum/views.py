@@ -3,7 +3,7 @@ from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
 from django.contrib.auth.decorators import login_required
 
-
+from app_accounts.forms import ProfileForm
 
 def custom_proc(request):
 	return{
@@ -99,6 +99,35 @@ def change_info(request):
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 				
+
+
+@login_required
+def change_profile(request):
+	form = ProfileForm()
+	
+	#if request.method == 'POST':
+		#form = RegistrationForm(request.POST)	
+		#if form.is_valid():
+			#new_user = form.save()
+			
+			#return HttpResponseRedirect("/accounts/registration_success/")
+		
+		
+	t = loader.get_template('page_change_profile.html')
+	c = RequestContext(request, {
+		'form': form, 
+	}, [custom_proc])	
+	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def change_profile_call(request):
+    if request.method == "POST" and request.is_ajax():
+        c = Call(request.POST)
+        c.save()
+        return HttpResponse("ok")
+    else:
+        return HttpResponse("bad")
 
 
 def privacy_policy(request):	

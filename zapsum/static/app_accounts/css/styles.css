@@ -2,11 +2,13 @@ form{
 
 }
 
+	form textarea,
 	form input{
 		width: 270px;
 		display: inline-block;
 	}
 
+	form .input_outer .error,
 	form .input_outer .errorlist{
 		display: inline-block;
 
@@ -24,6 +26,7 @@ form{
 		font-weight: 300;
 		line-height: 1.4;
 		text-align: left;
+		vertical-align: top;
 
 		width: 270px;
 		display: inline-block;

@@ -10,7 +10,8 @@ urlpatterns = patterns('app_accounts',
     url(r'^registration_success/$', 'views.registration_success', name='registration_success'),
     url(r'^authentication/$', 'views.authentication', name='authentication'),
     url(r'^authentication_success/$', 'views.authentication_success', name='authentication_success'),    
-    url(r'^logout/$', 'views.logout', name='logout'),    
+    url(r'^logout/$', 'views.logout', name='logout'),       
+    url(r'^accounts/ajax_username_check/(?P<username>[a-zA-Z0-9-]+)$', 'views.ajax_username_check', name='ajax_username_check'),    
 )
 
 
