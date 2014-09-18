@@ -130,7 +130,8 @@ def change_profile(request):
 
 				entry.save() 
 
-				return HttpResponse({'message':'qwerty'})		
+				return HttpResponse({'message':'qwerty'})	
+				#return HttpResponse(json.dumps({'message':'qwerty'}))	
 		
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {

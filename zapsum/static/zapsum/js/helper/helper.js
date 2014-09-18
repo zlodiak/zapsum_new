@@ -1,7 +1,8 @@
 $(document).ready(function(){		
 	/*********************************************************************************************** form change profile */
 	$(".profile_form .btn_submit").click(function(event){
-		var	phone = $('#id_phone').val(),
+		var	gender = $('#id_gender').val(), 
+			phone = $('#id_phone').val(),
 			skype = $('#id_skype').val(),
 			other = $('#id_other').val();
 
@@ -25,9 +26,10 @@ $(document).ready(function(){
 				//alert('Ошибка получения запроса');
 			},
 			success: function(data) {
-				//alert('ajax worked::' + '::' + data.message);
-				$('#mySmallModalLabel').text('Изменения сохранены');
-				$('#infoModal').modal('show');
+
+				alert('ajax worked::' + '::' + data.message);
+				//$('#mySmallModalLabel').text('Изменения сохранены');
+				//$('#infoModal').modal('show');
 
 				setTimeout(function(){
 					$('#infoModal').modal('hide');

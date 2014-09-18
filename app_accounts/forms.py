@@ -99,6 +99,7 @@ class ProfileForm(ModelForm):
 	class Meta:
 		model = UserProfile
 		fields = (  
+			'gender',    
 			'phone',    
 			'skype',    
 			'other', 
