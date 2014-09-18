@@ -97,6 +97,7 @@
 
 		<!-- Begin page content -->
 		<div class="container">
+			<p><a id="test">Hello</a></p>
 			{% block content %}{% endblock %}
 		</div>
 
@@ -106,16 +107,50 @@
 			</div>
 		</div>
 
-	
+		<div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+						
+						<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+					</div>
 
-		<!-- Bootstrap -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+					<div class="modal-body">
+						...
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade bs-example-modal-sm" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+						<span class="sr-only">Close</span></button>
+						<h4 class="modal-title" id="mySmallModalLabel"></h4>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+					</div>		    
+				</div>
+			</div>
+		</div>		
+
+		<!-- jquery 	-->	
+		<script src='{% static "zapsum/js/jquery/jquery.2.min.js" %}'></script>		
+
+		<!-- Bootstrap 
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
 		<script src="{% static 'zapsum/js/bootstrap/bootstrap.min.js' %}"></script>
 		<script src="{% static 'zapsum/js/bootstrap/ie10-viewport-bug-workaround.js' %}"></script>
-
-		<!-- jquery 
-		<script src='{% static "js/jquery/jquery.2.min.js" %}'></script>	-->		
-
 
 		<!-- validate -->
 		<script src="{% static 'zapsum/js/validate/jquery.validate.js' %}"></script>

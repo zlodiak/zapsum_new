@@ -4,6 +4,7 @@ from django.shortcuts import render, render_to_response
 from django.contrib.auth.decorators import login_required
 
 from app_accounts.forms import ProfileForm
+from app_accounts.models import UserProfile
 
 def custom_proc(request):
 	return{
@@ -102,32 +103,36 @@ def change_info(request):
 
 
 @login_required
-def change_profile(request):
+def change_profile(request):		
 	form = ProfileForm()
 	
-	#if request.method == 'POST':
-		#form = RegistrationForm(request.POST)	
-		#if form.is_valid():
-			#new_user = form.save()
-			
-			#return HttpResponseRedirect("/accounts/registration_success/")
-		
+	if request.method == "POST" and request.is_ajax():	
+		form = ProfileForm(data=request.POST)
+		phone = request.POST.get('phone').strip()
+		skype = request.POST.get('skype').strip()
+		other = request.POST.get('other').strip()
+
+		if form.is_valid():
+			entry = UserProfile.objects.get(user_ptr_id=request.user.id)	
+			if phone:		
+				entry.phone = phone
+
+			if skype:		
+				entry.skype = skype
+
+			if other:		
+				entry.other = other								
+				
+			entry.save() 
+
+			return HttpResponse({'message':'qwerty'})		
 		
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {
 		'form': form, 
 	}, [custom_proc])	
+
 	return HttpResponse(t.render(c)) 	
-
-
-@login_required
-def change_profile_call(request):
-    if request.method == "POST" and request.is_ajax():
-        c = Call(request.POST)
-        c.save()
-        return HttpResponse("ok")
-    else:
-        return HttpResponse("bad")
 
 
 def privacy_policy(request):	
@@ -135,4 +140,12 @@ def privacy_policy(request):
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
+
+
+def xhr_test(request):
+	if request.is_ajax():
+		message = "Hello AJAX!"
+	else:
+		message = "Hello"
+	return HttpResponse(message)	
 

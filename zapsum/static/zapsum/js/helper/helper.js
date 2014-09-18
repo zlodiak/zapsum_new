@@ -1,4 +1,71 @@
 $(document).ready(function(){		
+	/*********************************************************************************************** form change profile */
+	$(".profile_form .btn_submit").click(function(event){
+		var	phone = $('#id_phone').val(),
+			skype = $('#id_skype').val(),
+			other = $('#id_other').val();
+
+		event.preventDefault();
+
+		console.log(phone);
+		console.log(skype);
+		console.log(other);
+
+		$.ajax({
+			url: "/change_profile/",
+			type: 'POST',
+			dataType:"html",
+			data: {
+				"phone": phone,
+				"skype": skype,
+				"other": other,
+				"csrfmiddlewaretoken": $('#profile_form input[name=csrfmiddlewaretoken]').val()
+			},
+			error: function() {
+				//alert('Ошибка получения запроса');
+			},
+			success: function(data) {
+				//alert('ajax worked::' + '::' + data.message);
+				$('#mySmallModalLabel').text('Изменения сохранены');
+				$('#infoModal').modal('show');
+
+				setTimeout(function(){
+					$('#infoModal').modal('hide');
+				}, 2000);
+			}
+		});		
+	});
+
+
+/*
+ 	$(function() {
+      $("#test").click(function() {
+		$.ajax({
+			url: "/xhr_test/",
+			type: 'POST',
+			dataType:"html",
+			data: {
+				"phone": 1,
+				"skype": 2,
+				"other": 3,
+
+			},
+			error: function() {
+				alert('Ошибка получения запроса');
+			},
+			success: function(data) {
+				alert('ajax worked' + data);
+			}
+		});	
+
+      	
+         $.get("/xhr_test/", function(data) {
+            alert(data);
+         });
+      });
+    });	*/
+	
+
 	/*********************************************************************************************** active menu punkt */
 	var	pathname = location.pathname,
 		pathnameList = pathname.split('/'),

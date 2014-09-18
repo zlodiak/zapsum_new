@@ -8,7 +8,7 @@
 			<h2>Изменить профиль</h2>
 		</div>
 
-		<form action="" method="post" novalidate>
+		<form class="profile_form" id="profile_form" action="ya.ru" method="post" novalidate>
 			{% csrf_token %}	
 			
 			<div class="cell input_outer">
@@ -36,7 +36,7 @@
 			</div>	
 			
 			<div class="cell submit_outer">
-				<input class="btn btn-default" type="submit" value="Зарегистрироваться">
+				<input class="btn btn-default btn_submit" type="submit" value="Зарегистрироваться">
 			</div>
 		</form>
 	</section>

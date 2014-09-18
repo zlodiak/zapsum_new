@@ -20,7 +20,6 @@ urlpatterns = patterns('app_zapsum',
     url(r'^change_info/$', 'views.change_info', name='change_info'),
     url(r'^privacy_policy/$', 'views.privacy_policy', name='privacy_policy'),
     url(r'^change_profile/$', 'views.change_profile', name='change_profile'), 
-    url(r'^change_profile_call/$', 'views.change_profile_call', name='change_profile_call'), 
 )
 
 

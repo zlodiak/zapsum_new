@@ -76,20 +76,24 @@ class AuthenticationCustomForm(AuthenticationForm):
 		widget=forms.PasswordInput(),
 	)
 
+
 class ProfileForm(ModelForm):
 	phone = forms.CharField(
 		label='Номер телефона',
-		widget=forms.TextInput(),		
+		widget=forms.TextInput(),	
+		required=False,		
 	)
 
 	skype = forms.CharField(
 		label='Skype',
-		widget=forms.TextInput(),		
+		widget=forms.TextInput(),	
+		required=False,		
 	)
 
 	other = forms.CharField(
 		label='Доп.информация',
 		widget=forms.Textarea,		
+		required=False,	
 	)	
 
 	class Meta:
