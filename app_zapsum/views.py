@@ -103,29 +103,34 @@ def change_info(request):
 
 
 @login_required
-def change_profile(request):		
-	form = ProfileForm()
+def change_profile(request):
+	entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)		
+	form = ProfileForm(instance=entry_user_profile)
 	
 	if request.method == "POST" and request.is_ajax():	
-		form = ProfileForm(data=request.POST)
-		phone = request.POST.get('phone').strip()
-		skype = request.POST.get('skype').strip()
-		other = request.POST.get('other').strip()
+		try:
+			phone = request.POST.get('phone').strip()
+			skype = request.POST.get('skype').strip()
+			other = request.POST.get('other').strip()
+		except:
+			# to do
+			pass
+		else:
+			form = ProfileForm(data=request.POST)
+			if form.is_valid():
+				entry = UserProfile.objects.get(user_ptr_id=request.user.id)	
+				if phone:		
+					entry.phone = phone
 
-		if form.is_valid():
-			entry = UserProfile.objects.get(user_ptr_id=request.user.id)	
-			if phone:		
-				entry.phone = phone
+				if skype:		
+					entry.skype = skype
 
-			if skype:		
-				entry.skype = skype
+				if other:		
+					entry.other = other								
 
-			if other:		
-				entry.other = other								
-				
-			entry.save() 
+				entry.save() 
 
-			return HttpResponse({'message':'qwerty'})		
+				return HttpResponse({'message':'qwerty'})		
 		
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {
@@ -141,11 +146,4 @@ def privacy_policy(request):
 	
 	return HttpResponse(t.render(c)) 	
 
-
-def xhr_test(request):
-	if request.is_ajax():
-		message = "Hello AJAX!"
-	else:
-		message = "Hello"
-	return HttpResponse(message)	
 
