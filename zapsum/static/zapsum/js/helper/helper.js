@@ -1,22 +1,24 @@
 $(document).ready(function(){		
 	/*********************************************************************************************** form change profile */
 	$(".profile_form .btn_submit").click(function(event){
-		var	gender = $('#id_gender').val(), 
+		var	gender = $('#id_gender').val(),
 			phone = $('#id_phone').val(),
 			skype = $('#id_skype').val(),
 			other = $('#id_other').val();
 
 		event.preventDefault();
 
-		console.log(phone);
-		console.log(skype);
-		console.log(other);
+		//console.log(gender);
+		//console.log(phone);
+		//console.log(skype);
+		//console.log(other);
 
 		$.ajax({
 			url: "/change_profile/",
 			type: 'POST',
 			dataType:"html",
 			data: {
+				"gender": gender,
 				"phone": phone,
 				"skype": skype,
 				"other": other,
@@ -27,9 +29,9 @@ $(document).ready(function(){
 			},
 			success: function(data) {
 
-				alert('ajax worked::' + '::' + data.message);
-				//$('#mySmallModalLabel').text('Изменения сохранены');
-				//$('#infoModal').modal('show');
+				//alert('ajax worked::' + '::' + data.message);
+				$('#mySmallModalLabel').text('Изменения сохранены');
+				$('#infoModal').modal('show');
 
 				setTimeout(function(){
 					$('#infoModal').modal('hide');

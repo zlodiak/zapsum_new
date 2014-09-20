@@ -1,0 +1,23 @@
+[
+	{
+		"model": "app_accounts.Gender",
+		"pk": 0,
+		"fields": {
+			"gender": "-----"
+		}
+	},
+	{
+		"model": "app_accounts.Gender",
+		"pk": 1,
+		"fields": {
+			"gender": "Ж"
+		}
+	},
+	{
+		"model": "app_accounts.Gender",
+		"pk": 2,
+		"fields": {
+			"gender": "М"
+		}
+	}
+]

@@ -108,30 +108,12 @@ def change_profile(request):
 	form = ProfileForm(instance=entry_user_profile)
 	
 	if request.method == "POST" and request.is_ajax():	
-		try:
-			phone = request.POST.get('phone').strip()
-			skype = request.POST.get('skype').strip()
-			other = request.POST.get('other').strip()
-		except:
-			# to do
-			pass
-		else:
-			form = ProfileForm(data=request.POST)
-			if form.is_valid():
-				entry = UserProfile.objects.get(user_ptr_id=request.user.id)	
-				if phone:		
-					entry.phone = phone
+		form = ProfileForm(data=request.POST, instance=entry_user_profile)
+		if form.is_valid():
+			form.save()
 
-				if skype:		
-					entry.skype = skype
-
-				if other:		
-					entry.other = other								
-
-				entry.save() 
-
-				return HttpResponse({'message':'qwerty'})	
-				#return HttpResponse(json.dumps({'message':'qwerty'}))	
+			return HttpResponse({'message':'qwerty'})	
+			#return HttpResponse(json.dumps({'message':'qwerty'}))	
 		
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {

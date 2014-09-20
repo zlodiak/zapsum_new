@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.forms import ModelForm
 import re
 
-from app_accounts.models import UserProfile
+from app_accounts.models import UserProfile, Gender
 
 
 class RegistrationForm(UserCreationForm):	
@@ -77,7 +77,12 @@ class AuthenticationCustomForm(AuthenticationForm):
 	)
 
 
-class ProfileForm(ModelForm):
+class ProfileForm(forms.ModelForm):
+	gender = forms.ModelChoiceField(
+		queryset=Gender.objects.all(),
+		empty_label = None,
+	)		
+
 	phone = forms.CharField(
 		label='Номер телефона',
 		widget=forms.TextInput(),	
