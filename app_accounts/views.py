@@ -78,17 +78,33 @@ def logout(request):
 
 
 def ajax_username_check(request):
-	result = 'default'
+	error = False
+	error_message = ''
 
 	if request.method == "POST" and request.is_ajax():
 		username = request.POST.get('username', '')		
 
-		username_req = User.objects.filter(username=username)		
+		#login check
+		username_req = User.objects.filter(username=username)				
 
-		if username_req.exists():
-			result = username_req[0].username	
+		if not username_req.exists():
+			error = True
+			error_message = 'Неверный логин'
 
-	data = {'result': result,}
+		#min_length check
+		if(len(username) < 3):
+			error = True
+			error_message = 'Имя должно состоять не менее чем из 3 символов'
+
+		#max_height check				
+		if(len(username) > 30):
+			error = True
+			error_message = 'Имя должно состоять не более чем из 30 символов'
+
+	data = {
+		'error': error,
+		'error_message': error_message,
+	}
 
 	return HttpResponse(json.dumps(data), content_type='application/json')	
 

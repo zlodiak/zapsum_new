@@ -41,14 +41,12 @@ $(document).ready(function(){
 	});
 
 	$("#login_submit").click(function(event){
-		console.log('lsc');
-
 		var	username = $('#id_username').val(),
 			password = $('#id_password').val();
 
 		event.preventDefault();
 
-		console.log(username);
+		//console.log(username);
 		//console.log(other);
 
 		$.ajax({
@@ -63,45 +61,21 @@ $(document).ready(function(){
 				alert('Ошибка получения запроса');
 			},
 			success: function(data) {
+				var	error_list;
 
-				alert('ajax is worked::' + data['result'] + '::' + data);
-				//$('#mySmallModalLabel').text('Изменения сохранены');
-				//$('#infoModal').modal('show');
+				console.log('le ' + data.error + ':lo ' + data.error_message);
 
-				setTimeout(function(){
-					$('#infoModal').modal('hide');
-				}, 2000);
+				if(data.error == false){
+					//$('#loginForm').submit();
+					console.log('submit');
+
+					error_list = '';
+				}
+
+				$('#error_list_login').text(data.error_message);
 			}
 		});		
 	});
-
-/*
- 	$(function() {
-      $("#test").click(function() {
-		$.ajax({
-			url: "/xhr_test/",
-			type: 'POST',
-			dataType:"html",
-			data: {
-				"phone": 1,
-				"skype": 2,
-				"other": 3,
-
-			},
-			error: function() {
-				alert('Ошибка получения запроса');
-			},
-			success: function(data) {
-				alert('ajax worked' + data);
-			}
-		});	
-
-      	
-         $.get("/xhr_test/", function(data) {
-            alert(data);
-         });
-      });
-    });	*/
 	
 
 	/*********************************************************************************************** active menu punkt */
