@@ -78,32 +78,58 @@ def logout(request):
 
 
 def ajax_username_check(request):
-	error = False
-	error_message = ''
+	error_login = False
+	error_message_login = ''
+	error_pass = False
+	error_message_pass = ''	
 
 	if request.method == "POST" and request.is_ajax():
 		username = request.POST.get('username', '')		
+		password = request.POST.get('password', '')		
 
 		#login check
 		username_req = User.objects.filter(username=username)				
 
 		if not username_req.exists():
-			error = True
-			error_message = 'Неверный логин'
+			error_login = True
+			error_message_login = 'Неверный логин'
 
 		#min_length check
 		if(len(username) < 3):
-			error = True
-			error_message = 'Имя должно состоять не менее чем из 3 символов'
+			error_login = True
+			error_message_login = 'Имя должно состоять не менее чем из 3 символов'
 
 		#max_height check				
 		if(len(username) > 30):
-			error = True
-			error_message = 'Имя должно состоять не более чем из 30 символов'
+			error_login = True
+			error_message_login = 'Имя должно состоять не более чем из 30 символов'
+
+		#password check
+		user = auth.authenticate(username=username, password=password)
+		if user:
+			pass
+		else:
+			error_pass = True
+			error_message_pass = 'Неверный пароль'
+		logout(request)
+
+		#password min_length check
+		if(len(password) < 3):
+			error_pass = True
+			error_message_pass = 'Пароль должен состоять не менее чем из 6 символов'	
+
+		#password max_height check
+		if(len(password) > 30):
+			error_pass = True
+			error_message_pass = 'Пароль должен состоять не более чем из 30 символов'		
+
+
 
 	data = {
-		'error': error,
-		'error_message': error_message,
+		'error_login': error_login,
+		'error_message_login': error_message_login,
+		'error_pass': error_pass,
+		'error_message_pass': error_message_pass,		
 	}
 
 	return HttpResponse(json.dumps(data), content_type='application/json')	

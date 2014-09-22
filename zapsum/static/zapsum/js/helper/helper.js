@@ -55,24 +55,30 @@ $(document).ready(function(){
 			dataType:"json",
 			data: {
 				"username": username,
+				"password": password,
 				"csrfmiddlewaretoken": $('#loginForm input[name=csrfmiddlewaretoken]').val()
 			},
 			error: function() {
 				alert('Ошибка получения запроса');
 			},
 			success: function(data) {
-				var	error_list;
+				var	error_list_login,
+					error_list_pass;
 
-				console.log('le ' + data.error + ':lo ' + data.error_message);
-
-				if(data.error == false){
-					//$('#loginForm').submit();
-					console.log('submit');
-
-					error_list = '';
+				if(data.error_login == false){
+					error_list_login = '';
 				}
 
-				$('#error_list_login').text(data.error_message);
+				if(data.error_pass == false){
+					error_list_pass = '';
+				}	
+
+				if(data.error_login == false && data.error_pass == false){
+					$('#loginForm').submit();
+				}			
+
+				$('#error_list_login').text(data.error_message_login);
+				$('#error_list_pass').text(data.error_message_pass);
 			}
 		});		
 	});
