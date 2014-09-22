@@ -40,17 +40,15 @@ $(document).ready(function(){
 		});		
 	});
 
+	/*********************************************************************************************** form login check */
 	$("#login_submit").click(function(event){
 		var	username = $('#id_username').val(),
 			password = $('#id_password').val();
 
 		event.preventDefault();
 
-		//console.log(username);
-		//console.log(other);
-
 		$.ajax({
-			url: "/accounts/ajax_username_check/",
+			url: "/accounts/ajax_login_check/",
 			type: 'POST',
 			dataType:"json",
 			data: {
@@ -59,7 +57,7 @@ $(document).ready(function(){
 				"csrfmiddlewaretoken": $('#loginForm input[name=csrfmiddlewaretoken]').val()
 			},
 			error: function() {
-				alert('Ошибка получения запроса');
+				//alert('Ошибка получения запроса');
 			},
 			success: function(data) {
 				var	error_list_login,
@@ -82,6 +80,68 @@ $(document).ready(function(){
 			}
 		});		
 	});
+
+
+	/*********************************************************************************************** form registration check */
+	$("#registration_submit").click(function(event){
+		var	username = $('#id_username').val(),
+			email = $('#id_email').val(),
+			password1 = $('#id_password1').val(),
+			password2 = $('#id_password2').val();
+
+		event.preventDefault();
+
+		$.ajax({
+			url: "/accounts/ajax_registration_check/",
+			type: 'POST',
+			dataType:"json",
+			data: {
+				"username": username,
+				"email": email,
+				"password1": password1,
+				"password2": password2,
+				"csrfmiddlewaretoken": $('#registrationForm input[name=csrfmiddlewaretoken]').val()
+			},
+			error: function() {
+				alert('Ошибка получения запроса');
+			},
+			success: function(data) {
+				var	error_list_login,
+					error_list_email,
+					error_list_password1,
+					error_list_password2;
+
+				if(data.error_login == false){
+					error_list_login = '';
+				}
+
+				if(data.error_email == false){
+					error_list_email = '';
+				}	
+
+				if(data.error_password1 == false){
+					error_list_password1 = '';
+				}		
+
+				if(data.error_password2 == false){
+					error_list_password2 = '';
+				}	
+
+		console.log(error_list_password1);					
+		console.log(error_list_password2);														
+
+				if(data.error_login == false && data.error_email == false && data.error_password1 == false && data.error_password2 == false){
+					//$('#registrationForm').submit();
+					alert('submit');
+				}			
+
+				$('#error_list_login').text(data.error_message_login);
+				$('#error_list_email').text(data.error_message_email);
+				$('#error_list_password1').text(data.error_message_password1);
+				$('#error_list_password2').text(data.error_message_password2);
+			}
+		});		
+	});	
 	
 
 	/*********************************************************************************************** active menu punkt */

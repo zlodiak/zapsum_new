@@ -4,6 +4,7 @@ from django.shortcuts import render, render_to_response
 from django.contrib import auth
 from django.contrib.auth.models import User
 import json
+import re
 import os
 from django.conf import settings
 
@@ -77,7 +78,7 @@ def logout(request):
 	return HttpResponse(t.render(c)) 
 
 
-def ajax_username_check(request):
+def ajax_login_check(request):
 	error_login = False
 	error_message_login = ''
 	error_pass = False
@@ -87,7 +88,7 @@ def ajax_username_check(request):
 		username = request.POST.get('username', '')		
 		password = request.POST.get('password', '')		
 
-		#login check
+		#login check unique
 		username_req = User.objects.filter(username=username)				
 
 		if not username_req.exists():
@@ -123,8 +124,6 @@ def ajax_username_check(request):
 			error_pass = True
 			error_message_pass = 'Пароль должен состоять не более чем из 30 символов'		
 
-
-
 	data = {
 		'error_login': error_login,
 		'error_message_login': error_message_login,
@@ -134,5 +133,89 @@ def ajax_username_check(request):
 
 	return HttpResponse(json.dumps(data), content_type='application/json')	
 
+
+def ajax_registration_check(request):
+	error_login = False
+	error_message_login = ''
+	error_email = False
+	error_message_email = ''	
+	error_password1 = False
+	error_message_password1 = ''
+	error_password2 = False
+	error_message_password2 = ''			
+
+	if request.method == "POST" and request.is_ajax():
+		username = request.POST.get('username', '')		
+		email = request.POST.get('email', '')		
+		password1 = request.POST.get('password1', '')	
+		password2 = request.POST.get('password2', '')			
+
+		#login check unique
+		username_req = User.objects.filter(username=username)				
+
+		if username_req.exists():
+			error_login = True
+			error_message_login = 'Логин занят'
+
+		#login min_length check
+		if(len(username) < 3):
+			error_login = True
+			error_message_login = 'Имя должно состоять не менее чем из 3 символов'
+
+		#login  max_height check				
+		if(len(username) > 30):
+			error_login = True
+			error_message_login = 'Имя должно состоять не более чем из 30 символов'
+
+		#email check unique
+		email_req = User.objects.filter(email=email)				
+
+		if email_req.exists():
+			error_email = True
+			error_message_email = 'Email занят'		
+
+		#email regex check
+		EMAIL_REGEX = re.compile(r'.*?@.*?\..*?$')
+		if not EMAIL_REGEX.match(email):
+			error_email = True
+			error_message_email = 'Введите корректный email'
+
+		#email min_length check
+		if(len(email) < 6):
+			error_email = True
+			error_message_email = 'Email должен состоять не менее чем из 6 символов'
+
+		#email max_height check				
+		if(len(email) > 30):
+			error_email = True
+			error_message_email = 'Email должен состоять не более чем из 30 символов'	
+
+		#password1 min_length check
+		if(len(password1) < 6):
+			error_password1 = True
+			error_message_password1 = 'Пароль должен состоять не менее чем из 6 символов'
+
+		#password1 max_height check				
+		if(len(password1) > 30):
+			error_password1 = True
+			error_message_password1 = 'Пароль должен состоять не более чем из 30 символов'		
+
+		#password2 compare check				
+		if(password1 != password2):
+			error_password2 = True
+			error_message_password2 = 'Пароли должны совпадать'						
+
+	data = {
+		'error_login': error_login,
+		'error_message_login': error_message_login,	
+		'error_email': error_email,
+		'error_message_email': error_message_email,			
+		'error_password1': error_password1,
+		'error_message_password1': error_message_password1,			
+		'error_password2': error_password2,
+		'error_message_password2': error_message_password2,			
+	}
+
+	return HttpResponse(json.dumps(data), content_type='application/json')				
 
 	

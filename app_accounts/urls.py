@@ -11,7 +11,8 @@ urlpatterns = patterns('app_accounts',
 	url(r'^authentication/$', 'views.authentication', name='authentication'),
 	url(r'^authentication_success/$', 'views.authentication_success', name='authentication_success'),    
 	url(r'^logout/$', 'views.logout', name='logout'),       
-	url(r'^ajax_username_check/$', 'views.ajax_username_check', name='ajax_username_check'),    
+	url(r'^ajax_login_check/$', 'views.ajax_login_check', name='ajax_login_check'),    
+	url(r'^ajax_registration_check/$', 'views.ajax_registration_check', name='ajax_registration_check'),    
 )
 
 
