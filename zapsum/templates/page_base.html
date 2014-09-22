@@ -67,8 +67,6 @@
 						<ul class="dropdown-menu" role="menu">
 							<li><a href="{% url 'change_avatar' %}">Изменить аватар</a></li>
 							<li><a href="{% url 'change_password' %}">Изменить пароль</a></li>					
-							<li><a href="{% url 'change_email' %}">Изменить email</a></li>
-							<li><a href="{% url 'change_info' %}">Изменить доп.информацию</a></li>
 							<li><a href="{% url 'change_profile' %}">Изменить профиль</a></li>
 							<li class="divider"></li>	
 							<li><a href="#">Удалить профиль</a></li>
@@ -179,7 +177,7 @@
 							required: "Введите имя",
 							minlength: "Имя должно состоять не менее чем из 3 символов",
 							maxlength: "Имя должно состоять не более чем из 30 символов",
-							remote: "/accounts/ajax_username_check/" + $('#id_username').val()
+							remote: "/accounts/ajax_username_check/"// + $('#id_username').val()
 						},
 						password: {
 							required: "Введите пароль",

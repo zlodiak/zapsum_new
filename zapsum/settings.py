@@ -36,6 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'sorl.thumbnail',
+
     'app_zapsum',
     'app_accounts',
 )
@@ -104,3 +107,26 @@ TEMPLATE_DIRS = (
         os.path.join(BASE_DIR, 'app_zapsum/templates/'),
         os.path.join(BASE_DIR, 'app_accounts/templates/'),
 )
+
+THUMBNAIL_DEBUG = False
+
+ALLOWED_HOSTS = ['127.0.0.1:8000']
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'debug.log'),
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}

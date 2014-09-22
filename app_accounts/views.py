@@ -3,6 +3,7 @@ from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
 from django.contrib import auth
 from django.contrib.auth.models import User
+import json
 import os
 from django.conf import settings
 
@@ -76,19 +77,20 @@ def logout(request):
 	return HttpResponse(t.render(c)) 
 
 
-def ajax_username_check(request, username):
-	with open(os.path.join(settings.BASE_DIR, "debug_local.txt"), "wb") as f:
-		f.write(bytes(username, 'UTF-8'))
+def ajax_username_check(request):
+	result = 'default'
 
-	result = False
+	if request.method == "POST" and request.is_ajax():
+		username = request.POST.get('username', '')		
 
-	if request.is_ajax():
-		username_exist = User.objects.get(username=username)
+		username_req = User.objects.filter(username=username)		
 
-		if(username_exist):
-			result = username_exist			
+		if username_req.exists():
+			result = username_req[0].username	
 
-	return HttpResponse(result)
+	data = {'result': result,}
+
+	return HttpResponse(json.dumps(data), content_type='application/json')	
 
 
 	

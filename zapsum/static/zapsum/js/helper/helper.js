@@ -40,6 +40,40 @@ $(document).ready(function(){
 		});		
 	});
 
+	$("#login_submit").click(function(event){
+		console.log('lsc');
+
+		var	username = $('#id_username').val(),
+			password = $('#id_password').val();
+
+		event.preventDefault();
+
+		console.log(username);
+		//console.log(other);
+
+		$.ajax({
+			url: "/accounts/ajax_username_check/",
+			type: 'POST',
+			dataType:"json",
+			data: {
+				"username": username,
+				"csrfmiddlewaretoken": $('#loginForm input[name=csrfmiddlewaretoken]').val()
+			},
+			error: function() {
+				alert('Ошибка получения запроса');
+			},
+			success: function(data) {
+
+				alert('ajax is worked::' + data['result'] + '::' + data);
+				//$('#mySmallModalLabel').text('Изменения сохранены');
+				//$('#infoModal').modal('show');
+
+				setTimeout(function(){
+					$('#infoModal').modal('hide');
+				}, 2000);
+			}
+		});		
+	});
 
 /*
  	$(function() {

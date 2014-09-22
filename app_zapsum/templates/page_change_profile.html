@@ -1,4 +1,5 @@
 {% extends "page_base.html" %}
+{% load thumbnail %}
 
 {% block title %}Изменить профиль{% endblock %}
 
@@ -8,7 +9,7 @@
 			<h2>Изменить профиль</h2>
 		</div>
 
-		<form class="profile_form" id="profile_form" action="ya.ru" method="post" novalidate>
+		<form class="profile_form" id="profile_form" action="" method="post" novalidate>
 			{% csrf_token %}	
 
 			<div class="cell input_outer">
@@ -42,9 +43,23 @@
 				
 				{{ form.other.errors }}
 			</div>	
+
+			<div class="cell input_outer">
+				<label class="label">{{ form.avatar.label }}</label>
+
+				{% if avatar %}
+					{% thumbnail avatar "83x83" crop="center" as im %}
+						<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+					{% endthumbnail %}		
+				{% endif %}				
+				
+				{{ form.avatar }}
+				
+				{{ form.avatar.errors }}
+			</div>				
 			
 			<div class="cell submit_outer">
-				<input class="btn btn-default btn_submit" type="submit" value="Зарегистрироваться">
+				<input class="btn btn-default btn_submit" type="submit" value="Сохранить изменения">
 			</div>
 		</form>
 	</section>

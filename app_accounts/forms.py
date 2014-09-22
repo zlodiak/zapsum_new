@@ -81,6 +81,7 @@ class ProfileForm(forms.ModelForm):
 	gender = forms.ModelChoiceField(
 		queryset=Gender.objects.all(),
 		empty_label = None,
+		label='Пол',
 	)		
 
 	phone = forms.CharField(

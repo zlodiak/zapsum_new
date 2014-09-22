@@ -2,6 +2,8 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404, HttpRespons
 from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
 from django.contrib.auth.decorators import login_required
+import os
+from django.conf import settings
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
@@ -83,32 +85,17 @@ def change_password(request):
 	t = loader.get_template('page_change_password.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 	
-
-
-@login_required
-def change_email(request):	
-	t = loader.get_template('page_change_email.html')
-	c = RequestContext(request, {}, [custom_proc])	
-	
-	return HttpResponse(t.render(c)) 	
-
-
-@login_required
-def change_info(request):	
-	t = loader.get_template('page_change_info.html')
-	c = RequestContext(request, {}, [custom_proc])	
-	
 	return HttpResponse(t.render(c)) 				
 
 
 @login_required
 def change_profile(request):
 	entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)		
+	avatar = entry_user_profile.avatar
 	form = ProfileForm(instance=entry_user_profile)
 	
-	if request.method == "POST" and request.is_ajax():	
-		form = ProfileForm(data=request.POST, instance=entry_user_profile)
+	if request.method == "POST" and request.is_ajax():
+		form = ProfileForm(request.POST, instance=entry_user_profile)
 		if form.is_valid():
 			form.save()
 
@@ -118,6 +105,7 @@ def change_profile(request):
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {
 		'form': form, 
+		'avatar': avatar, 
 	}, [custom_proc])	
 
 	return HttpResponse(t.render(c)) 	

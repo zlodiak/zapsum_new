@@ -16,8 +16,6 @@ urlpatterns = patterns('app_zapsum',
     url(r'^add_records/$', 'views.add_records', name='add_records'),
     url(r'^change_avatar/$', 'views.change_avatar', name='change_avatar'),
     url(r'^change_password/$', 'views.change_password', name='change_password'),
-    url(r'^change_email/$', 'views.change_email', name='change_email'),
-    url(r'^change_info/$', 'views.change_info', name='change_info'),
     url(r'^privacy_policy/$', 'views.privacy_policy', name='privacy_policy'),
     url(r'^change_profile/$', 'views.change_profile', name='change_profile'), 
 )

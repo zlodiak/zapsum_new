@@ -32,8 +32,9 @@ class UserProfile(User):
 		blank=False,
 	)
 	avatar = models.ImageField(
-		upload_to='userprofile/', 
-		blank=False,
+		upload_to='userprofile/avatar/', 
+		blank=True,
+		null=True,
 	)
 	
 	objects = UserManager()
