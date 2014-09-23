@@ -25,7 +25,7 @@ def registration(request):
 		if form.is_valid():
 			new_user = form.save()
 			
-			return HttpResponseRedirect("/accounts/registration_success/")
+			return HttpResponseRedirect("/accounts/authentication/")
 		
 		
 	t = loader.get_template('page_registration.html')
@@ -55,7 +55,7 @@ def authentication(request):
 
 			if user is not None and user.is_active and username != 'admin':
 				auth.login(request, user)
-				return HttpResponseRedirect("/accounts/authentication_success/")
+				return HttpResponseRedirect("/")
                 	
 	t = loader.get_template('page_authentication.html')
 	c = RequestContext(request, {
@@ -83,6 +83,8 @@ def ajax_login_check(request):
 	error_message_login = ''
 	error_pass = False
 	error_message_pass = ''	
+	error_active = False
+	error_message_active = ''		
 
 	if request.method == "POST" and request.is_ajax():
 		username = request.POST.get('username', '')		
@@ -94,6 +96,13 @@ def ajax_login_check(request):
 		if not username_req.exists():
 			error_login = True
 			error_message_login = 'Неверный логин'
+
+		#login check active
+		username_req = User.objects.filter(username=username, is_active=1)	
+
+		if not username_req.exists():
+			error_active = True
+			error_message_active = 'Профиль отключен'			
 
 		#min_length check
 		if(len(username) < 3):
@@ -129,6 +138,8 @@ def ajax_login_check(request):
 		'error_message_login': error_message_login,
 		'error_pass': error_pass,
 		'error_message_pass': error_message_pass,		
+		'error_active': error_active,
+		'error_message_active': error_message_active,		
 	}
 
 	return HttpResponse(json.dumps(data), content_type='application/json')	
@@ -219,3 +230,24 @@ def ajax_registration_check(request):
 	return HttpResponse(json.dumps(data), content_type='application/json')				
 
 	
+def delete_profile(request):
+	result = False
+
+	if request.method == "POST" and request.is_ajax():
+		username = request.user.username	
+
+		try:
+			entry = User.objects.get(username=username)	
+			entry.is_active = 0
+			entry.save()
+		except:
+			pass
+		else:
+			result = True
+			auth.logout(request)
+
+	data = {
+		'result': result,		
+	}
+
+	return HttpResponse(json.dumps(data), content_type='application/json')					

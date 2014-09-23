@@ -600,3 +600,248 @@ Traceback (most recent call last):
   File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/sre_parse.py", line 751, in parse
     raise error("unbalanced parenthesis")
 sre_constants.error: unbalanced parenthesis
+Internal Server Error: /accounts/registration/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 27, in registration
+    auth.login(request, user)
+NameError: name 'user' is not defined
+Not Found: /favicon.ico
+Internal Server Error: /accounts/registration/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 31, in registration
+    auth.login(request, user)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/__init__.py", line 85, in login
+    request.session[BACKEND_SESSION_KEY] = user.backend
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 214, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'backend'
+Internal Server Error: /accounts/registration/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 31, in registration
+    auth.login(request, user)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/__init__.py", line 85, in login
+    request.session[BACKEND_SESSION_KEY] = user.backend
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 214, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'AnonymousUser' object has no attribute 'backend'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.active == 0:
+AttributeError: 'QuerySet' object has no attribute 'active'
+Internal Server Error: /accounts/ajax_login_check/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py", line 101, in ajax_login_check
+    if username_req.is_active == 0:
+AttributeError: 'QuerySet' object has no attribute 'is_active'
+Not Found: /account/delete_profile/
+Forbidden (CSRF token missing or incorrect.): /accounts/delete_profile/
+Forbidden (CSRF token missing or incorrect.): /accounts/delete_profile/
+Forbidden (CSRF token missing or incorrect.): /accounts/delete_profile/
+Not Found: /accounts/login/

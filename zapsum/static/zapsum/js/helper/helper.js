@@ -1,4 +1,38 @@
 $(document).ready(function(){		
+	/*********************************************************************************************** delete_profile */
+	$('#delete_profile').on('click', function(){
+		$('#commonModalLabel').text('Удалить профиль?');
+		$('#commonModal .modal-body').html('Возможность восстановить профиль будет доступна в течение двух недель. Для восстановления нужно отправить <a href="mailto:prozaik81-2@yandex.ru">администратору</a> ресурса письмо с почтового адреса, который был указан в профиле.');
+		$('#commonModal').modal('show');	
+
+		$('#commonModal .but_ok').on('click', function(){
+			$.ajax({
+				url: "/accounts/delete_profile/",
+				type: 'POST',
+				dataType:"json",
+				data: {
+					"csrfmiddlewaretoken": $.csrf_token
+				},
+				error: function() {
+					alert('Ошибка получения запроса');
+				},
+				success: function(data) {
+					console.log(data.result);
+
+					if(data.result == true){
+						$('#mySmallModalLabel').text('Профиль удалён');
+						$('#infoModal').modal('show');
+
+						setTimeout(function(){
+							$('#infoModal').modal('hide');
+							location.href = '/';
+						}, 2000);
+					}
+				}
+			});				
+		});
+	});
+
 	/*********************************************************************************************** form change profile */
 	$(".profile_form .btn_submit").click(function(event){
 		var	gender = $('#id_gender').val(),
@@ -8,15 +42,10 @@ $(document).ready(function(){
 
 		event.preventDefault();
 
-		//console.log(gender);
-		//console.log(phone);
-		//console.log(skype);
-		//console.log(other);
-
 		$.ajax({
 			url: "/change_profile/",
 			type: 'POST',
-			dataType:"html",
+			dataType:"json",
 			data: {
 				"gender": gender,
 				"phone": phone,
@@ -28,8 +57,6 @@ $(document).ready(function(){
 				//alert('Ошибка получения запроса');
 			},
 			success: function(data) {
-
-				//alert('ajax worked::' + '::' + data.message);
 				$('#mySmallModalLabel').text('Изменения сохранены');
 				$('#infoModal').modal('show');
 
@@ -61,7 +88,8 @@ $(document).ready(function(){
 			},
 			success: function(data) {
 				var	error_list_login,
-					error_list_pass;
+					error_list_pass,
+					error_list_active;
 
 				if(data.error_login == false){
 					error_list_login = '';
@@ -71,11 +99,29 @@ $(document).ready(function(){
 					error_list_pass = '';
 				}	
 
-				if(data.error_login == false && data.error_pass == false){
-					$('#loginForm').submit();
+				if(data.error_active == false){
+					error_list_active = '';
+				}		
+
+				console.log(data.error_list_active);		
+				console.log(data.error_active);		
+
+				if(data.error_login == false && data.error_pass == false && data.error_active == false){
+					$('#mySmallModalLabel').text('Вы успешно авторизовались');
+					$('#infoModal').modal('show');
+
+					setTimeout(function(){
+						$('#infoModal').modal('hide');
+					}, 2000);					
+
+					$('#infoModal').on('hidden.bs.modal', function (){
+						$('#infoModal').modal('hide');
+						$('#loginForm').submit();
+					})	
 				}			
 
 				$('#error_list_login').text(data.error_message_login);
+				$('#error_list_login').text(data.error_message_active);
 				$('#error_list_pass').text(data.error_message_pass);
 			}
 		});		
@@ -103,7 +149,7 @@ $(document).ready(function(){
 				"csrfmiddlewaretoken": $('#registrationForm input[name=csrfmiddlewaretoken]').val()
 			},
 			error: function() {
-				alert('Ошибка получения запроса');
+				//alert('Ошибка получения запроса');
 			},
 			success: function(data) {
 				var	error_list_login,
@@ -125,14 +171,22 @@ $(document).ready(function(){
 
 				if(data.error_password2 == false){
 					error_list_password2 = '';
-				}	
-
-		console.log(error_list_password1);					
-		console.log(error_list_password2);														
+				}														
 
 				if(data.error_login == false && data.error_email == false && data.error_password1 == false && data.error_password2 == false){
-					//$('#registrationForm').submit();
-					alert('submit');
+					
+
+					$('#mySmallModalLabel').text('Вы успешно зарегистрировались');
+					$('#infoModal').modal('show');
+
+					setTimeout(function(){
+						$('#infoModal').modal('hide');
+					}, 2000);					
+
+					$('#infoModal').on('hidden.bs.modal', function (){
+						$('#infoModal').modal('hide');
+						$('#registrationForm').submit();
+					})						
 				}			
 
 				$('#error_list_login').text(data.error_message_login);

@@ -99,8 +99,7 @@ def change_profile(request):
 		if form.is_valid():
 			form.save()
 
-			return HttpResponse({'message':'qwerty'})	
-			#return HttpResponse(json.dumps({'message':'qwerty'}))	
+			return HttpResponse()	
 		
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {
