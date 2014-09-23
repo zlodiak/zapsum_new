@@ -17,8 +17,6 @@ $(document).ready(function(){
 					alert('Ошибка получения запроса');
 				},
 				success: function(data) {
-					console.log(data.result);
-
 					if(data.result == true){
 						$('#mySmallModalLabel').text('Профиль удалён');
 						$('#infoModal').modal('show');
@@ -121,7 +119,7 @@ $(document).ready(function(){
 				}			
 
 				$('#error_list_login').text(data.error_message_login);
-				$('#error_list_login').text(data.error_message_active);
+				//$('#error_list_login').text(data.error_message_active);
 				$('#error_list_pass').text(data.error_message_pass);
 			}
 		});		

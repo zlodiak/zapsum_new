@@ -3,6 +3,7 @@ from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
 from django.contrib import auth
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 import json
 import re
 import os
@@ -76,6 +77,14 @@ def logout(request):
 	t = loader.get_template('page_logout.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	return HttpResponse(t.render(c)) 
+
+
+@login_required
+def changed_password(request):	
+	t = loader.get_template('page_changed_password.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 		
 
 
 def ajax_login_check(request):

@@ -4,9 +4,11 @@ from django.shortcuts import render, render_to_response
 from django.contrib.auth.decorators import login_required
 import os
 from django.conf import settings
+from django.contrib.auth.models import User
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
+from app_zapsum.forms import ChangePasswordForm
 
 def custom_proc(request):
 	return{
@@ -82,10 +84,22 @@ def change_avatar(request):
 
 @login_required
 def change_password(request):	
+	form = ChangePasswordForm(request=request)		
+
+	if request.method == 'POST':								
+		form = ChangePasswordForm(request.POST, request=request)
+		if form.is_valid():
+			username = User.objects.get(username__exact=request.user.username)
+			username.set_password(form.cleaned_data.get('password1'))
+			username.save()	
+			return HttpResponseRedirect('/accounts/changed_password/')											
+
 	t = loader.get_template('page_change_password.html')
-	c = RequestContext(request, {}, [custom_proc])	
+	c = RequestContext(request, {
+		'form': form,
+	}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 				
+	return HttpResponse(t.render(c)) 					
 
 
 @login_required

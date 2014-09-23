@@ -1,13 +1,13 @@
 {% if is_authenticated %}
 	<li>
-		<a href="/accounts/logout/">Выйти</a>
+		<a href="{% url 'logout' %}">Выйти</a>
 	</li>
 {% else %}
 	<li>
-		<a href="/accounts/authentication/">Войти</a>
+		<a href="{% url 'authentication' %}">Войти</a>
 	</li>
 	
 	<li>
-		<a href="/accounts/registration/">Зарегистрироваться</a>
+		<a href="{% url 'registration' %}">Зарегистрироваться</a>
 	</li>
 {% endif %}	
