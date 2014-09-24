@@ -5,10 +5,11 @@ from django.contrib.auth.decorators import login_required
 import os
 from django.conf import settings
 from django.contrib.auth.models import User
+from sorl.thumbnail import delete
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
-from app_zapsum.forms import ChangePasswordForm
+from app_zapsum.forms import ChangePasswordForm, ChangeAvatarForm
 
 def custom_proc(request):
 	return{
@@ -76,8 +77,23 @@ def add_records(request):
 
 @login_required
 def change_avatar(request):	
+	entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)	
+			
+	avatar = entry_user_profile.avatar					
+	form = ChangeAvatarForm(instance=entry_user_profile)		
+				
+	#if request.method == 'POST' and request.is_ajax():								
+	if request.method == 'POST':								
+		form = ChangeAvatarForm(request.POST, request.FILES, instance=entry_user_profile)
+		if form.is_valid():				
+			form.save()	
+			return HttpResponseRedirect('/change_avatar/')						
+        		
 	t = loader.get_template('page_change_avatar.html')
-	c = RequestContext(request, {}, [custom_proc])	
+	c = RequestContext(request, {
+		'form': form,
+		'avatar': avatar,
+	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
 

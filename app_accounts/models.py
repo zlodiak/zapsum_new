@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User, UserManager
+from sorl.thumbnail import ImageField
 
 
 class Gender(models.Model):		

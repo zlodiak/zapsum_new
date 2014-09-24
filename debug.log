@@ -1257,3 +1257,197 @@ Traceback (most recent call last):
 NameError: name 'login_required' is not defined
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'thumbnail'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 79, in change_avatar
+    t = loader.get_template('page_change_avatar.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'thumbnail', expected 'elif','else' или 'endif'
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 82, in change_avatar
+    form = ChangeAvatarForm(instance=entry_user_profile)
+NameError: name 'ChangeAvatarForm' is not defined
+Not Found: /media/cache/c7/a7/c7a7ce5c7a285c455f98981e07e3aa3d.jpg
+Not Found: /media/cache/c7/a7/c7a7ce5c7a285c455f98981e07e3aa3d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/x_2b8e0c5d.jpg
+Not Found: /media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg
+Not Found: /media/userprofile/avatar/w.jpg
+Not Found: /media/cache/4b/a5/4ba5b0a8f79249df3bb624fc89b12b10.jpg
+Not Found: /media/userprofile/avatar/w.jpg
+Not Found: /media/cache/4b/a5/4ba5b0a8f79249df3bb624fc89b12b10.jpg
+Not Found: /media/userprofile/avatar/w.jpg
+Not Found: /media/cache/4b/a5/4ba5b0a8f79249df3bb624fc89b12b10.jpg
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 358, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py", line 12, in <module>
+    if settings.DEBUG:
+NameError: name 'settings' is not defined
+Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 358, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 88, in get_response
+    response = middleware_method(request)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/middleware/common.py", line 71, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 596, in is_valid_path
+    resolve(path, urlconf)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 476, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py", line 12, in <module>
+    if settings.DEBUG:
+NameError: name 'settings' is not defined
+Not Found: /favicon.ico

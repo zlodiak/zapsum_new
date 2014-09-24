@@ -18,6 +18,8 @@
 
 		<link href="{% static 'app_accounts/css/styles.css' %}" rel="stylesheet">
 
+		<link href="{% static 'app_zapsum/css/styles.css' %}" rel="stylesheet">
+
 		<!--[if lt IE 9]><script src="zapsum/js/bootstrap/ie8-responsive-file-warning.js"></script><![endif]-->
 		<script src="{% static 'zapsum/js/bootstrap/ie-emulation-modes-warning.js' %}"></script>
 
@@ -148,11 +150,13 @@
 		<script src='{% static "zapsum/js/jquery/jquery.2.min.js" %}'></script>		-->	
 		<script src='{% static "zapsum/js/jquery/jquery-2.1.1.js" %}'></script>		
 	
-
 		<!-- Bootstrap 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
 		<script src="{% static 'zapsum/js/bootstrap/bootstrap.min.js' %}"></script>
 		<script src="{% static 'zapsum/js/bootstrap/ie10-viewport-bug-workaround.js' %}"></script>	
+
+		<!-- fancybox2 -->	
+		<script src='{% static "zapsum/js/fancybox2/jquery.fancybox2.js" %}'></script>		
 
 		<script type="text/javascript">
 			$.csrf_token = '{{ csrf_token }}';

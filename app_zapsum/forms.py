@@ -51,3 +51,11 @@ class ChangePasswordForm(forms.Form):
 			raise forms.ValidationError("Новые пароли не совпадают.")
 		else:							
 			return cleaned_data
+
+
+class ChangeAvatarForm(forms.ModelForm):
+	class Meta:
+		model = UserProfile
+		fields = (
+			'avatar', 
+		)			

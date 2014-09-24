@@ -1,0 +1,12 @@
+.avatar_form{
+
+}
+
+	.avatar_form input[name='avatar-clear']{
+		width: 20px;
+	}
+
+	.avatar_form a{
+		margin-right: 100%;
+	}
+

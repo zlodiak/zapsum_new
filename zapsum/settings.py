@@ -103,10 +103,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 TEMPLATE_DIRS = (
-        os.path.join(BASE_DIR, 'zapsum/templates/'),
-        os.path.join(BASE_DIR, 'app_zapsum/templates/'),
-        os.path.join(BASE_DIR, 'app_accounts/templates/'),
+    os.path.join(BASE_DIR, 'zapsum/templates/'),
+    os.path.join(BASE_DIR, 'app_zapsum/templates/'),
+    os.path.join(BASE_DIR, 'app_accounts/templates/'),
 )
+
+
 
 THUMBNAIL_DEBUG = False
 
