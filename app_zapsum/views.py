@@ -6,6 +6,7 @@ import os
 from django.conf import settings
 from django.contrib.auth.models import User
 from sorl.thumbnail import delete
+import json
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
@@ -82,12 +83,14 @@ def change_avatar(request):
 	avatar = entry_user_profile.avatar					
 	form = ChangeAvatarForm(instance=entry_user_profile)		
 				
-	#if request.method == 'POST' and request.is_ajax():								
-	if request.method == 'POST':								
+	if request.method == 'POST' and request.is_ajax():								
+	#if request.method == 'POST':								
 		form = ChangeAvatarForm(request.POST, request.FILES, instance=entry_user_profile)
 		if form.is_valid():				
 			form.save()	
-			return HttpResponseRedirect('/change_avatar/')						
+			#return HttpResponseRedirect('/change_avatar/')		
+			data = {'txt': 'Загрузили'}
+			return HttpResponse(json.dumps(data), content_type='application/json')			
         		
 	t = loader.get_template('page_change_avatar.html')
 	c = RequestContext(request, {
