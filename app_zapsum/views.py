@@ -87,7 +87,12 @@ def change_avatar(request):
 		form = ChangeAvatarForm(request.POST, request.FILES, instance=entry_user_profile)
 		if form.is_valid():				
 			form.save()	
-			data = {'txt': 'loaded!'}
+
+			filename = False
+			if request.FILES:
+				filename = True
+					
+			data = {'filename': filename}	
 			return HttpResponse(json.dumps(data), content_type='application/json')			
         		
 	t = loader.get_template('page_change_avatar.html')
@@ -130,7 +135,11 @@ def change_profile(request):
 		if form.is_valid():
 			form.save()
 
-			return HttpResponse()	
+			data = {
+				'result': True,	
+			}
+
+		return HttpResponse(json.dumps(data), content_type='application/json')	
 		
 	t = loader.get_template('page_change_profile.html')
 	c = RequestContext(request, {

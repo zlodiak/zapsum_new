@@ -1,48 +1,19 @@
 $(document).ready(function(){		
 	/*********************************************************************************************** ajax form image load */
-	var files;
+	var	form = $('#avatarForm');
 
-	$('#avatarForm input[type=file]').on('change', prepareUpload);
-	function prepareUpload(event){
-		files = event.target.files;
-	}
+	form.ajaxForm();
 
-	$('#avatarForm').on('submit', uploadFiles);
-	function uploadFiles(event){
-	  event.stopPropagation(); // Stop stuff happening
-	    event.preventDefault(); // Totally stop stuff happening
-	 
-	    // START A LOADING SPINNER HERE
-	 
-	    // Create a formdata object and add the files
-		var data = new FormData();
-		data.append("csrfmiddlewaretoken", $.csrf_token);
-		$.each(files, function(key, value)
-		{
-			data.append(key, value);
+	$('#avaSubmit').on('click', function(){
+		form.ajaxSubmit({
+		    url: form.action,
+		    type : form.method,
+		    data: $(form).serialize(),
+		    success: function (data) {
+				window.location.replace('/change_avatar/');
+		    }
 		});
-	    
-	    $.ajax({
-	        url: '/change_avatar/',
-	        type: 'POST',
-	        data: data,
-	        cache: false,
-	        dataType: 'json',
-	        processData: false, // Don't process the files
-	        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
-	        success: function(data, textStatus, jqXHR)
-	        {
-	        	console.log('success!!');
-	        	console.log(data.txt);
-	        },
-	        error: function(jqXHR, textStatus, errorThrown)
-	        {
-	        	// Handle errors here
-	        	console.log('ERRORS: ' + textStatus);
-	        	// STOP LOADING SPINNER
-	        }
-	    });
-	}	
+	});
 
 	/*********************************************************************************************** delete_profile */
 	$('#delete_profile').on('click', function(){
@@ -100,12 +71,14 @@ $(document).ready(function(){
 				//alert('Ошибка получения запроса');
 			},
 			success: function(data) {
-				$('#mySmallModalLabel').text('Изменения сохранены');
-				$('#infoModal').modal('show');
+				if(data.result){
+					$('#mySmallModalLabel').text('Изменения сохранены');
+					$('#infoModal').modal('show');
 
-				setTimeout(function(){
-					$('#infoModal').modal('hide');
-				}, 2000);
+					setTimeout(function(){
+						$('#infoModal').modal('hide');
+					}, 2000);
+				}
 			}
 		});		
 	});

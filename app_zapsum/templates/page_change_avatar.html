@@ -16,7 +16,7 @@
 			
 			{% if avatar %}
 				{% thumbnail avatar "83x83" crop="center" as im %}
-					<div><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></div>
+					<div><img id="ava_img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></div>
 				{% endthumbnail %}	
 			{% endif %}
 			
@@ -26,7 +26,7 @@
 		</div>				
 			
 		<div class="cell submit_outer">
-			<input class="btn btn-default" type="submit" value="Изменить" />
+			<input id="avaSubmit" class="btn btn-default" type="submit" value="Изменить" />
 		</div>
 	</form>
 {% endblock %}

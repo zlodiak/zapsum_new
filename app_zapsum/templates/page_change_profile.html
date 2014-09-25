@@ -42,20 +42,6 @@
 				{{ form.other }}
 				
 				{{ form.other.errors }}
-			</div>	
-
-			<div class="cell input_outer">
-				<label class="label">{{ form.avatar.label }}</label>
-
-				{% if avatar %}
-					{% thumbnail avatar "83x83" crop="center" as im %}
-						<img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
-					{% endthumbnail %}		
-				{% endif %}				
-				
-				{{ form.avatar }}
-				
-				{{ form.avatar.errors }}
 			</div>				
 			
 			<div class="cell submit_outer">
