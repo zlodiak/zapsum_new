@@ -83,13 +83,11 @@ def change_avatar(request):
 	avatar = entry_user_profile.avatar					
 	form = ChangeAvatarForm(instance=entry_user_profile)		
 				
-	if request.method == 'POST' and request.is_ajax():								
-	#if request.method == 'POST':								
+	if request.method == 'POST' and request.is_ajax():																
 		form = ChangeAvatarForm(request.POST, request.FILES, instance=entry_user_profile)
 		if form.is_valid():				
 			form.save()	
-			#return HttpResponseRedirect('/change_avatar/')		
-			data = {'txt': 'Загрузили'}
+			data = {'txt': 'loaded!'}
 			return HttpResponse(json.dumps(data), content_type='application/json')			
         		
 	t = loader.get_template('page_change_avatar.html')

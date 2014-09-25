@@ -16,6 +16,7 @@ $(document).ready(function(){
 	 
 	    // Create a formdata object and add the files
 		var data = new FormData();
+		data.append("csrfmiddlewaretoken", $.csrf_token);
 		$.each(files, function(key, value)
 		{
 			data.append(key, value);
@@ -33,16 +34,6 @@ $(document).ready(function(){
 	        {
 	        	console.log('success!!');
 	        	console.log(data.txt);
-	        	if(typeof data.error === 'undefined')
-	        	{
-	        		// Success so call function to process the form
-	        		submitForm(event, data);
-	        	}
-	        	else
-	        	{
-	        		// Handle errors here
-	        		console.log('ERRORS: ' + data.error);
-	        	}
 	        },
 	        error: function(jqXHR, textStatus, errorThrown)
 	        {
