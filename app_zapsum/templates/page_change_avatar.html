@@ -15,9 +15,11 @@
 			<label class="label hide">{{ form.avatar.label }}</label>
 			
 			{% if avatar %}
-				{% thumbnail avatar "83x83" crop="center" as im %}
-					<div><img id="ava_img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></div>
-				{% endthumbnail %}	
+				<a class="link_block fancybox" href="{{ avatar.url }}">
+					{% thumbnail avatar "83x83" crop="center" as im %}
+						<div><img id="ava_img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></div>
+					{% endthumbnail %}	
+				</a>
 			{% endif %}
 			
 			{{ form.avatar }}

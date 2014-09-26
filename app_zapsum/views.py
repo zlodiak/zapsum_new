@@ -10,7 +10,8 @@ import json
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
-from app_zapsum.forms import ChangePasswordForm, ChangeAvatarForm
+from app_zapsum.models import Diary
+from app_zapsum.forms import ChangePasswordForm, ChangeAvatarForm, addMessageForm
 
 def custom_proc(request):
 	return{
@@ -70,8 +71,32 @@ def my_records(request):
 
 @login_required
 def add_records(request):	
+	form = addMessageForm()
+	print('top')
+	print(request.method)
+
+	if request.method == "POST":
+		print('post')
+		form = addMessageForm(request.POST)
+		#print(form.cleaned_data.get('title'));
+
+		if form.is_valid():
+			print('valid')
+			Diary.objects.create(
+				user_id=request.user.pk, 
+				title=form.cleaned_data.get('title').strip(), 
+				date=form.cleaned_data.get('date'), 
+				text=form.cleaned_data.get('text').strip(), 
+			)
+
+			return HttpResponseRedirect('/my_records/')
+		else:
+			print('not valid')
+
 	t = loader.get_template('page_add_records.html')
-	c = RequestContext(request, {}, [custom_proc])	
+	c = RequestContext(request, {
+		'form': form,
+	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
 

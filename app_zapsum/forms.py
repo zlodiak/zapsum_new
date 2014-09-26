@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.forms import ModelForm
 
 from app_accounts.models import UserProfile
+from app_zapsum.models import Diary
 
 class ChangePasswordForm(forms.Form):
 	password_old = forms.CharField(
@@ -58,4 +59,44 @@ class ChangeAvatarForm(forms.ModelForm):
 		model = UserProfile
 		fields = (
 			'avatar', 
-		)			
+		)	
+
+
+class addMessageForm(forms.ModelForm):
+	date = forms.DateField(
+		widget=forms.TextInput(attrs={
+			'class':'datepicker',
+		}),
+		required=True,
+		label='Дата записи',
+	)			
+				
+	class Meta:
+		model = Diary
+		fields = (
+			'title', 
+			'date',  
+			'text',
+		)		
+
+	def clean_title(self):
+		title = self.cleaned_data['title']
+		q_letters = len(title)
+		if q_letters < 3:
+			raise forms.ValidationError("Заголовок не может быть короче 3 символов.")		
+
+		if q_letters > 100:
+			raise forms.ValidationError("Заголовок не может быть длиннее 100 символов.")					
+
+		return title	
+
+	def clean_text(self):
+		text = self.cleaned_data['text']
+		q_letters = len(text)
+		if q_letters < 3:
+			raise forms.ValidationError("Содержание не может быть короче 3 символов.")		
+
+		if q_letters > 100:
+			raise forms.ValidationError("Содержание не может быть длиннее 5000 символов.")					
+
+		return text								

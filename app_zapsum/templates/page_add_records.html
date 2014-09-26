@@ -7,5 +7,35 @@
 		<h2>Добавить запись</h2>
 	</div>
 
-	<p class="lead">Мои записи Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
+	<form action="{% url 'add_records' %}" method="POST">
+		{% csrf_token %}	
+		
+		<div class="cell input_outer">
+			<label class="label">{{ form.title.label }}</label>
+			
+			{{ form.title }}
+			
+			{{ form.title.errors }}
+		</div>		
+
+		<div class="cell input_outer">
+			<label class="label">{{ form.date.label }}</label>
+			
+			{{ form.date }}
+			
+			{{ form.date.errors }}
+		</div>						
+
+		<div class="cell input_outer">
+			<label class="label">{{ form.text.label }}</label>
+			
+			{{ form.text }}
+			
+			{{ form.text.errors }}
+		</div>	
+		
+		<div class="cell submit_outer">
+			<input class="btn btn-default" type="submit" value="Добавить запись" /> 
+		</div>
+	</form>
 {% endblock %}
