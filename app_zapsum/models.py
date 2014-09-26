@@ -40,5 +40,9 @@ class Diary(models.Model):
 	def delete_entry(self, delete_id):
 		return self.objects.get(id=delete_id).delete()	
 
+	@classmethod
+	def get_entry(self, id_record, user_id):
+		return self.objects.get(id=id_record, user_id=user_id)			
+
 
 

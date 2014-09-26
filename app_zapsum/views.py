@@ -2,11 +2,10 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404, HttpRespons
 from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
 from django.contrib.auth.decorators import login_required
-import os
-from django.conf import settings
 from django.contrib.auth.models import User
 from sorl.thumbnail import delete
 import json
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
@@ -63,8 +62,30 @@ def new_authors(request):
 
 @login_required
 def my_records(request):	
+	all_user_entries = Diary.get_all_user_entries(id=request.user.pk)
+
+	paginator = Paginator(all_user_entries, 3)
+	list_pages = paginator.page_range
+
+	page = request.GET.get('page')
+	try:
+		all_user_entries_paginated = paginator.page(page)
+	except PageNotAnInteger:
+		all_user_entries_paginated = paginator.page(1)
+	except EmptyPage:
+		all_user_entries_paginated = paginator.page(paginator.num_pages)	
+
+	last_page = list_pages[-1]	
+	first_page = list_pages[0]				
+
 	t = loader.get_template('page_my_records.html')
-	c = RequestContext(request, {}, [custom_proc])	
+	c = RequestContext(request, {
+		'all_user_entries': all_user_entries,
+		'list_pages': list_pages,
+		'all_user_entries_paginated': all_user_entries_paginated,
+		'last_page': last_page,
+		'first_page': first_page,		
+	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
 
@@ -72,16 +93,12 @@ def my_records(request):
 @login_required
 def add_records(request):	
 	form = addMessageForm()
-	print('top')
-	print(request.method)
 
 	if request.method == "POST":
 		print('post')
 		form = addMessageForm(request.POST)
-		#print(form.cleaned_data.get('title'));
 
 		if form.is_valid():
-			print('valid')
 			Diary.objects.create(
 				user_id=request.user.pk, 
 				title=form.cleaned_data.get('title').strip(), 
@@ -90,8 +107,6 @@ def add_records(request):
 			)
 
 			return HttpResponseRedirect('/my_records/')
-		else:
-			print('not valid')
 
 	t = loader.get_template('page_add_records.html')
 	c = RequestContext(request, {
@@ -99,6 +114,25 @@ def add_records(request):
 	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def edit_records(request, id_record):	
+	entry = Diary.get_entry(id_record=id_record, user_id=request.user.pk)
+	form = addMessageForm(instance=entry)
+
+	if request.method == 'POST':
+		form = addMessageForm(request.POST, request.FILES, instance=entry)
+		if form.is_valid():		
+			form.save()		
+			return HttpResponseRedirect('/my_records/')
+
+	t = loader.get_template('page_edit_records.html')
+	c = RequestContext(request, {
+		'form': form,
+	}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 		
 
 
 @login_required

@@ -95,8 +95,22 @@ input:-moz-placeholder {
 	display: block;
 }
 
-/*************************************************************************************************************** GLOBAL_blocks : foot_right */
+/*************************************************************************************************************** GLOBAL_blocks : my_records_list */
+.my_records_list{
 
+}
+
+	.my_records_list .article{
+
+	}
+
+		.my_records_list .article .date{
+			display: inline-block;
+		}
+
+		.my_records_list .article .h3{
+			display: inline-block;
+		}		
 
 
 /*************************************************************************************************************** PLUGINS : fancubox2 */						

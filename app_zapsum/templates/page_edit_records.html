@@ -1,0 +1,43 @@
+{% extends "page_base.html" %}
+
+{% block title %}Редактировать запись{% endblock %}
+
+{% block content %}
+	<section class="section edit_records">
+		<div class="page-header">
+			<h2>Редактировать запись</h2>
+		</div>
+
+		<form action="" method="POST">
+			{% csrf_token %}	
+			
+			<div class="cell input_outer">
+				<label class="label">{{ form.title.label }}</label>
+				
+				{{ form.title }}
+				
+				{{ form.title.errors }}
+			</div>		
+
+			<div class="cell input_outer">
+				<label class="label">{{ form.date.label }}</label>
+				
+				{{ form.date }}
+				
+				{{ form.date.errors }}
+			</div>						
+
+			<div class="cell input_outer">
+				<label class="label">{{ form.text.label }}</label>
+				
+				{{ form.text }}
+				
+				{{ form.text.errors }}
+			</div>	
+			
+			<div class="cell submit_outer">
+				<input class="btn btn-default" type="submit" value="Сохранить изменения" /> 
+			</div>
+		</form>
+	</section>
+{% endblock %}

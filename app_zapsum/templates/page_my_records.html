@@ -3,9 +3,51 @@
 {% block title %}Мои записи{% endblock %}
 
 {% block content %}
-	<div class="page-header">
-		<h2>Мои записи</h2>
-	</div>
+	<section class="section my_records_list">
+		<div class="page-header">
+			<h2>Мои записи</h2>
+		</div>
 
-	<p class="lead">Мои записи Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
+		{% for entry in all_user_entries_paginated %}
+			<article class="article">
+				<a class="article_link" href="/edit_records/{{ entry.id }}/">
+					{% if entry.date %}
+						<div class="date">{{ entry.date }}</div>
+					{% endif %}		
+
+					{% if entry.title %}
+						<h3 class="h3">{{ entry.title }}</h3>
+					{% endif %}		
+				</a>		
+			</article>
+		{% endfor %}
+
+		{% if last_page > 1 %}
+			<div class="pager_outer">	
+				<div class="pager">	
+					{% if all_user_entries_paginated.has_previous %}
+						<a class="a left2" href="?page={{ first_page }}"></a>
+
+						<a class="a left" href="?page={{ all_user_entries_paginated.previous_page_number }}"></a>
+					{% endif %}
+					
+					<span>
+						{% for page in list_pages  %}
+							{% if all_user_entries_paginated.number == page %}
+								<span class="a">{{ page }}</span>
+							{% else %}
+								<a class="a num" href="?page={{ page }}">{{ page }}</a>
+							{% endif %}
+						{% endfor %}		
+					</span>
+					
+					{% if all_user_entries_paginated.has_next %}
+						<a class="a right" href="?page={{ all_user_entries_paginated.next_page_number }}"></a>
+
+						<a class="a right2" href="?page={{ last_page }}"></a>
+					{% endif %}
+				</div>
+			</div>	
+		{% endif %}			
+	</section>
 {% endblock %}
