@@ -141,6 +141,10 @@ input:-moz-placeholder {
 				color: #000;
 			}
 
+			.my_records_list .article .cell_date .date_span.active_false{
+				color: #a9a9a9;
+			}			
+
 		.my_records_list .list_table .cell_title{
 			padding: 0 20px 0 0;
 		}
@@ -167,6 +171,10 @@ input:-moz-placeholder {
 				display: inline-block;
 			}
 
+			.my_records_list .article .h3.active_false{
+				color: #a9a9a9;
+			}
+
 			.my_records_list .article .h3{
 				display: inline-block;
 			}		
@@ -183,10 +191,14 @@ input:-moz-placeholder {
 				}
 
 				.my_records_list .article .glyphicon-pencil{
-					color: DarkGoldenrod;
+					color: #cc6633;
 				}	
 
-				.my_records_list .article .glyphicon-lock{
+				.my_records_list .article .glyphicon-minus-sign{
+					color: #a9a9a9;
+				}
+
+				.my_records_list .article .glyphicon-plus-sign{
 					color: green;
 				}						
 

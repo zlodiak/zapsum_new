@@ -25,7 +25,7 @@
 						<td class="cell_date">
 							<a class="article_link" href="/edit_records/{{ entry.id }}/">
 								{% if entry.date %}
-									<span class="date_span">{{ entry.date }}</span>
+									<span class="date_span {% if not entry.is_active %} active_false {% endif %}">{{ entry.date }}</span>
 								{% endif %}		
 							</a>	
 						</td>
@@ -33,14 +33,14 @@
 						<td class="cell_title">
 							<a class="article_link" href="/edit_records/{{ entry.id }}/">
 								{% if entry.title %}
-									<h3 class="h3">{{ entry.title }}</h3>
+									<h3 class="h3 {% if not entry.is_active %} active_false {% endif %}">{{ entry.title }}</h3>
 								{% endif %}		
 							</a>
 						</td>
 						
 						<td class="cell_actions">
 							<button type="button" class="btn btn-default btn-xs">
-								<span class="glyphicon glyphicon-lock deleteRecord">Доступ</span> 
+								<span class="glyphicon activeRecord {% if entry.is_active %} glyphicon-plus-sign {% else %} glyphicon-minus-sign {% endif %}" data-id-rec="{{ entry.id }}">Доступ</span> 
 							</button>				
 
 							<button type="button" class="btn btn-default btn-xs">

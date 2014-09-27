@@ -1,5 +1,41 @@
-$(document).ready(function(){		
-	/*********************************************************************************************** ajax form image load */
+$(document).ready(function(){	
+	/*********************************************************************************************** ajax activeRecord */
+	$('.activeRecord').on('click', function(){
+		$.ajax({
+			url: "/active_record/",
+			type: 'POST',
+			dataType:"json",
+			data: {
+				"id_rec": $(this).attr('data-id-rec'),
+				"csrfmiddlewaretoken": $.csrf_token
+			},
+			error: function() {
+				//alert('Ошибка получения запроса');
+			},
+			success: function(data) {
+				var	text;
+
+				console.log(data.result);
+
+				if(data.result == true){
+					text = 'Доступ открыт';
+				}
+				else{
+					text = 'Доступ закрыт';
+				}
+				
+				$('#mySmallModalLabel').text(text);
+				$('#infoModal').modal('show');
+
+				setTimeout(function(){
+					$('#infoModal').modal('hide');
+					window.location.replace('/my_records/');
+				}, 2000);				
+			}
+		});				
+	});
+
+	/*********************************************************************************************** ajax deleteRecord*/
 	$('.deleteRecord').on('click', function(){
 		$.ajax({
 			url: "/delete_record/",
@@ -10,7 +46,7 @@ $(document).ready(function(){
 				"csrfmiddlewaretoken": $.csrf_token
 			},
 			error: function() {
-				alert('Ошибка получения запроса');
+				//alert('Ошибка получения запроса');
 			},
 			success: function(data) {
 				if(data.result == true){
@@ -20,7 +56,6 @@ $(document).ready(function(){
 
 					setTimeout(function(){
 						$('#infoModal').modal('hide');
-						//location.href = '/';
 						window.location.replace('/my_records/');
 					}, 2000);
 				}

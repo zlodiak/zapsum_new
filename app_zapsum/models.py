@@ -42,6 +42,23 @@ class Diary(models.Model):
 		return self.objects.get(id=id_delete, user_id=user_id).delete()	
 
 	@classmethod
+	def active_entry(self, id_rec, user_id):
+		state = self.objects.get(id=id_rec, user_id=user_id)	
+
+		if state.is_active:
+			state.is_active = False
+			state.save()
+			result = False
+		else:
+			state.is_active = True
+			state.save()
+			result = True
+
+		print(result)
+
+		return result		
+
+	@classmethod
 	def get_entry(self, id_record, user_id):
 		return self.objects.get(id=id_record, user_id=user_id)			
 

@@ -181,7 +181,24 @@ def delete_record(request):
 	t = loader.get_template('my_records.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 		
+	return HttpResponse(t.render(c)) 	
+
+
+@login_required
+def active_record(request):				
+	if request.method == 'POST' and request.is_ajax():	
+		data = {'result': False}		
+		id_rec = request.POST.get('id_rec', '')	
+
+		result = Diary.active_entry(id_rec=id_rec, user_id=request.user.pk)													
+		data = {'result': result}	
+
+		return HttpResponse(json.dumps(data), content_type='application/json')			
+        		
+	t = loader.get_template('my_records.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 			
 
 
 @login_required
