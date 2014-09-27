@@ -1,5 +1,27 @@
 [
 	{
+		"model": "app_accounts.Gender",
+		"pk": 0,
+		"fields": {
+			"gender": "-----"
+		}
+	},
+	{
+		"model": "app_accounts.Gender",
+		"pk": 1,
+		"fields": {
+			"gender": "Ж"
+		}
+	},
+	{
+		"model": "app_accounts.Gender",
+		"pk": 2,
+		"fields": {
+			"gender": "М"
+		}
+	},
+
+	{
 		"model": "auth.User",
 		"pk": 2,
 		"fields": {
@@ -83,24 +105,198 @@
 	},	
 
 	{
-		"model": "app_accounts.Gender",
-		"pk": 0,
-		"fields": {
-			"gender": "-----"
-		}
-	},
-	{
-		"model": "app_accounts.Gender",
+		"model": "app_zapsum.Diary",
 		"pk": 1,
 		"fields": {
-			"gender": "Ж"
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
 		}
-	},
+	},	
 	{
-		"model": "app_accounts.Gender",
+		"model": "app_zapsum.Diary",
 		"pk": 2,
 		"fields": {
-			"gender": "М"
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
 		}
-	}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 3,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 4,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 5,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 6,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 7,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 8,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 9,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 10,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 11,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 12,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 13,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 14,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	},	
+	{
+		"model": "app_zapsum.Diary",
+		"pk": 15,
+		"fields": {
+			"user_id": 2,
+			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"date": "2014-09-03",
+			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"last_edit_date": "2014-09-03",
+			"is_active": 1,
+			"is_delete": 0
+		}
+	}											
 ]

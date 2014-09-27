@@ -96,7 +96,7 @@ class addMessageForm(forms.ModelForm):
 		if q_letters < 3:
 			raise forms.ValidationError("Содержание не может быть короче 3 символов.")		
 
-		if q_letters > 100:
+		if q_letters > 5000:
 			raise forms.ValidationError("Содержание не может быть длиннее 5000 символов.")					
 
 		return text								

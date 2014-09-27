@@ -27,6 +27,7 @@ class Diary(models.Model):
 		default=datetime.now(),
 	)	
 	is_active = models.BooleanField(default=True)					
+	is_delete = models.BooleanField(default=False)					
 	
 	@classmethod
 	def get_all_entries(self):
@@ -37,8 +38,8 @@ class Diary(models.Model):
 		return self.objects.filter(user_id=id)		
 		
 	@classmethod
-	def delete_entry(self, delete_id):
-		return self.objects.get(id=delete_id).delete()	
+	def delete_entry(self, id_delete, user_id):
+		return self.objects.get(id=id_delete, user_id=user_id).delete()	
 
 	@classmethod
 	def get_entry(self, id_record, user_id):

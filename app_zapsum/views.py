@@ -164,6 +164,27 @@ def change_avatar(request):
 
 
 @login_required
+def delete_record(request):				
+	if request.method == 'POST' and request.is_ajax():	
+		data = {'result': False}		
+		id_delete = request.POST.get('id_delete', '')	
+
+		try:
+			Diary.delete_entry(id_delete=id_delete, user_id=request.user.pk)	
+		except:
+			pass
+		else:												
+			data = {'result': True}	
+
+		return HttpResponse(json.dumps(data), content_type='application/json')			
+        		
+	t = loader.get_template('my_records.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 		
+
+
+@login_required
 def change_password(request):	
 	form = ChangePasswordForm(request=request)		
 

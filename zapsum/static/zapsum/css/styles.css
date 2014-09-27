@@ -20,7 +20,14 @@ TABLE OF CONTENTS:
 */
 
 /*************************************************************************************************************** FONTS */
-
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), 
+  url('../fonts/glyphicons-halflings-regular.woff') format('woff'), 
+  url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+  url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
 
 /*************************************************************************************************************** COMMON_STYLES */
 html, body, div, h1, h2, h3, h4, h5, h6, a, a img, p, ul, ol, li, span, fieldset , form, dl, dd, dt, table, tr, td, img{ 
@@ -95,22 +102,98 @@ input:-moz-placeholder {
 	display: block;
 }
 
+
+/*************************************************************************************************************** GLOBAL_blocks : pager */
+.pager{
+	padding-top: 40px;
+}
+
+	.pager .btn{
+		padding: 0;
+	}
+
+	.pager .a{
+		padding: 3px 9px 8px;
+	}
+
 /*************************************************************************************************************** GLOBAL_blocks : my_records_list */
 .my_records_list{
 
 }
 
-	.my_records_list .article{
-
+	.my_records_list .list_table{
+		width: 100%;
 	}
-
-		.my_records_list .article .date{
-			display: inline-block;
+		.my_records_list .list_table thead{
+			font: bold 20px arial, sans-serif;
 		}
 
-		.my_records_list .article .h3{
-			display: inline-block;
-		}		
+			.my_records_list .list_table thead td{
+				padding-bottom: 20px;
+			}
+
+		.my_records_list .list_table .cell_date{
+			padding: 0 20px 0 0;
+		}
+
+			.my_records_list .list_table .cell_date .date_span{
+				font: 13px arial, sans-serif;
+				color: #000;
+			}
+
+		.my_records_list .list_table .cell_title{
+			padding: 0 20px 0 0;
+		}
+
+			.my_records_list .list_table .cell_title .h3{
+				font: 16px arial, sans-serif;
+				color: #000;
+			}
+
+		.my_records_list .list_table .cell_actions{
+			width: 40%;
+		}	
+
+			.my_records_list .list_table .cell_actions button{
+				margin: 0 10px 10px 0;
+			}			
+
+
+		.my_records_list .article{
+
+		}
+
+			.my_records_list .article .date{
+				display: inline-block;
+			}
+
+			.my_records_list .article .h3{
+				display: inline-block;
+			}		
+
+			.my_records_list .article .glyphicon{
+				padding: 5px 5px 10px;
+				display: inline-block;
+
+				color: #000;
+			}
+
+				.my_records_list .article .glyphicon-remove{
+					color: red;
+				}
+
+				.my_records_list .article .glyphicon-pencil{
+					color: DarkGoldenrod;
+				}	
+
+				.my_records_list .article .glyphicon-lock{
+					color: green;
+				}						
+
+			.my_records_list .article .glyphicon:before{
+				margin: 5px 5px 5px 0;
+			}
+
 
 
 /*************************************************************************************************************** PLUGINS : fancubox2 */						

@@ -8,45 +8,93 @@
 			<h2>Мои записи</h2>
 		</div>
 
-		{% for entry in all_user_entries_paginated %}
-			<article class="article">
-				<a class="article_link" href="/edit_records/{{ entry.id }}/">
-					{% if entry.date %}
-						<div class="date">{{ entry.date }}</div>
-					{% endif %}		
+		<table class="list_table">
+			<thead>
+				<tr>
+					<td>Дата</td>
+					
+					<td>Заголовок</td>
+					
+					<td>Действия</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for entry in all_user_entries_paginated %}
+					<tr class="article">
+						<td class="cell_date">
+							<a class="article_link" href="/edit_records/{{ entry.id }}/">
+								{% if entry.date %}
+									<span class="date_span">{{ entry.date }}</span>
+								{% endif %}		
+							</a>	
+						</td>
+							
+						<td class="cell_title">
+							<a class="article_link" href="/edit_records/{{ entry.id }}/">
+								{% if entry.title %}
+									<h3 class="h3">{{ entry.title }}</h3>
+								{% endif %}		
+							</a>
+						</td>
+						
+						<td class="cell_actions">
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-lock deleteRecord">Доступ</span> 
+							</button>				
 
-					{% if entry.title %}
-						<h3 class="h3">{{ entry.title }}</h3>
-					{% endif %}		
-				</a>		
-			</article>
-		{% endfor %}
+							<button type="button" class="btn btn-default btn-xs">
+								<a class="glyphicon glyphicon-pencil editRecord" href="/edit_records/{{ entry.id }}/">Редактировать</a> 
+							</button>
+
+							<button type="button" class="btn btn-default btn-xs">
+								<span class="glyphicon glyphicon-remove deleteRecord" data-id-delete="{{ entry.id }}">Удалить</span> 
+							</button>
+						</td>															
+					</tr>
+				{% endfor %}
+			</tbody>			
+		</table>
 
 		{% if last_page > 1 %}
 			<div class="pager_outer">	
 				<div class="pager">	
 					{% if all_user_entries_paginated.has_previous %}
-						<a class="a left2" href="?page={{ first_page }}"></a>
+						<button type="button" class="btn btn-default">
+							<a class="a left2 glyphicon glyphicon-fast-backward" href="?page={{ first_page }}"></a>
+						</button>								
 
-						<a class="a left" href="?page={{ all_user_entries_paginated.previous_page_number }}"></a>
+						<button type="button" class="btn btn-default">
+							<a class="a left glyphicon glyphicon-backward" href="?page={{ all_user_entries_paginated.previous_page_number }}"></a>
+						</button>								
 					{% endif %}
 					
 					<span>
 						{% for page in list_pages  %}
-							{% if all_user_entries_paginated.number == page %}
-								<span class="a">{{ page }}</span>
-							{% else %}
-								<a class="a num" href="?page={{ page }}">{{ page }}</a>
-							{% endif %}
+							<div class="btn-group">
+								{% if all_user_entries_paginated.number == page %}
+									<button type="button" class="btn btn-default">
+										<span class="a glyphicon">{{ page }}</span>
+									</button>
+								{% else %}
+									<button type="button" class="btn btn-default">
+										<a class="a num glyphicon" href="?page={{ page }}">{{ page }}</a>
+									</button>							
+								{% endif %}
+							</div>
 						{% endfor %}		
 					</span>
 					
 					{% if all_user_entries_paginated.has_next %}
-						<a class="a right" href="?page={{ all_user_entries_paginated.next_page_number }}"></a>
+						<button type="button" class="btn btn-default">
+							<a class="a right glyphicon glyphicon-forward" href="?page={{ all_user_entries_paginated.next_page_number }}"></a>
+						</button>		
 
-						<a class="a right2" href="?page={{ last_page }}"></a>
+						<button type="button" class="btn btn-default">
+							<a class="a right2 glyphicon glyphicon-fast-forward" href="?page={{ last_page }}"></a>
+						</button>														
 					{% endif %}
-				</div>
+				</div>				
 			</div>	
 		{% endif %}			
 	</section>

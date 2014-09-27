@@ -1,5 +1,34 @@
 $(document).ready(function(){		
 	/*********************************************************************************************** ajax form image load */
+	$('.deleteRecord').on('click', function(){
+		$.ajax({
+			url: "/delete_record/",
+			type: 'POST',
+			dataType:"json",
+			data: {
+				"id_delete": $(this).attr('data-id-delete'),
+				"csrfmiddlewaretoken": $.csrf_token
+			},
+			error: function() {
+				alert('Ошибка получения запроса');
+			},
+			success: function(data) {
+				if(data.result == true){
+					
+					$('#mySmallModalLabel').text('Запись удалена');
+					$('#infoModal').modal('show');
+
+					setTimeout(function(){
+						$('#infoModal').modal('hide');
+						//location.href = '/';
+						window.location.replace('/my_records/');
+					}, 2000);
+				}
+			}
+		});				
+	});
+
+	/*********************************************************************************************** ajax form image load */
 	var	form = $('#avatarForm');
 
 	form.ajaxForm();
@@ -30,7 +59,7 @@ $(document).ready(function(){
 					"csrfmiddlewaretoken": $.csrf_token
 				},
 				error: function() {
-					alert('Ошибка получения запроса');
+					//alert('Ошибка получения запроса');
 				},
 				success: function(data) {
 					if(data.result == true){

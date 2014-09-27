@@ -2237,3 +2237,5 @@ Traceback (most recent call last):
   File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 126, in edit_records
     if form.is_valid():
 AttributeError: 'Diary' object has no attribute 'is_valid'
+Not Found: /accounts/login/
+Not Found: /accounts/login/
