@@ -125,52 +125,52 @@ input:-moz-placeholder {
 		padding: 3px 9px 8px;
 	}
 
-/*************************************************************************************************************** GLOBAL_blocks : my_records_list */
-.my_records_list{
-
-}
-
-	.my_records_list .list_table{
+/*************************************************************************************************************** GLOBAL_blocks : list_table */
+	.list_table{
 		width: 100%;
 	}
-		.my_records_list .list_table thead{
+		.list_table thead{
 			font: bold 20px arial, sans-serif;
 		}
 
-			.my_records_list .list_table thead td{
+			.list_table thead td{
 				padding-bottom: 20px;
 			}
 
-		.my_records_list .list_table .cell_date{
+		.list_table .cell_date{
 			padding: 0 20px 0 0;
 		}
 
-			.my_records_list .list_table .cell_date .date_span{
+			.list_table .cell_date .date_span{
 				font: 13px arial, sans-serif;
 				color: #000;
 			}
 
-			.my_records_list .article .cell_date .date_span.active_false{
+			.article .cell_date .date_span.active_false{
 				color: #a9a9a9;
 			}			
 
-		.my_records_list .list_table .cell_title{
+		.list_table .cell_title{
 			padding: 0 20px 0 0;
 		}
 
-			.my_records_list .list_table .cell_title .h3{
+			.list_table .cell_title .h3{
 				font: 16px arial, sans-serif;
 				color: #000;
 			}
 
-		.my_records_list .list_table .cell_actions{
+		.list_table .cell_actions{
 			width: 40%;
 		}	
 
-			.my_records_list .list_table .cell_actions button{
+			.list_table .cell_actions button{
 				margin: 0 10px 10px 0;
-			}			
+			}	
 
+/*************************************************************************************************************** GLOBAL_blocks : my_records_list */
+.my_records_list{
+
+}
 
 		.my_records_list .article{
 

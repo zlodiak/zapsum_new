@@ -43,4 +43,8 @@ class UserProfile(User):
 	@classmethod
 	def get_search_authors_entries(self, author):
 		#return self.objects.filter(username__icontains=author)		
-		return self.objects.filter(username__icontains=author)		
+		return self.objects.filter(username__icontains=author)	
+
+	@classmethod
+	def get_new_authors_entries(self):
+		return self.objects.filter(is_active=1, is_superuser=0).order_by('-date_joined')			

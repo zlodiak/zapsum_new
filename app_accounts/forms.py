@@ -6,6 +6,8 @@ import re
 
 from app_accounts.models import UserProfile, Gender
 
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
 
 class RegistrationForm(UserCreationForm):	
 	username = forms.CharField(
@@ -98,9 +100,12 @@ class ProfileForm(forms.ModelForm):
 
 	other = forms.CharField(
 		label='Доп.информация',
-		widget=forms.Textarea,		
+		widget=SummernoteWidget({
+		    'width': '670px',
+		    #'height': '200px',	    
+		}),	
 		required=False,	
-	)	
+	)				
 
 	class Meta:
 		model = UserProfile

@@ -63,8 +63,12 @@ def last_records(request):
 
 
 def new_authors(request):	
+	new_authors = UserProfile.get_new_authors_entries()
+
 	t = loader.get_template('page_new_authors.html')
-	c = RequestContext(request, {}, [custom_proc])	
+	c = RequestContext(request, {
+		'new_authors': new_authors,
+	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 			
 

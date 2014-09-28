@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'sorl.thumbnail',
+    'django_summernote', 
 
     'app_zapsum',
     'app_accounts',
@@ -119,5 +120,6 @@ LOGGING = {
         },
     },
 }
+
 
 

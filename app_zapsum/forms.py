@@ -5,6 +5,8 @@ from django.forms import ModelForm
 from app_accounts.models import UserProfile
 from app_zapsum.models import Diary
 
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
 class ChangePasswordForm(forms.Form):
 	password_old = forms.CharField(
 		max_length=30, 
@@ -69,6 +71,17 @@ class addMessageForm(forms.ModelForm):
 		}),
 		required=True,
 		label='Дата записи',
+	)		
+
+	text = forms.CharField(
+		label='Содержание записи',
+		help_text='',
+		max_length=5000, 
+		required=True,
+		widget=SummernoteWidget({
+		    'width': '670px',
+		    #'height': '200px',	    
+		}),
 	)			
 				
 	class Meta:
