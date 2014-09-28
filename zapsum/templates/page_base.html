@@ -18,7 +18,7 @@
 
 		<link href="{% static 'app_accounts/css/styles.css' %}" rel="stylesheet">
 
-		<link href="{% static 'app_zapsum/css/styles.css' %}" rel="stylesheet">
+		<link href="{% static 'app_zapsum/css/styles.css' %}" rel="stylesheet">	
 	</head>
 
 	<body>
@@ -88,7 +88,9 @@
 
 		<!-- Begin page content -->
 		<div class="container">
-			{% block content %}{% endblock %}
+			<div class="container">
+				{% block content %}{% endblock %}
+			</div>
 		</div>
 
 		<div class="footer">

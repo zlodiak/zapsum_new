@@ -1,4 +1,29 @@
 $(document).ready(function(){	
+	/*********************************************************************************************** ajax search author */
+	$('.formSearchAuthorSubmit').on('click', function(event){
+		event.preventDefault();
+
+		$.ajax({
+			url: "/search_author/",
+			type: 'POST',
+			dataType:"json",
+			data: {
+				"author": $('#formSearchAuthorWord').val(),
+				"csrfmiddlewaretoken": $.csrf_token
+			},
+			success: function(data) {	
+				console.log(data.result)			
+				$('#mySmallModalLabel').text('text');
+				$('#infoModal').modal('show');
+
+				setTimeout(function(){
+					$('#infoModal').modal('hide');
+					//window.location.replace('/search_author/');
+				}, 2000);				
+			}
+		});				
+	});
+
 	/*********************************************************************************************** ajax activeRecord */
 	$('.activeRecord').on('click', function(){
 		$.ajax({

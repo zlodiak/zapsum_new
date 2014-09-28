@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from sorl.thumbnail import delete
 import json
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.core import serializers
 
 from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile
@@ -26,6 +27,14 @@ def rules(request):
 
 
 def search_author(request):	
+	if request.method == "POST":
+		result = False
+		author = request.POST.get('author', '')	
+		authors_list = UserProfile.get_search_authors_entries(author)
+
+		result = serializers.serialize("json", authors_list)
+		return HttpResponse(json.dumps(result), content_type='application/json')		
+
 	t = loader.get_template('page_search_author.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
@@ -95,7 +104,6 @@ def add_records(request):
 	form = addMessageForm()
 
 	if request.method == "POST":
-		print('post')
 		form = addMessageForm(request.POST)
 
 		if form.is_valid():

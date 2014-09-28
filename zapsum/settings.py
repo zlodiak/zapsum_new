@@ -59,7 +59,6 @@ WSGI_APPLICATION = 'zapsum.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -69,36 +68,24 @@ DATABASES = {
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
-
 LANGUAGE_CODE = 'ru-ru'
-
 TIME_ZONE = 'Europe/Moscow'
-
 USE_I18N = True
-
 USE_L10N = True
-
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
-
 STATIC_URL = '/static/'
-
-
 STATICFILES_DIRS = (
     (os.path.join(BASE_DIR, "zapsum/static/")),
 )
-
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
-
 MEDIA_URL = '/media/'
-
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
@@ -112,8 +99,8 @@ TEMPLATE_DIRS = (
 
 THUMBNAIL_DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1:8000']
 
+ALLOWED_HOSTS = ['127.0.0.1:8000']
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -132,3 +119,5 @@ LOGGING = {
         },
     },
 }
+
+

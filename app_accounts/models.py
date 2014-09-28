@@ -39,3 +39,8 @@ class UserProfile(User):
 	)
 	
 	objects = UserManager()
+
+	@classmethod
+	def get_search_authors_entries(self, author):
+		#return self.objects.filter(username__icontains=author)		
+		return self.objects.filter(username__icontains=author)		

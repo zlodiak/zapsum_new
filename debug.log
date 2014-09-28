@@ -2251,3 +2251,87 @@ Traceback (most recent call last):
   File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 49, in active_entry
     result = state(is_active=False).save()
 TypeError: 'Diary' object is not callable
+Not Found: /search_author/search_author
+Forbidden (CSRF token missing or incorrect.): /search_author/
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 31, in search_author
+    authors_list = UserProfile.get_search_authors_entries()
+TypeError: get_search_authors_entries() missing 1 required positional argument: 'author'
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 36, in search_author
+    return HttpResponse(json.dumps(data), content_type='application/json')
+  File "/usr/lib/python3.4/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: [] is not JSON serializable
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 36, in search_author
+    data = serializers.serialize("result", authors_list)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/serializers/__init__.py", line 121, in serialize
+    s = get_serializer(format)()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/serializers/__init__.py", line 96, in get_serializer
+    raise SerializerDoesNotExist(format)
+django.core.serializers.base.SerializerDoesNotExist: 'result'
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 32, in search_author
+    print(data)
+NameError: name 'data' is not defined
+Internal Server Error: /add_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'wysiwyg_editor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 119, in add_records
+    t = loader.get_template('page_add_records.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'wysiwyg_editor', expected 'endblock'
