@@ -30,10 +30,10 @@ def search_author(request):
 	if request.method == "POST":
 		result = False
 		author = request.POST.get('author', '')	
-		authors_list = UserProfile.get_search_authors_entries(author)
+		authors_list = User.objects.filter(username__icontains=author, is_active=1, is_superuser=0).values_list('id', 'username')	
+		authors_list_obj = [{k: v for k, v in authors_list}]
 
-		result = serializers.serialize("json", authors_list)
-		return HttpResponse(json.dumps(result), content_type='application/json')		
+		return HttpResponse(json.dumps(authors_list_obj), content_type='application/json')		
 
 	t = loader.get_template('page_search_author.html')
 	c = RequestContext(request, {}, [custom_proc])	
@@ -63,14 +63,31 @@ def last_records(request):
 
 
 def new_authors(request):	
-	new_authors = UserProfile.get_new_authors_entries()
+	count_new_authors = UserProfile.get_count_authors_entries()
 
-	t = loader.get_template('page_new_authors.html')
-	c = RequestContext(request, {
-		'new_authors': new_authors,
-	}, [custom_proc])	
-	
-	return HttpResponse(t.render(c)) 			
+	if request.method == 'POST' and request.is_ajax():	
+		page_new_authors = request.POST.get('page_new_authors', '')	
+		count_new_authors = request.POST.get('count_new_authors', '')	
+		print('posst')
+		print(page_new_authors)
+		print(count_new_authors)
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
+
+		data = {
+			'result': True,		
+		}	
+
+		return HttpResponse(json.dumps(data), content_type='application/json')		
+	else:
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
+
+		t = loader.get_template('page_new_authors.html')
+		c = RequestContext(request, {
+			'new_authors': new_authors,
+			'count_new_authors': count_new_authors,
+		}, [custom_proc])	
+		
+		return HttpResponse(t.render(c)) 			
 
 
 @login_required

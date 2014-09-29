@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime  
 
+
 class Diary(models.Model):
 	user_id = models.IntegerField(
 		'',

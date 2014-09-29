@@ -41,10 +41,10 @@ class UserProfile(User):
 	objects = UserManager()
 
 	@classmethod
-	def get_search_authors_entries(self, author):
-		#return self.objects.filter(username__icontains=author)		
-		return self.objects.filter(username__icontains=author)	
+	def get_new_authors_entries(self, cut_begin=0, cut_end=2):
+		return self.objects.filter(is_active=1, is_superuser=0).order_by('-date_joined')[cut_begin:cut_end]	
 
 	@classmethod
-	def get_new_authors_entries(self):
-		return self.objects.filter(is_active=1, is_superuser=0).order_by('-date_joined')			
+	def get_count_authors_entries(self):
+		return self.objects.filter(is_active=1, is_superuser=0).order_by('-date_joined').count()				
+	

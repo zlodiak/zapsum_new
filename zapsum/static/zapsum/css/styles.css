@@ -103,6 +103,30 @@ input:-moz-placeholder {
 }
 
 
+/*************************************************************************************************************** GLOBAL_blocks : more_button */
+.more_button_outer{
+	text-align: center;
+}
+
+	.more_button_outer .more_button{
+		display: inline-block;
+		padding-left: 100px;
+		padding-right: 100px;
+
+		color: #cc6633;
+	}
+
+
+/*************************************************************************************************************** GLOBAL_blocks : new_authors */
+.new_authors{
+
+}
+
+	.new_authors .more_button{
+
+	}
+
+
 /*************************************************************************************************************** GLOBAL_blocks : search_author */
 .search_author{
 
@@ -114,7 +138,7 @@ input:-moz-placeholder {
 
 /*************************************************************************************************************** GLOBAL_blocks : pager */
 .pager{
-	padding-top: 40px;
+
 }
 
 	.pager .btn{
@@ -128,6 +152,7 @@ input:-moz-placeholder {
 /*************************************************************************************************************** GLOBAL_blocks : list_table */
 	.list_table{
 		width: 100%;
+		margin-bottom: 40px;
 	}
 		.list_table thead{
 			font: bold 20px arial, sans-serif;
