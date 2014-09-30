@@ -2847,3 +2847,236 @@ Traceback (most recent call last):
     print(authors_listauthors_list_obj)
 NameError: name 'authors_listauthors_list_obj' is not defined
 Not Found: /favicon.ico
+Not Found: /accounts/login/
+Not Found: /favicon.ico
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 371, in get_field_by_name
+    return self._name_map[name]
+KeyError: 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1271, in names_to_path
+    field, model, direct, m2m = opts.get_field_by_name(name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 377, in get_field_by_name
+    % (self.object_name, name))
+django.db.models.fields.FieldDoesNotExist: UserProfile has no field named 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1540, in add_fields
+    allow_explicit_fk=True, outer_if_first=True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1363, in setup_joins
+    names, opts, allow_many, allow_explicit_fk)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1283, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 33, in search_author
+    authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_id', 'nickname')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 538, in values_list
+    _fields=fields)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 852, in _clone
+    c._setup_query()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 995, in _setup_query
+    self.query.add_fields(self.field_names, True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1560, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 371, in get_field_by_name
+    return self._name_map[name]
+KeyError: 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1271, in names_to_path
+    field, model, direct, m2m = opts.get_field_by_name(name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 377, in get_field_by_name
+    % (self.object_name, name))
+django.db.models.fields.FieldDoesNotExist: UserProfile has no field named 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1540, in add_fields
+    allow_explicit_fk=True, outer_if_first=True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1363, in setup_joins
+    names, opts, allow_many, allow_explicit_fk)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1283, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 33, in search_author
+    authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_id', 'nickname')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 538, in values_list
+    _fields=fields)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 852, in _clone
+    c._setup_query()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 995, in _setup_query
+    self.query.add_fields(self.field_names, True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1560, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 371, in get_field_by_name
+    return self._name_map[name]
+KeyError: 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1271, in names_to_path
+    field, model, direct, m2m = opts.get_field_by_name(name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 377, in get_field_by_name
+    % (self.object_name, name))
+django.db.models.fields.FieldDoesNotExist: UserProfile has no field named 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1540, in add_fields
+    allow_explicit_fk=True, outer_if_first=True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1363, in setup_joins
+    names, opts, allow_many, allow_explicit_fk)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1283, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 33, in search_author
+    authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_id', 'nickname')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 538, in values_list
+    _fields=fields)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 852, in _clone
+    c._setup_query()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 995, in _setup_query
+    self.query.add_fields(self.field_names, True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1560, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 371, in get_field_by_name
+    return self._name_map[name]
+KeyError: 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1271, in names_to_path
+    field, model, direct, m2m = opts.get_field_by_name(name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/options.py", line 377, in get_field_by_name
+    % (self.object_name, name))
+django.db.models.fields.FieldDoesNotExist: UserProfile has no field named 'user_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1540, in add_fields
+    allow_explicit_fk=True, outer_if_first=True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1363, in setup_joins
+    names, opts, allow_many, allow_explicit_fk)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1283, in names_to_path
+    "Choices are: %s" % (name, ", ".join(available)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 33, in search_author
+    authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_id', 'nickname')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 538, in values_list
+    _fields=fields)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 852, in _clone
+    c._setup_query()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 995, in _setup_query
+    self.query.add_fields(self.field_names, True)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 1560, in add_fields
+    "Choices are: %s" % (name, ", ".join(names)))
+django.core.exceptions.FieldError: Cannot resolve keyword 'user_id' into field. Choices are: avatar, date_joined, email, first_name, gender, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, nickname, other, password, phone, skype, user_permissions, user_ptr, username
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    author = unicode(request.POST.get('author')).encode("utf-8")
+NameError: name 'unicode' is not defined

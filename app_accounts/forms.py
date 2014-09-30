@@ -11,7 +11,7 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class RegistrationForm(UserCreationForm):	
 	username = forms.CharField(
-		label='Отображаемое имя',
+		label='Логин',
 		help_text='',
 		max_length=50, 
 		required=True,
@@ -40,7 +40,8 @@ class RegistrationForm(UserCreationForm):
 	class Meta:
 		model = UserProfile
 		fields = (  
-			'username',    
+			'username',  
+			'nickname',    
 			'email',    
 			'password1', 
 			'password2',
@@ -69,7 +70,7 @@ class RegistrationForm(UserCreationForm):
 
 class AuthenticationCustomForm(AuthenticationForm):
 	username = forms.CharField(
-		label='Отображаемое имя',
+		label='Логин',
 		widget=forms.TextInput(),		
 	)
 
@@ -98,6 +99,12 @@ class ProfileForm(forms.ModelForm):
 		required=False,		
 	)
 
+	nickname = forms.CharField(
+		label='Отображаемое имя',
+		widget=forms.TextInput(),	
+		required=False,		
+	)	
+
 	other = forms.CharField(
 		label='Доп.информация',
 		widget=SummernoteWidget({
@@ -113,6 +120,7 @@ class ProfileForm(forms.ModelForm):
 			'gender',    
 			'phone',    
 			'skype',    
+			'nickname',    
 			'other', 
 		)
 

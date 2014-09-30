@@ -201,6 +201,7 @@ $(document).ready(function(){
 			phone = $('#id_phone').val(),
 			skype = $('#id_skype').val(),
 			other = $('#id_other').val();
+			nickname = $('#id_nickname').val();
 
 		event.preventDefault();
 
@@ -212,6 +213,7 @@ $(document).ready(function(){
 				"gender": gender,
 				"phone": phone,
 				"skype": skype,
+				"nickname": nickname,
 				"other": other,
 				"csrfmiddlewaretoken": $('#profile_form input[name=csrfmiddlewaretoken]').val()
 			},
@@ -232,7 +234,7 @@ $(document).ready(function(){
 	});
 
 	/*********************************************************************************************** form login check */
-	$("#login_submit").click(function(event){
+/*	$("#login_submit").click(function(event){
 		var	username = $('#id_username').val(),
 			password = $('#id_password').val();
 
@@ -290,10 +292,10 @@ $(document).ready(function(){
 			}
 		});		
 	});
-
+*/
 
 	/*********************************************************************************************** form registration check */
-	$("#registration_submit").click(function(event){
+/*	$("#registration_submit").click(function(event){
 		var	username = $('#id_username').val(),
 			email = $('#id_email').val(),
 			password1 = $('#id_password1').val(),
@@ -359,7 +361,7 @@ $(document).ready(function(){
 				$('#error_list_password2').text(data.error_message_password2);
 			}
 		});		
-	});	
+	});	*/
 	
 
 	/*********************************************************************************************** active menu punkt */

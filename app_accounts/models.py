@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 from django.db import models
 from django.contrib.auth.models import User, UserManager
 from sorl.thumbnail import ImageField
@@ -20,6 +22,11 @@ class UserProfile(User):
 		blank=True,
 		null=True,
 	)
+	nickname = models.CharField(
+		'Отображаемое имя',
+		max_length=50, 
+		blank=False,
+	)	
 	phone = models.CharField(
 		max_length=50, 
 		blank=False,

@@ -1,3 +1,5 @@
+# -*- coding:utf-8 -*-
+
 from django.http import HttpResponse, HttpResponseRedirect, Http404, HttpResponseForbidden
 from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
@@ -29,8 +31,9 @@ def rules(request):
 def search_author(request):	
 	if request.method == "POST":
 		result = False
-		author = request.POST.get('author', '')	
-		authors_list = User.objects.filter(username__icontains=author, is_active=1, is_superuser=0).values_list('id', 'username')	
+		#author = request.POST.get('author', '')	
+		author = request.POST.get('author').encode("utf-8")
+		authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_ptr_id', 'nickname')	
 		authors_list_obj = [{k: v for k, v in authors_list}]
 
 		return HttpResponse(json.dumps(authors_list_obj), content_type='application/json')		

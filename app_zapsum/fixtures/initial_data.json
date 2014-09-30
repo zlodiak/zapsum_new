@@ -69,6 +69,54 @@
 			"date_joined": "2014-09-22 17:37:25.866974"
 		}
 	},	
+	{
+		"model": "auth.User",
+		"pk": 5,
+		"fields": {
+			"password": "pbkdf2_sha256$12000$mYXKstn17g7M$+odzVtDT7B4UTcd76ZU/WxpLyDK6gV5Cmq1QEFKQzms=",
+			"last_login": "2014-09-24 11:04:01.488821",
+			"is_superuser": 0,
+			"username": "wwwwww",
+			"first_name": "3",
+			"last_name": "3",
+			"email": "zzz@mail.ru",
+			"is_staff": 0,
+			"is_active": 1,
+			"date_joined": "2014-09-22 17:37:25.866974"
+		}
+	},	
+	{
+		"model": "auth.User",
+		"pk": 6,
+		"fields": {
+			"password": "pbkdf2_sha256$12000$mYXKstn17g7M$+odzVtDT7B4UTcd76ZU/WxpLyDK6gV5Cmq1QEFKQzms=",
+			"last_login": "2014-09-24 11:04:01.488821",
+			"is_superuser": 0,
+			"username": "ssssss",
+			"first_name": "3",
+			"last_name": "3",
+			"email": "zzz@mail.ru",
+			"is_staff": 0,
+			"is_active": 1,
+			"date_joined": "2014-09-22 17:37:25.866974"
+		}
+	},	
+	{
+		"model": "auth.User",
+		"pk": 7,
+		"fields": {
+			"password": "pbkdf2_sha256$12000$mYXKstn17g7M$+odzVtDT7B4UTcd76ZU/WxpLyDK6gV5Cmq1QEFKQzms=",
+			"last_login": "2014-09-24 11:04:01.488821",
+			"is_superuser": 0,
+			"username": "xxxxxx",
+			"first_name": "3",
+			"last_name": "3",
+			"email": "zzz@mail.ru",
+			"is_staff": 0,
+			"is_active": 1,
+			"date_joined": "2014-09-22 17:37:25.866974"
+		}
+	},		
 
 	{
 		"model": "app_accounts.UserProfile",
@@ -78,6 +126,7 @@
 			"phone": "21",
 			"skype": "dfsdf",
 			"other": "qqqqqq",
+			"nickname": "Достоевский фёдор",
 			"avatar": ""
 		}
 	},
@@ -89,6 +138,7 @@
 			"phone": "2014-09-24 11:04:01.488821",
 			"skype": "dfsdf",
 			"other": "aaaa",
+			"nickname": "Лев Толстой",
 			"avatar": ""
 		}
 	},
@@ -100,6 +150,43 @@
 			"phone": "2014-0921",
 			"skype": "dfsdf",
 			"other": "zzzz",
+			"nickname": "Иван Тургенев ёпта",
+			"avatar": ""
+		}
+	},	
+	{
+		"model": "app_accounts.UserProfile",
+		"pk": 5,
+		"fields": {
+			"gender": 2,
+			"phone": "21",
+			"skype": "dfsdf",
+			"other": "qqqqqq",
+			"nickname": "Антон Чех",
+			"avatar": ""
+		}
+	},
+	{
+		"model": "app_accounts.UserProfile",
+		"pk": 6,
+		"fields": {
+			"gender": 2,
+			"phone": "2014-09-24 11:04:01.488821",
+			"skype": "dfsdf",
+			"other": "aaaa",
+			"nickname": "Олексей Толстой",
+			"avatar": ""
+		}
+	},
+	{
+		"model": "app_accounts.UserProfile",
+		"pk": 7,
+		"fields": {
+			"gender": 1,
+			"phone": "2014-0921",
+			"skype": "dfsdf",
+			"other": "zzzz",
+			"nickname": "Николай Лесков",
 			"avatar": ""
 		}
 	},	
@@ -109,9 +196,9 @@
 		"pk": 1,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
@@ -122,87 +209,87 @@
 		"pk": 2,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 3,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 4,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 5,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 6,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 7,
 		"fields": {
 			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 8,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
@@ -212,91 +299,79 @@
 		"model": "app_zapsum.Diary",
 		"pk": 9,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 10,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 11,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 12,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 13,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
+	},
 	{
 		"model": "app_zapsum.Diary",
 		"pk": 14,
 		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
+			"user_id": 3,
+			"title": "Однажды в студёную зимнюю пору",
 			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
+			"text": "Конец 1867 года. Князь Лев Николаевич Мышкин приезжает в Петербург из Швейцарии. Ему двадцать шесть лет, он последний из знатного дворянского рода, рано осиротел, в детстве заболел тяжёлой нервной болезнью и был помещён своим опекуном и благодетелем Павлищевым в швейцарский санаторий. Там он прожил четыре года и теперь возвращается в Россию с неясными, но большими планами послужить ей. В поезде князь знакомится с Парфеном Рогожиным, сыном богатого купца, унаследовавшим после его смерти огромное состояние. От него князь впервые слышит имя Настасьи Филипповны Барашковой, любовницы некоего богатого аристократа Тоцкого, которой страстно увлечён Рогожин.",
 			"last_edit_date": "2014-09-03",
 			"is_active": 1,
 			"is_delete": 0
 		}
-	},	
-	{
-		"model": "app_zapsum.Diary",
-		"pk": 15,
-		"fields": {
-			"user_id": 2,
-			"title": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.-0921",
-			"date": "2014-09-03",
-			"text": "Don't use data attributes from multiple plugins on the same element. For example, a button cannot both have a tooltip and toggle a modal. To accomplish this, use a wrapping element.  fgdhfgh fgh fhghfzz",
-			"last_edit_date": "2014-09-03",
-			"is_active": 1,
-			"is_delete": 0
-		}
-	}											
+	}
+								
 ]
