@@ -1,0 +1,23 @@
+{% extends "page_base.html" %}
+
+{% block title %}Дневник пользователя :: {{ obj_author.nickname }}{% endblock %}
+
+{% block content %}
+	<section class="section record_public">
+		<div class="page-header">
+			<h2>{{ entry.title }}</h2>
+		</div>
+
+		<article class="article record_article">
+			<div class="body">
+				{{ entry.text }}
+			</div>
+
+			<div class="dates_block">
+				<span class="date">{{ entry.date }}</span>
+
+				<span class="date_mod">Дата редактирования: {{ entry.last_edit_date }}</span>
+			</div>
+		</article>
+	</section>
+{% endblock %}

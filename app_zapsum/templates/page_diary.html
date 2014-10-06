@@ -1,0 +1,85 @@
+{% extends "page_base.html" %}
+
+{% block title %}Дневник пользователя :: {{ obj_author.nickname }}{% endblock %}
+
+{% block content %}
+	<section class="section diary_public">
+		<div class="page-header">
+			<h2>Дневник пользователя :: {{ obj_author.nickname }}</h2>
+		</div>
+
+		<table class="list_table">
+			<thead>
+				<tr>
+					<td>Заголовок</td>
+					
+					<td>Дата</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for entry in obj_diary %}
+					<tr class="article">
+						<td class="cell_title">
+							<a class="article_link" href="/record/{{ entry.id }}/">
+								{% if entry.title %}
+									<span class="">{{ entry.title }}</span>
+								{% endif %}		
+							</a>	
+						</td>
+							
+						<td class="cell_date">
+							<a class="article_link" href="/record/{{ entry.id }}/">
+								{% if entry.date %}
+									{{ entry.date }}
+								{% endif %}		
+							</a>
+						</td>														
+					</tr>
+				{% endfor %}
+			</tbody>			
+		</table>		
+
+		{% if last_page > 1 %}
+			<div class="pager_outer">	
+				<div class="pager">	
+					{% if all_user_entries_paginated.has_previous %}
+						<button type="button" class="btn btn-default">
+							<a class="a left2 glyphicon glyphicon-fast-backward" href="?page={{ first_page }}"></a>
+						</button>								
+
+						<button type="button" class="btn btn-default">
+							<a class="a left glyphicon glyphicon-backward" href="?page={{ all_user_entries_paginated.previous_page_number }}"></a>
+						</button>								
+					{% endif %}
+					
+					<span>
+						{% for page in list_pages  %}
+							<div class="btn-group">
+								{% if all_user_entries_paginated.number == page %}
+									<button type="button" class="btn btn-default">
+										<span class="a glyphicon">{{ page }}</span>
+									</button>
+								{% else %}
+									<button type="button" class="btn btn-default">
+										<a class="a num glyphicon" href="?page={{ page }}">{{ page }}</a>
+									</button>							
+								{% endif %}
+							</div>
+						{% endfor %}		
+					</span>
+					
+					{% if all_user_entries_paginated.has_next %}
+						<button type="button" class="btn btn-default">
+							<a class="a right glyphicon glyphicon-forward" href="?page={{ all_user_entries_paginated.next_page_number }}"></a>
+						</button>		
+
+						<button type="button" class="btn btn-default">
+							<a class="a right2 glyphicon glyphicon-fast-forward" href="?page={{ last_page }}"></a>
+						</button>														
+					{% endif %}
+				</div>				
+			</div>	
+		{% endif %}	
+	</section>
+{% endblock %}

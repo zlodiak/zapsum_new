@@ -14,6 +14,11 @@ class Gender(models.Model):
 	def __str__(self):
 		return self.gender	
 
+	@classmethod
+	def get_entry(self, gender_id):
+		result = Gender.objects.get(id=gender_id)
+		return result			
+
 
 class UserProfile(User):			
 	gender = models.ForeignKey(
@@ -53,5 +58,10 @@ class UserProfile(User):
 
 	@classmethod
 	def get_count_authors_entries(self):
-		return self.objects.filter(is_active=1, is_superuser=0).order_by('-date_joined').count()				
+		return self.objects.filter(is_active=1, is_superuser=0).order_by('-date_joined').count()	
+
+	@classmethod
+	def get_entry(self, user_id):
+		result = UserProfile.objects.get(user_ptr_id=user_id)
+		return result						
 	

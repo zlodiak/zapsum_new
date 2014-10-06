@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+﻿# -*- coding:utf-8 -*-
 
 from django.http import HttpResponse, HttpResponseRedirect, Http404, HttpResponseForbidden
 from django.template import loader, RequestContext
@@ -11,7 +11,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.core import serializers
 
 from app_accounts.forms import ProfileForm
-from app_accounts.models import UserProfile
+from app_accounts.models import UserProfile, Gender
 from app_zapsum.models import Diary
 from app_zapsum.forms import ChangePasswordForm, ChangeAvatarForm, addMessageForm
 
@@ -42,6 +42,52 @@ def search_author(request):
 	c = RequestContext(request, {}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
+
+def record(request, id_record):	
+	entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
+
+	t = loader.get_template('page_record.html')
+	c = RequestContext(request, {
+		'entry': entry,
+	}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 		
+
+
+def diary(request, id_author=None):	
+	if id_author:
+		obj_author = UserProfile.get_entry(user_id=id_author)
+		obj_diary = Diary.get_all_user_entries(user_id=id_author)
+
+		t = loader.get_template('page_diary.html')
+		c = RequestContext(request, {
+			'obj_author': obj_author,
+			'obj_diary': obj_diary,
+		}, [custom_proc])	
+		
+		return HttpResponse(t.render(c)) 
+
+
+def profile(request, id_author=None):	
+	if id_author:
+		obj_author = UserProfile.get_entry(user_id=id_author)
+		obj_user = User.objects.get(id=id_author)
+
+		if obj_user.is_active == 0:
+			obj_user_is_active = True
+		else: 
+			obj_user_is_active = False
+
+		t = loader.get_template('page_profile.html')
+		c = RequestContext(request, {
+			'obj_author': obj_author,
+			'obj_user_date_joined': obj_user.date_joined,
+			'obj_user_last_login': obj_user.last_login,
+			'obj_user_is_active': obj_user_is_active,
+			'obj_user_email': obj_user.email,
+		}, [custom_proc])	
+		
+		return HttpResponse(t.render(c)) 		
 
 
 def search_record(request):	
@@ -95,7 +141,7 @@ def new_authors(request):
 
 @login_required
 def my_records(request):	
-	all_user_entries = Diary.get_all_user_entries(id=request.user.pk)
+	all_user_entries = Diary.get_all_user_entries(user_id=request.user.pk)
 
 	paginator = Paginator(all_user_entries, 3)
 	list_pages = paginator.page_range

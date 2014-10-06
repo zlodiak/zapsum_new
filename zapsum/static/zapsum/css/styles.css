@@ -15,6 +15,7 @@ COLORS:
 TABLE OF CONTENTS:
 	FONTS
 	COMMON_STYLES
+	LAYOUT
 	GLOBAL_blocks	
 	PLUGINS	& WIDJETS
 */
@@ -38,12 +39,10 @@ html, body, div, h1, h2, h3, h4, h5, h6, a, a img, p, ul, ol, li, span, fieldset
 }
 
 html{
-    height:100%;	
 }
 
 body{	
-    height:100%;	
-	margin: 0 auto;
+
 	
 	font: normal 13px arial, sans-serif;
 	color: #444;
@@ -101,6 +100,79 @@ input:-moz-placeholder {
 .link_block{
 	display: block;
 }
+
+
+/*************************************************************************************************************** LAYOUT : LAYOUT */
+body > .main_container{
+	padding-bottom: 80px;
+
+}
+
+/*************************************************************************************************************** GLOBAL_blocks : diary_public */
+.diary_public{
+	
+}
+
+	.diary_public td{
+		vertical-align: top;
+		
+	}
+
+	.diary_public .article{
+		
+	}
+
+		.diary_public .article_link{
+			margin-bottom: 20px;
+			display: block;
+		}
+
+		.diary_public .cell_title a{
+			font-size: 21px;
+			
+		}
+
+		.diary_public .cell_date a{
+			font-size: 13px;
+		}
+
+
+/*************************************************************************************************************** GLOBAL_blocks : record_public */
+.record_public{
+	font-size: 21px;
+}
+
+	.record_public .body{
+		padding-bottom: 20px;
+	}
+
+	.record_public .dates_block{
+		overflow: hidden;
+
+
+	}
+
+		.record_public .dates_block .date{
+			float: right;
+		}
+
+		.record_public .dates_block .date_mod{
+			float: right;
+			clear: both;
+
+			font-size: 13px;
+			color: #ccc;
+		}	
+
+/*************************************************************************************************************** GLOBAL_blocks : profile_public */
+.profile_public{
+
+}
+
+	.profile_public .unactive_mark{
+		color: red;
+	}
+
 
 
 /*************************************************************************************************************** GLOBAL_blocks : more_button */
@@ -192,6 +264,15 @@ input:-moz-placeholder {
 				margin: 0 10px 10px 0;
 			}	
 
+/*************************************************************************************************************** GLOBAL_blocks : search_author */
+.search_author{
+
+}
+
+	.search_author .list_table .cell_actions{
+		width: 80%;
+	}
+
 /*************************************************************************************************************** GLOBAL_blocks : my_records_list */
 .my_records_list{
 
@@ -219,6 +300,10 @@ input:-moz-placeholder {
 
 				color: #000;
 			}
+
+				.my_records_list .article .glyphicon{
+					color: #cc6633;
+				}
 
 				.my_records_list .article .glyphicon-remove{
 					color: red;

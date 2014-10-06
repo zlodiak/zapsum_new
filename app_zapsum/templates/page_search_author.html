@@ -3,7 +3,7 @@
 {% block title %}правила{% endblock %}
 
 {% block content %}
-	<section class="section search_author">
+	<section class="section search_author my_records_list">
 		<div class="page-header">
 			<h2>Поиск по автору</h2>
 		</div>
@@ -17,6 +17,8 @@
 						<input id="formSearchAuthorWord" type="text" name="author" id="authorField" />
 					</div>
 
+					<p>Внимание! Поиск регистрозависимый - не забывайте про заглавные буквы.</p>
+
 					<div class="cell submit_outer">
 						<input class="btn btn-default" id="formSearchAuthorSubmit" type="submit" value="Найти" /> 
 					</div>
@@ -24,9 +26,11 @@
 			</div>
 
 			<div class="col-md-9">
-				<div class="search_list">
+				<table class="list_table">					
+					<tbody>
 
-				</div>
+					</tbody>			
+				</table>				
 			</div>
 		</div>
 	</section>

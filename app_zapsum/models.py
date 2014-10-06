@@ -1,4 +1,4 @@
-from django.db import models
+﻿from django.db import models
 from datetime import datetime  
 
 
@@ -35,8 +35,8 @@ class Diary(models.Model):
 		return self.objects.all()
 		
 	@classmethod
-	def get_all_user_entries(self, id):
-		return self.objects.filter(user_id=id)		
+	def get_all_user_entries(self, user_id):
+		return self.objects.filter(user_id=user_id, is_active=True, is_delete=False).order_by('-date')	
 		
 	@classmethod
 	def delete_entry(self, id_delete, user_id):
@@ -59,7 +59,11 @@ class Diary(models.Model):
 
 	@classmethod
 	def get_entry(self, id_record, user_id):
-		return self.objects.get(id=id_record, user_id=user_id)			
+		return self.objects.get(id=id_record, user_id=user_id, is_delete=False)		
+
+	@classmethod
+	def get_entry_public(self, id_record, user_id):
+		return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)	
 			
 
 

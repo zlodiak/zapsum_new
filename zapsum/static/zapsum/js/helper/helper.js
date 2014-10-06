@@ -39,7 +39,8 @@ $(document).ready(function(){
 
 	/*********************************************************************************************** ajax search author */
 	$('#formSearchAuthorSubmit').on('click', function(event){
-		var	block_search = $('.search_author .search_list')
+		var	block_search = $('.search_author .search_list'),
+			block_search2 = $('.search_author .list_table tbody'),
 			searchWord = $('#formSearchAuthorWord').val();
 
 		event.preventDefault();
@@ -53,7 +54,7 @@ $(document).ready(function(){
 				"csrfmiddlewaretoken": $.csrf_token
 			},
 			beforeSend : function(jqXHR,data){
-				block_search.empty();
+				block_search2.empty();
 
 				if(!searchWord){
 					return false;
@@ -65,7 +66,13 @@ $(document).ready(function(){
 
 					for(var key in data[0]){
 						console.log( "key: " + key + ", value: " + data[0][key] );
-						block_search.append('<article class="article"><a class="link" href="#">' + data[0][key]  + '</a></article>');
+						block_search2.append(' \
+							<tr class="article"> \
+								<td class="cell_title">' + data[0][key]  + '</td> \
+								<td class="cell_actions"><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-list-alt">Дневник</span> </button> \
+								<button type="button" class="btn btn-default btn-xs"><a class="glyphicon glyphicon-user" href="/profile/' + key + '/">Профиль</a> </button> \
+								<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-envelope">Написать письмо</span> </button></td> \
+							</tr>');
 					}					
 
 					//window.location.replace('/search_author/');
