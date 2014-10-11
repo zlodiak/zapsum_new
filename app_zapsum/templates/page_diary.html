@@ -18,7 +18,7 @@
 			</thead>
 			
 			<tbody>
-				{% for entry in obj_diary %}
+				{% for entry in obj_diary_paginated %}
 					<tr class="article">
 						<td class="cell_title">
 							<a class="article_link" href="/record/{{ entry.id }}/">
@@ -43,20 +43,20 @@
 		{% if last_page > 1 %}
 			<div class="pager_outer">	
 				<div class="pager">	
-					{% if all_user_entries_paginated.has_previous %}
+					{% if obj_diary_paginated.has_previous %}
 						<button type="button" class="btn btn-default">
 							<a class="a left2 glyphicon glyphicon-fast-backward" href="?page={{ first_page }}"></a>
 						</button>								
 
 						<button type="button" class="btn btn-default">
-							<a class="a left glyphicon glyphicon-backward" href="?page={{ all_user_entries_paginated.previous_page_number }}"></a>
+							<a class="a left glyphicon glyphicon-backward" href="?page={{ obj_diary_paginated.previous_page_number }}"></a>
 						</button>								
 					{% endif %}
 					
 					<span>
 						{% for page in list_pages  %}
 							<div class="btn-group">
-								{% if all_user_entries_paginated.number == page %}
+								{% if obj_diary_paginated.number == page %}
 									<button type="button" class="btn btn-default">
 										<span class="a glyphicon">{{ page }}</span>
 									</button>
@@ -69,9 +69,9 @@
 						{% endfor %}		
 					</span>
 					
-					{% if all_user_entries_paginated.has_next %}
+					{% if obj_diary_paginated.has_next %}
 						<button type="button" class="btn btn-default">
-							<a class="a right glyphicon glyphicon-forward" href="?page={{ all_user_entries_paginated.next_page_number }}"></a>
+							<a class="a right glyphicon glyphicon-forward" href="?page={{ obj_diary_paginated.next_page_number }}"></a>
 						</button>		
 
 						<button type="button" class="btn btn-default">

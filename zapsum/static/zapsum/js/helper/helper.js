@@ -22,16 +22,17 @@ $(document).ready(function(){
 			type: 'POST',
 			dataType:"json",
 			data: {
-				//"page_new_authors": page_new_authors,
-				//"count_new_authors": count_new_authors,
+				"page_new_authors": page_new_authors,
+				"count_new_authors": count_new_authors,
 				"csrfmiddlewaretoken": $.csrf_token
 			},
 			error: function() {
 				alert('Ошибка получения запроса');
 			},			
 			success: function(data) {	
+				console.log(data);
 				$('#infoModal').modal('show');	
-				$('.new_authors .list_table tbody').append('<tr><td>fgdgdfgddggf</td></tr>');
+				$('.new_authors .list_table tbody').append('<tr><td>ввв</td></tr>');
 				
 			}
 		});				

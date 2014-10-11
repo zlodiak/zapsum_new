@@ -71,9 +71,10 @@
 
 			{% if obj_author.other %}
 				<div class="cell input_outer">
-					<label class="label">Доп.информация</label>
+					<label class="label">Доп.информация:</label>
 					
-					<textarea cols="40" id="id_other" name="other" rows="10" width="670px" disabled="disabled">{{ obj_author.other }}</textarea>
+					<!--<textarea cols="40" id="id_other" name="other" rows="10" width="670px" disabled="disabled">{{ obj_author.other | safe }}</textarea>-->
+					<div class="textarea">{{ obj_author.other | safe }}</div>
 				</div>	
 			{% endif %}	
 

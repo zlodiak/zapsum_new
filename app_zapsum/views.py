@@ -59,10 +59,28 @@ def diary(request, id_author=None):
 		obj_author = UserProfile.get_entry(user_id=id_author)
 		obj_diary = Diary.get_all_user_entries(user_id=id_author)
 
+		paginator = Paginator(obj_diary, 3)
+		list_pages = paginator.page_range
+
+		page = request.GET.get('page')
+		try:
+			obj_diary_paginated = paginator.page(page)
+		except PageNotAnInteger:
+			obj_diary_paginated = paginator.page(1)
+		except EmptyPage:
+			obj_diary_paginated = paginator.page(paginator.num_pages)	
+
+		last_page = list_pages[-1]	
+		first_page = list_pages[0]			
+
 		t = loader.get_template('page_diary.html')
 		c = RequestContext(request, {
 			'obj_author': obj_author,
 			'obj_diary': obj_diary,
+			'list_pages': list_pages,
+			'obj_diary_paginated': obj_diary_paginated,
+			'last_page': last_page,
+			'first_page': first_page,			
 		}, [custom_proc])	
 		
 		return HttpResponse(t.render(c)) 
@@ -115,18 +133,14 @@ def new_authors(request):
 	count_new_authors = UserProfile.get_count_authors_entries()
 
 	if request.method == 'POST' and request.is_ajax():	
-		page_new_authors = request.POST.get('page_new_authors', '')	
-		count_new_authors = request.POST.get('count_new_authors', '')	
+		page_new_authors = int(request.POST.get('page_new_authors', ''))
+		count_new_authors = int(request.POST.get('count_new_authors', ''))
 		print('posst')
 		print(page_new_authors)
 		print(count_new_authors)
-		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=page_new_authors, cut_end=page_new_authors + 2)
 
-		data = {
-			'result': True,		
-		}	
-
-		return HttpResponse(json.dumps(data), content_type='application/json')		
+		return HttpResponse(json.dumps(new_authors), content_type='application/json')		
 	else:
 		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
 

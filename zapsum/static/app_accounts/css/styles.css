@@ -2,6 +2,7 @@ form{
 
 }
 
+	form .textarea,
 	form textarea,
 	form input{
 		width: 270px;

@@ -9,40 +9,40 @@
 			<div class="hide" id="count_new_authors">{{ count_new_authors }}</div>
 		</div>
 
-			<table class="list_table">
-				<thead>
-					<tr>
-						<td>Дата регистрации</td>
-						
-						<td>Имя пользователя</td>
+		<table class="list_table">
+			<thead>
+				<tr>
+					<td>Дата регистрации</td>
+					
+					<td>Имя пользователя</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for entry in new_authors %}
+					<tr class="article author_line">
+						<td class="cell_date">
+							<a class="article_link" href="#">
+								{% if entry.date_joined %}
+									<span class="date_span {% if not entry.is_active %} active_false {% endif %}">{{ entry.date_joined }}</span>
+								{% endif %}		
+							</a>	
+						</td>
+							
+						<td class="cell_title">
+							<a class="article_link" href="#">
+								{% if entry.username %}
+									<h3 class="h3 {% if not entry.is_active %} active_false {% endif %}">{{ entry.username }}</h3>
+								{% endif %}		
+							</a>
+						</td>															
 					</tr>
-				</thead>
-				
-				<tbody>
-					{% for entry in new_authors %}
-						<tr class="article author_line">
-							<td class="cell_date">
-								<a class="article_link" href="#">
-									{% if entry.date_joined %}
-										<span class="date_span {% if not entry.is_active %} active_false {% endif %}">{{ entry.date_joined }}</span>
-									{% endif %}		
-								</a>	
-							</td>
-								
-							<td class="cell_title">
-								<a class="article_link" href="#">
-									{% if entry.username %}
-										<h3 class="h3 {% if not entry.is_active %} active_false {% endif %}">{{ entry.username }}</h3>
-									{% endif %}		
-								</a>
-							</td>															
-						</tr>
-					{% endfor %}
-				</tbody>			
-			</table>
+				{% endfor %}
+			</tbody>			
+		</table>
 
-			<form class="more_button_outer" action="/new_authors/" method="POST">
-				<input class="btn btn-default more_button" type="submit" value="Показать ещё" />
-			</form>
+		<form class="more_button_outer" action="/new_authors/" method="POST">
+			<input class="btn btn-default more_button" type="submit" value="Показать ещё" />
+		</form>
 	</section>
 {% endblock %}
