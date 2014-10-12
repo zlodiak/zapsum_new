@@ -1,4 +1,5 @@
 {% extends "page_base.html" %}
+{% load tags_app_zapsum %}
 
 {% block title %}Новые дневники{% endblock %}
 
@@ -6,7 +7,6 @@
 	<section class="section new_authors">
 		<div class="page-header">
 			<h2>Новые дневники</h2>
-			<div class="hide" id="count_new_authors">{{ count_new_authors }}</div>
 		</div>
 
 		<table class="list_table">
@@ -19,7 +19,7 @@
 			</thead>
 			
 			<tbody>
-				{% for entry in new_authors %}
+				{% for entry in new_authors_paginated %}
 					<tr class="article author_line">
 						<td class="cell_date">
 							<a class="article_link" href="#">
@@ -41,8 +41,6 @@
 			</tbody>			
 		</table>
 
-		<form class="more_button_outer" action="/new_authors/" method="POST">
-			<input class="btn btn-default more_button" type="submit" value="Показать ещё" />
-		</form>
+		{% part_pagination all_user_entries_paginated list_pages last_page first_page %} 	
 	</section>
 {% endblock %}

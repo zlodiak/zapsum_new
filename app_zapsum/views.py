@@ -31,8 +31,8 @@ def rules(request):
 def search_author(request):	
 	if request.method == "POST":
 		result = False
-		#author = request.POST.get('author', '')	
-		author = request.POST.get('author').encode("utf-8")
+		author = request.POST.get('author', '')	
+		#author = request.POST.get('author').encode("utf-8")
 		authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_ptr_id', 'nickname')	
 		authors_list_obj = [{k: v for k, v in authors_list}]
 
@@ -130,27 +130,32 @@ def last_records(request):
 
 
 def new_authors(request):	
-	count_new_authors = UserProfile.get_count_authors_entries()
+	new_authors = UserProfile.get_new_authors_entries()
 
-	if request.method == 'POST' and request.is_ajax():	
-		page_new_authors = int(request.POST.get('page_new_authors', ''))
-		count_new_authors = int(request.POST.get('count_new_authors', ''))
-		print('posst')
-		print(page_new_authors)
-		print(count_new_authors)
-		new_authors = UserProfile.get_new_authors_entries(cut_begin=page_new_authors, cut_end=page_new_authors + 2)
+	paginator = Paginator(new_authors, 3)
+	list_pages = paginator.page_range
 
-		return HttpResponse(json.dumps(new_authors), content_type='application/json')		
-	else:
-		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
+	page = request.GET.get('page')
+	try:
+		new_authors_paginated = paginator.page(page)
+	except PageNotAnInteger:
+		new_authors_paginated = paginator.page(1)
+	except EmptyPage:
+		new_authors_paginated = paginator.page(paginator.num_pages)	
 
-		t = loader.get_template('page_new_authors.html')
-		c = RequestContext(request, {
-			'new_authors': new_authors,
-			'count_new_authors': count_new_authors,
-		}, [custom_proc])	
-		
-		return HttpResponse(t.render(c)) 			
+	last_page = list_pages[-1]	
+	first_page = list_pages[0]		
+
+	t = loader.get_template('page_new_authors.html')
+	c = RequestContext(request, {
+		'new_authors': new_authors,
+		'list_pages': list_pages,
+		'new_authors_paginated': new_authors_paginated,
+		'last_page': last_page,
+		'first_page': first_page,			
+	}, [custom_proc])	
+	
+	return HttpResponse(t.render(c)) 			
 
 
 @login_required

@@ -11,6 +11,9 @@ def part_auth_area(is_authenticated):
 		'is_authenticated': is_authenticated,
 	}	
 
+
+
+
 	
 
 	

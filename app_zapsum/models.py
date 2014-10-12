@@ -36,7 +36,7 @@ class Diary(models.Model):
 		
 	@classmethod
 	def get_all_user_entries(self, user_id):
-		return self.objects.filter(user_id=user_id, is_active=True, is_delete=False).order_by('-date')	
+		return self.objects.filter(user_id=user_id, is_delete=False).order_by('-date')	
 		
 	@classmethod
 	def delete_entry(self, id_delete, user_id):

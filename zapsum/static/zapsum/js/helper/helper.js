@@ -1,43 +1,4 @@
 $(document).ready(function(){	
-	/*********************************************************************************************** more button for new authors */
-	var	count_new_authors = parseInt($('#count_new_authors').text(), 10)
-		page_new_authors = $('.author_line').length;
-
-	$('.new_authors .more_button').hide();
-
-	console.log(count_new_authors);
-	console.log(page_new_authors);
-
-	if(count_new_authors > page_new_authors){
-		$('.new_authors .more_button').show(1000);
-	};
-
-	$('.new_authors .more_button').on('click', function(event){
-		event.preventDefault();
-
-		console.log('click');
-
-		$.ajax({
-			url: "/new_authors/",
-			type: 'POST',
-			dataType:"json",
-			data: {
-				"page_new_authors": page_new_authors,
-				"count_new_authors": count_new_authors,
-				"csrfmiddlewaretoken": $.csrf_token
-			},
-			error: function() {
-				alert('Ошибка получения запроса');
-			},			
-			success: function(data) {	
-				console.log(data);
-				$('#infoModal').modal('show');	
-				$('.new_authors .list_table tbody').append('<tr><td>ввв</td></tr>');
-				
-			}
-		});				
-	});	
-
 	/*********************************************************************************************** ajax search author */
 	$('#formSearchAuthorSubmit').on('click', function(event){
 		var	block_search = $('.search_author .search_list'),

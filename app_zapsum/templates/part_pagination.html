@@ -1,0 +1,41 @@
+{% if last_page > 1 %}
+	<div class="pager_outer">	
+		<div class="pager">	
+			{% if entries_paginated.has_previous %}
+				<button type="button" class="btn btn-default">
+					<a class="a left2 glyphicon glyphicon-fast-backward" href="?page={{ first_page }}"></a>
+				</button>								
+
+				<button type="button" class="btn btn-default">
+					<a class="a left glyphicon glyphicon-backward" href="?page={{ entries_paginated.previous_page_number }}"></a>
+				</button>								
+			{% endif %}
+			
+			<span>
+				{% for page in list_pages  %}
+					<div class="btn-group">
+						{% if entries_paginated.number == page %}
+							<button type="button" class="btn btn-default">
+								<span class="a glyphicon">{{ page }}</span>
+							</button>
+						{% else %}
+							<button type="button" class="btn btn-default">
+								<a class="a num glyphicon" href="?page={{ page }}">{{ page }}</a>
+							</button>							
+						{% endif %}
+					</div>
+				{% endfor %}		
+			</span>
+			
+			{% if entries_paginated.has_next %}
+				<button type="button" class="btn btn-default">
+					<a class="a right glyphicon glyphicon-forward" href="?page={{ entries_paginated.next_page_number }}"></a>
+				</button>		
+
+				<button type="button" class="btn btn-default">
+					<a class="a right2 glyphicon glyphicon-fast-forward" href="?page={{ last_page }}"></a>
+				</button>														
+			{% endif %}
+		</div>				
+	</div>	
+{% endif %}	
