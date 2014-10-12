@@ -14,27 +14,17 @@
 		<table class="list_table">
 			<thead>
 				<tr>
-					<td>Дата регистрации</td>
-					
-					<td>Имя пользователя</td>
+					<td><!-- Имя пользователя --></td>
 				</tr>
 			</thead>
 			
 			<tbody>
 				{% for entry in new_authors %}
-					<tr class="article author_line">
-						<td class="cell_date">
-							<a class="article_link" href="#">
-								{% if entry.date_joined %}
-									<span class="date_span {% if not entry.is_active %} active_false {% endif %}">{{ entry.date_joined }}</span>
-								{% endif %}		
-							</a>	
-						</td>
-							
+					<tr class="article author_line">							
 						<td class="cell_title">
-							<a class="article_link" href="#">
-								{% if entry.username %}
-									<h3 class="h3 {% if not entry.is_active %} active_false {% endif %}">{{ entry.username }}</h3>
+							<a class="article_link" href="/profile/{{ entry.id }}/">
+								{% if entry.nickname %}
+									<h3 class="h3">{{ entry.nickname }}</h3>
 								{% endif %}		
 							</a>
 						</td>															

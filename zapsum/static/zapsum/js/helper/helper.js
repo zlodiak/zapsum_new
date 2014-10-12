@@ -5,8 +5,8 @@ $(document).ready(function(){
 
 	$('.new_authors .more_button').hide();
 
-	console.log(count_new_authors);
-	console.log(page_new_authors);
+/*	console.log(count_new_authors);
+	console.log(page_new_authors);*/
 
 	if(count_new_authors > page_new_authors){
 		$('.new_authors .more_button').show(1000);
@@ -15,7 +15,10 @@ $(document).ready(function(){
 	$('.new_authors .more_button').on('click', function(event){
 		event.preventDefault();
 
-		console.log('click');
+		page_new_authors = $('.author_line').length;
+
+		//console.log(count_new_authors);
+		//console.log(page_new_authors);
 
 		$.ajax({
 			url: "/new_authors/",
@@ -30,13 +33,26 @@ $(document).ready(function(){
 				alert('Ошибка получения запроса');
 			},			
 			success: function(data) {	
-				console.log(data);
-				console.log(data);
-				$('#infoModal').modal('show');	
-				$('.new_authors .list_table tbody').append('<tr><td>ввв</td></tr>');
-				
+				data = JSON.parse(data);
+
+				$.each(data, function(){
+					$('.new_authors .list_table tbody').append('<tr class="article author_line"> \
+							<td class="cell_title"> \
+								<a class="article_link" href="/profile/' + this.pk + '/"> <h3 class="h3"> ' + this.fields.nickname + '</h3> \
+								</a> \
+							</td> \
+						</tr>\
+					');					
+				});	
+			},
+			complete: function(){
+				page_new_authors = $('.author_line').length;
+				if(count_new_authors <= page_new_authors){
+					//console.log('eq');
+					$('.new_authors .more_button').hide();	
+				};			
 			}
-		});				
+		});			
 	});	
 		
 	/*********************************************************************************************** ajax search author */
