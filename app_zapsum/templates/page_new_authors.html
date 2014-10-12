@@ -7,6 +7,8 @@
 	<section class="section new_authors">
 		<div class="page-header">
 			<h2>Новые дневники</h2>
+
+			<div class="hide" id="count_new_authors">{{ count_new_authors }}</div>
 		</div>
 
 		<table class="list_table">
@@ -41,6 +43,10 @@
 			</tbody>			
 		</table>
 
-		{% part_pagination all_user_entries_paginated list_pages last_page first_page %} 	
+		<form class="more_button_outer" action="/new_authors/" method="POST">
+			<input class="btn btn-default more_button" type="submit" value="Показать ещё" />
+		</form>		
+
+		{#% part_pagination all_user_entries_paginated list_pages last_page first_page %#} 	
 	</section>
 {% endblock %}

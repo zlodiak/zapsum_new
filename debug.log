@@ -1349,3 +1349,25 @@ Traceback (most recent call last):
   File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
     (command, get_text_list(["'%s'" % p for p in parse_until])))
 django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /new_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 133, in new_authors
+    new_authors = UserProfile.get_new_authors_entries()
+AttributeError: type object 'UserProfile' has no attribute 'get_new_authors_entries'
+Internal Server Error: /new_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 171, in new_authors
+    return HttpResponse(json.dumps(new_authors), content_type='application/json')
+  File "/usr/lib/python3.4/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: [{'id': 2, 'username': 'qqqqqq'}, {'id': 3, 'username': 'aaaaaa'}] is not JSON serializable

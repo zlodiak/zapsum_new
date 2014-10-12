@@ -52,9 +52,13 @@ class UserProfile(User):
 	
 	objects = UserManager()
 
+	# @classmethod
+	# def get_new_authors_entries(self):
+	# 	return self.objects.filter(is_active=1, is_superuser=0)
+
 	@classmethod
-	def get_new_authors_entries(self):
-		return self.objects.filter(is_active=1, is_superuser=0)
+	def get_new_authors_entries(self, cut_begin=0, cut_end=2):
+		return self.objects.filter(is_active=1, is_superuser=0).only('id', 'username')[cut_begin:cut_end]		
 
 	@classmethod
 	def get_count_authors_entries(self):

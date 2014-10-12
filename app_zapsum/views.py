@@ -129,33 +129,57 @@ def last_records(request):
 	return HttpResponse(t.render(c)) 	
 
 
-def new_authors(request):	
-	new_authors = UserProfile.get_new_authors_entries()
+# def new_authors(request):	
+# 	new_authors = UserProfile.get_new_authors_entries()
 
-	paginator = Paginator(new_authors, 3)
-	list_pages = paginator.page_range
+# 	paginator = Paginator(new_authors, 3)
+# 	list_pages = paginator.page_range
 
-	page = request.GET.get('page')
-	try:
-		new_authors_paginated = paginator.page(page)
-	except PageNotAnInteger:
-		new_authors_paginated = paginator.page(1)
-	except EmptyPage:
-		new_authors_paginated = paginator.page(paginator.num_pages)	
+# 	page = request.GET.get('page')
+# 	try:
+# 		new_authors_paginated = paginator.page(page)
+# 	except PageNotAnInteger:
+# 		new_authors_paginated = paginator.page(1)
+# 	except EmptyPage:
+# 		new_authors_paginated = paginator.page(paginator.num_pages)	
 
-	last_page = list_pages[-1]	
-	first_page = list_pages[0]		
+# 	last_page = list_pages[-1]	
+# 	first_page = list_pages[0]		
 
-	t = loader.get_template('page_new_authors.html')
-	c = RequestContext(request, {
-		'new_authors': new_authors,
-		'list_pages': list_pages,
-		'new_authors_paginated': new_authors_paginated,
-		'last_page': last_page,
-		'first_page': first_page,			
-	}, [custom_proc])	
+# 	t = loader.get_template('page_new_authors.html')
+# 	c = RequestContext(request, {
+# 		'new_authors': new_authors,
+# 		'list_pages': list_pages,
+# 		'new_authors_paginated': new_authors_paginated,
+# 		'last_page': last_page,
+# 		'first_page': first_page,			
+# 	}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 			
+# 	return HttpResponse(t.render(c)) 
+
+def new_authors(request):	
+	count_new_authors = UserProfile.get_count_authors_entries()
+
+	if request.method == 'POST' and request.is_ajax():	
+		page_new_authors = int(request.POST.get('page_new_authors', ''))
+		count_new_authors = int(request.POST.get('count_new_authors', ''))
+		print('posst')
+		print(page_new_authors)
+		print(count_new_authors)
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=page_new_authors, cut_end=page_new_authors + 2)
+
+		return HttpResponse(json.dumps(new_authors), content_type='application/json')		
+	else:
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
+		print(new_authors)
+
+		t = loader.get_template('page_new_authors.html')
+		c = RequestContext(request, {
+			'new_authors': new_authors,
+			'count_new_authors': count_new_authors,
+		}, [custom_proc])	
+		
+		return HttpResponse(t.render(c)) 			
 
 
 @login_required
