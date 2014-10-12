@@ -31,6 +31,7 @@ $(document).ready(function(){
 			},			
 			success: function(data) {	
 				console.log(data);
+				console.log(data);
 				$('#infoModal').modal('show');	
 				$('.new_authors .list_table tbody').append('<tr><td>ввв</td></tr>');
 				

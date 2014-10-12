@@ -1371,3 +1371,29 @@ Traceback (most recent call last):
   File "/usr/lib/python3.4/json/encoder.py", line 173, in default
     raise TypeError(repr(o) + " is not JSON serializable")
 TypeError: [{'id': 2, 'username': 'qqqqqq'}, {'id': 3, 'username': 'aaaaaa'}] is not JSON serializable
+Internal Server Error: /new_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 171, in new_authors
+    return HttpResponse(json.dumps(new_authors), content_type='application/json')
+  File "/usr/lib/python3.4/json/__init__.py", line 230, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/lib/python3.4/json/encoder.py", line 192, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.4/json/encoder.py", line 250, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.4/json/encoder.py", line 173, in default
+    raise TypeError(repr(o) + " is not JSON serializable")
+TypeError: [{'id': 4, 'username': 'zzzzzz'}, {'id': 5, 'username': 'wwwwww'}] is not JSON serializable
+Internal Server Error: /new_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 169, in new_authors
+    result = serializers.serialize('json', new_authors)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/serializers/__init__.py", line 122, in serialize
+    s.serialize(queryset, **options)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/serializers/base.py", line 45, in serialize
+    concrete_model = obj._meta.concrete_model
+AttributeError: 'dict' object has no attribute '_meta'

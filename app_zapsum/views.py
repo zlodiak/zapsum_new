@@ -163,15 +163,14 @@ def new_authors(request):
 	if request.method == 'POST' and request.is_ajax():	
 		page_new_authors = int(request.POST.get('page_new_authors', ''))
 		count_new_authors = int(request.POST.get('count_new_authors', ''))
-		print('posst')
-		print(page_new_authors)
-		print(count_new_authors)
+
 		new_authors = UserProfile.get_new_authors_entries(cut_begin=page_new_authors, cut_end=page_new_authors + 2)
 
-		return HttpResponse(json.dumps(new_authors), content_type='application/json')		
+		result = serializers.serialize('json', new_authors)
+
+		return HttpResponse(json.dumps(result), content_type='application/json')	
 	else:
 		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
-		print(new_authors)
 
 		t = loader.get_template('page_new_authors.html')
 		c = RequestContext(request, {
