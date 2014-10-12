@@ -264,6 +264,17 @@ body > .main_container{
 				margin: 0 10px 10px 0;
 			}	
 
+			.list_table .cell_actions .glyphicon{
+				padding: 5px 5px 10px;
+				display: inline-block;
+
+				color: #cc6633;
+			}				
+
+				.list_table .cell_actions .glyphicon:before{
+					margin: 5px 5px 5px 0;
+				}			
+
 /*************************************************************************************************************** GLOBAL_blocks : search_author */
 .search_author{
 
@@ -321,9 +332,9 @@ body > .main_container{
 					color: green;
 				}						
 
-			.my_records_list .article .glyphicon:before{
-				margin: 5px 5px 5px 0;
-			}
+				.my_records_list .article .glyphicon:before{
+					margin: 5px 5px 5px 0;
+				}
 
 
 

@@ -41,6 +41,10 @@ $(document).ready(function(){
 								<a class="article_link" href="/profile/' + this.pk + '/"> <h3 class="h3"> ' + this.fields.nickname + '</h3> \
 								</a> \
 							</td> \
+							<td class="cell_actions"> \
+								<button type="button" class="btn btn-default btn-xs"><a class="glyphicon glyphicon-list-alt" href="/diary/' + this.pk + '/ ">Дневник</a></button> \
+								<button type="button" class="btn btn-default btn-xs"><a class="glyphicon glyphicon-user" href="/profile/' + this.pk + '/ ">Профиль</a></button> \
+							</td> \
 						</tr>\
 					');					
 				});	
@@ -87,9 +91,9 @@ $(document).ready(function(){
 						block_search2.append(' \
 							<tr class="article"> \
 								<td class="cell_title">' + data[0][key]  + '</td> \
-								<td class="cell_actions"><button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-list-alt">Дневник</span> </button> \
+								<td class="cell_actions"><button type="button" class="btn btn-default btn-xs"><a class="glyphicon glyphicon-list-alt" href="/diary/' + key + '/">Дневник</a> </button> \
 								<button type="button" class="btn btn-default btn-xs"><a class="glyphicon glyphicon-user" href="/profile/' + key + '/">Профиль</a> </button> \
-								<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-envelope">Написать письмо</span> </button></td> \
+								<!--<button type="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-envelope">Написать письмо</span> </button></td>--> \
 							</tr>');
 					}					
 

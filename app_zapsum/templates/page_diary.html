@@ -8,6 +8,7 @@
 			<h2>Дневник пользователя :: {{ obj_author.nickname }}</h2>
 		</div>
 
+		{% if obj_diary_paginated %}
 		<table class="list_table">
 			<thead>
 				<tr>
@@ -38,7 +39,10 @@
 					</tr>
 				{% endfor %}
 			</tbody>			
-		</table>		
+		</table>	
+		{% else %}	
+			По не сделано ни одной записи
+		{% endif %}		
 
 		{% if last_page > 1 %}
 			<div class="pager_outer">	
