@@ -1,4 +1,51 @@
 $(document).ready(function(){	
+	/*********************************************************************************************** ajax search record */
+	$('#formSearchRecordSubmit').on('click', function(event){
+		var	block_search = $('.search_record .search_list'),
+			block_search2 = $('.search_record .list_table tbody'),
+			searchWord = $('#formSearchRecordWord').val();
+
+		event.preventDefault();
+
+		$.ajax({
+			url: "/search_record/",
+			type: 'POST',
+			dataType:"json",
+			data: {
+				"record": searchWord,
+				"csrfmiddlewaretoken": $.csrf_token
+			},
+			beforeSend : function(jqXHR,data){
+				block_search2.empty();
+
+				if(!searchWord){
+					return false;
+				};
+			},			
+			success: function(data) {	
+				try {
+					for(var key in data[0]){
+						//console.log( "key: " + key + ", value: " + data[0][key] );
+						block_search2.append(' \
+							<tr class="article"> \
+								<td class="cell_title extra_height"><a href="/record/' + key + '/">' + data[0][key]  + '</a></td> \
+							</tr>');
+					}					
+
+					//window.location.replace('/search_author/');
+				} catch(e) {
+					$('#mySmallModalLabel').text('Не найдено совпадений');
+					$('#infoModal').modal('show');
+
+					setTimeout(function(){
+						$('#infoModal').modal('hide');
+					}, 2000);	
+				}							
+				
+			}
+		});				
+	});
+
 	/*********************************************************************************************** more button for new authors */
 	var	count_new_authors = parseInt($('#count_new_authors').text(), 10)
 		page_new_authors = $('.author_line').length;
@@ -84,10 +131,10 @@ $(document).ready(function(){
 			},			
 			success: function(data) {	
 				try {
-					console.log(data);
+					//console.log('___' + data);
 
 					for(var key in data[0]){
-						console.log( "key: " + key + ", value: " + data[0][key] );
+						//console.log( "key: " + key + ", value: " + data[0][key] );
 						block_search2.append(' \
 							<tr class="article"> \
 								<td class="cell_title">' + data[0][key]  + '</td> \

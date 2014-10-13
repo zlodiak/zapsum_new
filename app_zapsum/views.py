@@ -32,9 +32,13 @@ def search_author(request):
 	if request.method == "POST":
 		result = False
 		author = request.POST.get('author', '')	
-		#author = request.POST.get('author').encode("utf-8")
 		authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_ptr_id', 'nickname')	
 		authors_list_obj = [{k: v for k, v in authors_list}]
+
+		if len(authors_list) > 0:
+			authors_list_obj = [{k: v for k, v in authors_list}]
+		else:
+			authors_list_obj = None
 
 		return HttpResponse(json.dumps(authors_list_obj), content_type='application/json')		
 
@@ -45,10 +49,12 @@ def search_author(request):
 
 def record(request, id_record):	
 	entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
+	user_entry = UserProfile.objects.get(user_ptr_id=entry.user_id)
 
 	t = loader.get_template('page_record.html')
 	c = RequestContext(request, {
 		'entry': entry,
+		'nickname': user_entry.nickname,
 	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 		
@@ -109,6 +115,19 @@ def profile(request, id_author=None):
 
 
 def search_record(request):	
+	if request.method == "POST":
+		result = False
+		record = request.POST.get('record', '')	
+		record_list = Diary.objects.filter(title__icontains=record, is_active=1).values_list('id', 'title')	
+		record_list_obj = [{k: v for k, v in record_list}]
+
+		if len(record_list) > 0:
+			record_list_obj = [{k: v for k, v in record_list}]
+		else:
+			record_list_obj = None		
+
+		return HttpResponse(json.dumps(record_list_obj), content_type='application/json')		
+
 	t = loader.get_template('page_search_record.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	

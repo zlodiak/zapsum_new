@@ -1,11 +1,11 @@
 {% extends "page_base.html" %}
 
-{% block title %}Дневник пользователя :: {{ obj_author.nickname }}{% endblock %}
+{% block title %}Запись пользователя :: {{ nickname }}{% endblock %}
 
 {% block content %}
 	<section class="section record_public">
 		<div class="page-header">
-			<h2>{{ entry.title }}</h2>
+			<h2>{{ entry.title }}<a class="author_info" href="/profile/{{ entry.user_id }}/">{{ nickname }}</a></h2>
 		</div>
 
 		<article class="article record_article">

@@ -164,6 +164,25 @@ body > .main_container{
 			color: #ccc;
 		}	
 
+		.record_public .author_info:after{
+			content: ')';
+		}
+
+		.record_public .author_info:before{
+			content: '(автор: ';
+		}		
+
+		.record_public .author_info:hover{
+			color: #cc6633;
+		}
+
+		.record_public .author_info{
+			margin-left: 10px;
+
+			font-size: 13px;
+			color: #ccc;
+		}		
+
 /*************************************************************************************************************** GLOBAL_blocks : profile_public */
 .profile_public{
 
@@ -246,6 +265,10 @@ body > .main_container{
 			.article .cell_date .date_span.active_false{
 				color: #a9a9a9;
 			}			
+
+		.list_table .cell_title.extra_height{
+			padding-bottom: 10px;
+		}
 
 		.list_table .cell_title{
 			padding: 0 20px 0 0;
