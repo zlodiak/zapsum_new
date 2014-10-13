@@ -142,10 +142,27 @@ def most_popular_authors(request):
 
 
 def last_records(request):	
-	t = loader.get_template('page_last_records.html')
-	c = RequestContext(request, {}, [custom_proc])	
-	
-	return HttpResponse(t.render(c)) 	
+	count_new_records= Diary.get_count_diary_entries()
+
+	if request.method == 'POST' and request.is_ajax():	
+		page_new_records = int(request.POST.get('page_new_records', ''))
+		count_new_records = int(request.POST.get('count_new_records', ''))
+
+		new_records = Diary.get_new_diary_entries(cut_begin=page_new_records, cut_end=page_new_records + 2)
+
+		result = serializers.serialize('json', new_records)
+
+		return HttpResponse(json.dumps(result), content_type='application/json')	
+	else:
+		new_records = Diary.get_new_diary_entries(cut_begin=0, cut_end=2)
+
+		t = loader.get_template('page_last_records.html')
+		c = RequestContext(request, {
+			'new_records': new_records,
+			'count_new_records': count_new_records,
+		}, [custom_proc])	
+		
+		return HttpResponse(t.render(c)) 	
 
 
 # def new_authors(request):	

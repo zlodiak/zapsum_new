@@ -64,6 +64,14 @@ class Diary(models.Model):
 	@classmethod
 	def get_entry_public(self, id_record, user_id):
 		return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)	
+
+	@classmethod
+	def get_count_diary_entries(self):
+		return self.objects.all().count()		
+
+	@classmethod
+	def get_new_diary_entries(self, cut_begin=0, cut_end=2):
+		return self.objects.all()[cut_begin:cut_end]				
 			
 
 

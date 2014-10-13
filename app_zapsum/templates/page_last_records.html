@@ -3,11 +3,57 @@
 {% block title %}Последние записи{% endblock %}
 
 {% block content %}
-	<div class="page-header">
-		<h2>Последние записи</h2>
-	</div>
+	<section class="section new_records">
+		<div class="page-header">
+			<h2>Последние записи</h2>
 
-	<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
+			<div class="hide" id="count_new_records">{{ count_new_records }}</div>
+		</div>
 
-	<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+		<table class="list_table">
+			<thead>
+				<tr>
+					<td>Заголовок записи</td>
+
+					<td>Дата создания</td>
+
+					<td>Дата редактирования</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for entry in new_records %}
+					<tr class="article record_line">							
+						<td class="cell_title">
+							<a class="article_link" href="/record/{{ entry.id }}/">
+								{% if entry.title %}
+									<h3 class="h3">{{ entry.title }}</h3>
+								{% endif %}		
+							</a>
+						</td>	
+
+						<td class="cell_date">
+							<a class="article_link" href="/record/{{ entry.id }}/">
+								{% if entry.date %}
+									<h3 class="h3">{{ entry.date }}</h3>
+								{% endif %}		
+							</a>
+						</td>	
+
+						<td class="cell_last_edit_date">
+							<a class="article_link" href="/record/{{ entry.id }}/">
+								{% if entry.last_edit_date %}
+									<h3 class="h3">{{ entry.last_edit_date }}</h3>
+								{% endif %}		
+							</a>
+						</td>																									
+					</tr>
+				{% endfor %}
+			</tbody>			
+		</table>
+
+		<form class="more_button_outer" action="/new_authors/" method="POST">
+			<input class="btn btn-default more_button" type="submit" value="Показать ещё" />
+		</form>	
+	</section>	
 {% endblock %}
