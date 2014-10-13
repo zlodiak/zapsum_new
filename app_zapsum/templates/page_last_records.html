@@ -15,9 +15,9 @@
 				<tr>
 					<td>Заголовок записи</td>
 
-					<td>Дата создания</td>
+<!-- 					<td>Дата создания</td>
 
-					<td>Дата редактирования</td>
+					<td>Дата редактирования</td> -->
 				</tr>
 			</thead>
 			
@@ -30,23 +30,7 @@
 									<h3 class="h3">{{ entry.title }}</h3>
 								{% endif %}		
 							</a>
-						</td>	
-
-						<td class="cell_date">
-							<a class="article_link" href="/record/{{ entry.id }}/">
-								{% if entry.date %}
-									<h3 class="h3">{{ entry.date }}</h3>
-								{% endif %}		
-							</a>
-						</td>	
-
-						<td class="cell_last_edit_date">
-							<a class="article_link" href="/record/{{ entry.id }}/">
-								{% if entry.last_edit_date %}
-									<h3 class="h3">{{ entry.last_edit_date }}</h3>
-								{% endif %}		
-							</a>
-						</td>																									
+						</td>																										
 					</tr>
 				{% endfor %}
 			</tbody>			

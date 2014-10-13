@@ -5,8 +5,8 @@ $(document).ready(function(){
 
 	$('.new_records .more_button').hide();
 
-	console.log(count_new_records);
-	console.log(page_new_records);
+/*	console.log(count_new_records);
+	console.log(page_new_records);*/
 
 	if(count_new_records > page_new_records){
 		$('.new_records .more_button').show(1000);
@@ -17,8 +17,8 @@ $(document).ready(function(){
 
 		page_new_records = $('.record_line').length;
 
-		console.log(count_new_records);
-		console.log(page_new_records);
+/*		console.log(count_new_records);
+		console.log(page_new_records);*/
 
 		$.ajax({
 			url: "/last_records/",
@@ -30,27 +30,19 @@ $(document).ready(function(){
 				"csrfmiddlewaretoken": $.csrf_token
 			},
 			error: function() {
-				alert('Ошибка получения запроса');
+				//alert('Ошибка получения запроса');
 			},			
 			success: function(data) {	
 				data = JSON.parse(data);
 
 				$.each(data, function(){
 					$('.new_records .list_table tbody').append('<tr class="article record_line"> \
-							<td class="cell_title"> \
-								<a class="article_link" href="/record/' + this.pk + '/"> <h3 class="h3">' + this.fields.title + '</h3> \
-								</a> \
-							</td> \
-							<td class="cell_date"> \
-								<a class="article_link" href="/record/' + this.pk + '/"> <h3 class="h3">' + this.fields.date + '</h3> \
-								</a> \
-							</td> \
-							<td class="cell_last_edit_date"> \
-								<a class="article_link" href="/record/' + this.pk + '/"> <h3 class="h3">' + this.fields.last_edit_date + '</h3> \
-								</a> \
-							</td> \							
-						</tr>\
-					');					
+						<td class="cell_title"> \
+						<a class="article_link" href="/record/' + this.pk + '/"> \
+						<h3 class="h3">' + this.fields.title + '</h3> \
+						</a> \
+						</td> 	\
+						</tr>');					
 				});	
 			},
 			complete: function(){
