@@ -1,6 +1,10 @@
 {% if is_authenticated %}
 	<li>
-		<a href="{% url 'logout' %}">Выйти</a>
+		<a id="login" href="/profile/{{ user_id }}/" onclick="preventDefault()">{{ username }}</a>
+	</li>
+
+	<li>
+		<a id="exit_link" href="{% url 'logout' %}">(Выйти)</a>
 	</li>
 {% else %}
 	<li>

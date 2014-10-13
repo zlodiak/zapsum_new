@@ -102,6 +102,15 @@ input:-moz-placeholder {
 	display: block;
 }
 
+#login{
+	padding-right: 0;
+	display: none;
+}
+
+#exit_link{
+	padding-left: 5px;
+}
+
 
 /*************************************************************************************************************** LAYOUT : LAYOUT */
 body > .main_container{
@@ -1298,3 +1307,46 @@ body > .main_container{
 	filter: Alpha(Opacity=20);
 	border-radius: 5px;
 }		
+
+
+
+/*************************************************************************************************************** MEDIA_QUERIES */
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+/*	body{
+		background: red;
+	}*/
+		
+	#login{
+		display: block;
+	}
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+/*	body{
+		background: magenta;
+	}*/
+	
+	#login{
+		display: block;
+	}
+	
+	
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+/*	body{
+		background: yellow;
+	}*/
+	
+
+	#login{
+		display: block;
+	}
+	
+
+}
+
