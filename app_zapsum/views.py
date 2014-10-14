@@ -412,3 +412,5 @@ def privacy_policy(request):
 	return HttpResponse(t.render(c)) 	
 
 
+
+
