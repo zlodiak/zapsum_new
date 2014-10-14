@@ -152,51 +152,65 @@ body > .main_container{
 	font-size: 21px;
 }
 
-	.record_public .body{
-		padding-bottom: 20px;
+	.record_public .ava{
+		position: relative;
+		top: -13px;
 	}
 
-	.record_public .dates_block{
-		overflow: hidden;
-
+	.record_public .h2{
+		display: inline-block;
 
 	}
 
-		.record_public .dates_block .date{
-			float: right;
+		.record_public .body{
+			padding-bottom: 20px;
 		}
 
-		.record_public .dates_block .date_mod{
-			float: right;
-			clear: both;
+		.record_public .dates_block{
+			overflow: hidden;
 
-			font-size: 13px;
-			color: #ccc;
-		}	
 
-		.record_public .author_info:after{
-			content: ')';
 		}
 
-		.record_public .author_info:before{
-			content: '(автор: ';
-		}		
+			.record_public .dates_block .date{
+				float: right;
+			}
 
-		.record_public .author_info:hover{
-			color: #cc6633;
-		}
+			.record_public .dates_block .date_mod{
+				float: right;
+				clear: both;
 
-		.record_public .author_info{
-			margin-left: 10px;
+				font-size: 13px;
+				color: #ccc;
+			}	
 
-			font-size: 13px;
-			color: #ccc;
-		}		
+			.record_public .author_info:after{
+				content: ')';
+			}
+
+			.record_public .author_info:before{
+				content: '(автор: ';
+			}		
+
+			.record_public .author_info:hover{
+				color: #cc6633;
+			}
+
+			.record_public .author_info{
+				margin-left: 10px;
+
+				font-size: 13px;
+				color: #ccc;
+			}		
 
 /*************************************************************************************************************** GLOBAL_blocks : profile_public */
 .profile_public{
 
 }
+
+	.profile_public .img_outer{
+		padding-bottom: 20px;
+	}
 
 	.profile_public .unactive_mark{
 		color: red;

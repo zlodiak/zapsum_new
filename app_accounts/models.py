@@ -49,6 +49,11 @@ class UserProfile(User):
 		blank=True,
 		null=True,
 	)
+	views = models.IntegerField(
+		default=0,
+		null=False,
+		blank=True,
+	)	
 	
 	objects = UserManager()
 
@@ -67,5 +72,15 @@ class UserProfile(User):
 	@classmethod
 	def get_entry(self, user_id):
 		result = UserProfile.objects.get(user_ptr_id=user_id)
-		return result						
+		return result	
+
+	@classmethod
+	def get_popular_authors_entries(self):
+		return self.objects.filter(is_active=1, is_superuser=0).order_by('-views')		
+
+	@classmethod
+	def get_authors_list(self, author):
+		result = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_ptr_id', 'nickname')	
+		return result					
+	
 	

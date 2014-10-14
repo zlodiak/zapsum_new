@@ -32,7 +32,7 @@ def search_author(request):
 	if request.method == "POST":
 		result = False
 		author = request.POST.get('author', '')	
-		authors_list = UserProfile.objects.filter(nickname__icontains=author, is_active=1, is_superuser=0).values_list('user_ptr_id', 'nickname')	
+		authors_list = UserProfile.get_authors_list(author=author)
 		authors_list_obj = [{k: v for k, v in authors_list}]
 
 		if len(authors_list) > 0:
@@ -48,12 +48,18 @@ def search_author(request):
 	return HttpResponse(t.render(c)) 	
 
 def record(request, id_record):	
-	entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
-	user_entry = UserProfile.objects.get(user_ptr_id=entry.user_id)
+	entry = Diary.get_entry_public(id_record=id_record)
+
+	user_entry = UserProfile.get_entry(user_id=entry.user_id)
+	user_entry.views = user_entry.views + 1
+	user_entry.save()
+
+	avatar = user_entry.avatar		
 
 	t = loader.get_template('page_record.html')
 	c = RequestContext(request, {
 		'entry': entry,
+		'avatar': avatar,
 		'nickname': user_entry.nickname,
 	}, [custom_proc])	
 	
@@ -64,6 +70,10 @@ def diary(request, id_author=None):
 	if id_author:
 		obj_author = UserProfile.get_entry(user_id=id_author)
 		obj_diary = Diary.get_all_user_entries(user_id=id_author)
+
+		user_entry = UserProfile.get_entry(user_id=id_author)
+		user_entry.views = user_entry.views + 1
+		user_entry.save()		
 
 		paginator = Paginator(obj_diary, 3)
 		list_pages = paginator.page_range
@@ -95,20 +105,16 @@ def diary(request, id_author=None):
 def profile(request, id_author=None):	
 	if id_author:
 		obj_author = UserProfile.get_entry(user_id=id_author)
-		obj_user = User.objects.get(id=id_author)
+		obj_user = UserProfile.get_entry(user_id=id_author)
 
-		if obj_user.is_active == 0:
-			obj_user_is_active = True
+		if obj_author.is_active == 0:
+			obj_author_is_active = True
 		else: 
-			obj_user_is_active = False
+			obj_author_is_active = False
 
 		t = loader.get_template('page_profile.html')
 		c = RequestContext(request, {
 			'obj_author': obj_author,
-			'obj_user_date_joined': obj_user.date_joined,
-			'obj_user_last_login': obj_user.last_login,
-			'obj_user_is_active': obj_user_is_active,
-			'obj_user_email': obj_user.email,
 		}, [custom_proc])	
 		
 		return HttpResponse(t.render(c)) 		
@@ -118,7 +124,8 @@ def search_record(request):
 	if request.method == "POST":
 		result = False
 		record = request.POST.get('record', '')	
-		record_list = Diary.objects.filter(title__icontains=record, is_active=1).values_list('id', 'title')	
+		record_list = Diary.get_search_records(record=record)
+
 		record_list_obj = [{k: v for k, v in record_list}]
 
 		if len(record_list) > 0:
@@ -135,10 +142,32 @@ def search_record(request):
 
 
 def most_popular_authors(request):	
+	popular_authors = UserProfile.get_popular_authors_entries()
+
+	paginator = Paginator(popular_authors, 3)
+	list_pages = paginator.page_range
+
+	page = request.GET.get('page')
+	try:
+		popular_authors_paginated = paginator.page(page)
+	except PageNotAnInteger:
+		popular_authors_paginated = paginator.page(1)
+	except EmptyPage:
+		popular_authors_paginated = paginator.page(paginator.num_pages)	
+
+	last_page = list_pages[-1]	
+	first_page = list_pages[0]		
+
 	t = loader.get_template('page_most_popular_authors.html')
-	c = RequestContext(request, {}, [custom_proc])	
+	c = RequestContext(request, {
+		'popular_authors': popular_authors,
+		'list_pages': list_pages,
+		'popular_authors_paginated': popular_authors_paginated,
+		'last_page': last_page,
+		'first_page': first_page,			
+	}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 		
+	return HttpResponse(t.render(c)) 
 
 
 def last_records(request):	
@@ -164,34 +193,6 @@ def last_records(request):
 		
 		return HttpResponse(t.render(c)) 	
 
-
-# def new_authors(request):	
-# 	new_authors = UserProfile.get_new_authors_entries()
-
-# 	paginator = Paginator(new_authors, 3)
-# 	list_pages = paginator.page_range
-
-# 	page = request.GET.get('page')
-# 	try:
-# 		new_authors_paginated = paginator.page(page)
-# 	except PageNotAnInteger:
-# 		new_authors_paginated = paginator.page(1)
-# 	except EmptyPage:
-# 		new_authors_paginated = paginator.page(paginator.num_pages)	
-
-# 	last_page = list_pages[-1]	
-# 	first_page = list_pages[0]		
-
-# 	t = loader.get_template('page_new_authors.html')
-# 	c = RequestContext(request, {
-# 		'new_authors': new_authors,
-# 		'list_pages': list_pages,
-# 		'new_authors_paginated': new_authors_paginated,
-# 		'last_page': last_page,
-# 		'first_page': first_page,			
-# 	}, [custom_proc])	
-	
-# 	return HttpResponse(t.render(c)) 
 
 def new_authors(request):	
 	count_new_authors = UserProfile.get_count_authors_entries()
@@ -293,7 +294,7 @@ def edit_records(request, id_record):
 
 @login_required
 def change_avatar(request):	
-	entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)	
+	entry_user_profile = UserProfile.get_entry(user_id=request.user.id)	
 			
 	avatar = entry_user_profile.avatar					
 	form = ChangeAvatarForm(instance=entry_user_profile)		
@@ -379,7 +380,8 @@ def change_password(request):
 
 @login_required
 def change_profile(request):
-	entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)		
+	entry_user_profile = UserProfile.get_entry(user_id=request.user.id)	
+
 	avatar = entry_user_profile.avatar
 	form = ProfileForm(instance=entry_user_profile)
 	

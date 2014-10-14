@@ -1,11 +1,20 @@
 {% extends "page_base.html" %}
+{% load staticfiles thumbnail %}
 
 {% block title %}Запись пользователя :: {{ nickname }}{% endblock %}
 
 {% block content %}
 	<section class="section record_public">
 		<div class="page-header">
-			<h2>{{ entry.title }}<a class="author_info" href="/profile/{{ entry.user_id }}/">{{ nickname }}</a></h2>
+			{% if avatar %}
+				<a class="fancybox ava" href="{{ avatar.url }}">
+					{% thumbnail avatar "50x50" crop="center" as im %}
+						<img id="ava_img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+					{% endthumbnail %}	
+				</a>
+			{% endif %}
+
+			<h2 class="h2">{{ entry.title }}<a class="author_info" href="/profile/{{ entry.user_id }}/">{{ nickname }}</a></h2>
 		</div>
 
 		<article class="article record_article">

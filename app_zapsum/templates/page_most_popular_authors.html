@@ -1,13 +1,44 @@
 {% extends "page_base.html" %}
+{% load tags_app_zapsum %}
 
 {% block title %}Популярные дневники{% endblock %}
 
 {% block content %}
-	<div class="page-header">
-		<h2>Популярные дневники</h2>
-	</div>
+	<section class="section popular_authors">
+		<div class="page-header">
+			<h2>Популярные дневники</h2>
+		</div>
 
-	<p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body > .container</code>.</p>
+		<table class="list_table">
+			<thead>
+				<tr>
+					<td>Дневник</td>
 
-	<p>Back to <a href="../sticky-footer">the default sticky footer</a> minus the navbar.</p>
+					<td>Количество просмотров</td>
+				</tr>
+			</thead>
+			
+			<tbody>
+				{% for entry in popular_authors_paginated %}
+					<tr class="article author_line">							
+						<td class="cell_title">
+							<a class="article_link" href="/profile/{{ entry.id }}/">
+								{% if entry.nickname %}
+									<h3 class="h3">{{ entry.nickname }}</h3>
+								{% endif %}		
+							</a>
+						</td>
+
+						<td class="cell_actions">
+							{% if entry.views %}
+								<h3 class="h3">{{ entry.views }}</h3>
+							{% endif %}						
+						</td>																						
+					</tr>
+				{% endfor %}
+			</tbody>			
+		</table>
+
+		{% part_pagination all_user_entries_paginated list_pages last_page first_page %} 	
+	</section>
 {% endblock %}

@@ -62,8 +62,8 @@ class Diary(models.Model):
 		return self.objects.get(id=id_record, user_id=user_id, is_delete=False)		
 
 	@classmethod
-	def get_entry_public(self, id_record, user_id):
-		return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)	
+	def get_entry_public(self, id_record):
+		return self.objects.get(id=id_record, is_active=True, is_delete=False)	
 
 	@classmethod
 	def get_count_diary_entries(self):
@@ -71,8 +71,10 @@ class Diary(models.Model):
 
 	@classmethod
 	def get_new_diary_entries(self, cut_begin=0, cut_end=2):
-		return self.objects.all()[cut_begin:cut_end]				
+		return self.objects.filter(is_delete=0, is_active=1)[cut_begin:cut_end]				
 			
-
+	@classmethod
+	def get_search_records(self, record):
+		return self.objects.filter(title__icontains=record, is_active=1).values_list('id', 'title')	
 
 

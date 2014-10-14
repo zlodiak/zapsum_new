@@ -2067,3 +2067,501 @@ Forbidden (CSRF token missing or incorrect.): /new_authors/
 Forbidden (CSRF token missing or incorrect.): /new_authors/
 Forbidden (CSRF token missing or incorrect.): /new_authors/
 Forbidden (CSRF token missing or incorrect.): /new_authors/
+Internal Server Error: /record/1/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 51, in record
+    entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 66, in get_entry_public
+    return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_zapsum.models.DoesNotExist: Diary matching query does not exist.
+Not Found: /favicon.ico
+Internal Server Error: /record/2/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 51, in record
+    entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 66, in get_entry_public
+    return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_zapsum.models.DoesNotExist: Diary matching query does not exist.
+Internal Server Error: /record/3/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 51, in record
+    entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 66, in get_entry_public
+    return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_zapsum.models.DoesNotExist: Diary matching query does not exist.
+Internal Server Error: /record/9/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 51, in record
+    entry = Diary.get_entry_public(id_record=id_record, user_id=request.user.pk)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 66, in get_entry_public
+    return self.objects.get(id=id_record, user_id=user_id, is_active=True, is_delete=False)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_zapsum.models.DoesNotExist: Diary matching query does not exist.
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Not Found: /favicon.ico
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /most_popular_authors/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'part_pagination'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 157, in most_popular_authors
+    t = loader.get_template('page_most_popular_authors.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'part_pagination', expected 'endblock'
+Internal Server Error: /record/2/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 52, in record
+    user_entry = UserProfile.get_entry(user_id=id_author)
+NameError: name 'id_author' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    authors_list = get_authors_list(author=author)
+NameError: name 'get_authors_list' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    authors_list = get_authors_list(author=author)
+NameError: name 'get_authors_list' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    authors_list = get_authors_list(author=author)
+NameError: name 'get_authors_list' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    authors_list = get_authors_list(author=author)
+NameError: name 'get_authors_list' is not defined
+Internal Server Error: /search_author/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 35, in search_author
+    authors_list = get_authors_list(author=author)
+NameError: name 'get_authors_list' is not defined
+Internal Server Error: /profile/3/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 105, in profile
+    obj_user = UserProfile.get_entry.get(user_id=id_author)
+AttributeError: 'function' object has no attribute 'get'
+Internal Server Error: /search_record/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 128, in search_record
+    record_list = Diary.get_search_records(record=record)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 78, in get_search_records
+    return objects.filter(title__icontains=record, is_active=1).values_list('id', 'title')
+NameError: name 'objects' is not defined
+Internal Server Error: /search_record/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 128, in search_record
+    record_list = Diary.get_search_records(record=record)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 78, in get_search_records
+    return objects.filter(title__icontains=record, is_active=1).values_list('id', 'title')
+NameError: name 'objects' is not defined
+Internal Server Error: /record/1/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 274, in parse
+    compile_func = self.tags[command]
+KeyError: 'thumbnail'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 57, in record
+    t = loader.get_template('page_record.html')
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 127, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 149, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 153, in compile_string
+    return parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 278, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 942, in do_if
+    nodelist = parser.parse(('elif', 'else', 'endif'))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 276, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 331, in invalid_block_tag
+    (command, get_text_list(["'%s'" % p for p in parse_until])))
+django.template.base.TemplateSyntaxError: Invalid block tag: 'thumbnail', expected 'elif','else' или 'endif'
+Internal Server Error: /record/1/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 51, in record
+    entry = Diary.get_entry_public(id_record=id_record)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 66, in get_entry_public
+    return self.objects.get(id=id_record, is_active=True, is_delete=False)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_zapsum.models.DoesNotExist: Diary matching query does not exist.

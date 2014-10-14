@@ -1,15 +1,22 @@
 {% extends "page_base.html" %}
+{% load staticfiles thumbnail %}
 
 {% block title %}Профиль пользователя{% endblock %}
 
 {% block content %}
 	<section class="section profile_public">
 		<div class="page-header">
-			<h2>Профиль пользователя</h2>
+			<h2>Профиль пользователя</h2>			
 		</div>
 
 		<form class="profile_form" id="profile_form" action="" method="post" novalidate="">
 			<input type="hidden" name="csrfmiddlewaretoken" value="u6ET2ApLZupYW7Ccyk06mQDBZJsuzcFU">
+
+			{% if obj_author.avatar %}
+				{% thumbnail obj_author.avatar "200x200" crop="center" as im %}
+					<div class="img_outer"><img id="ava_img" src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}"></div>
+				{% endthumbnail %}	
+			{% endif %}			
 
 			{% if obj_author.nickname %}
 				<div class="cell input_outer">
@@ -28,28 +35,28 @@
 				</div>	
 			{% endif %}				
 
-			{% if obj_user_date_joined %}
+			{% if obj_author.date_joined %}
 				<div class="cell input_outer">
 					<label class="label">Дата регистрации</label>
 					
-					<input id="id_skype" name="skype" type="text" value="{{ obj_user_date_joined }}" disabled="disabled" />
+					<input id="id_skype" name="skype" type="text" value="{{ obj_author.date_joined }}" disabled="disabled" />
 				</div>	
 			{% endif %}	
 
 
-			{% if obj_user_last_login %}
+			{% if obj_author.last_login %}
 				<div class="cell input_outer">
 					<label class="label">Последний визит</label>
 					
-					<input id="id_skype" name="skype" type="text" value="{{ obj_user_last_login }}" disabled="disabled" />
+					<input id="id_skype" name="skype" type="text" value="{{ obj_author.last_login }}" disabled="disabled" />
 				</div>	
 			{% endif %}		
 
-			{% if obj_user_email %}
+			{% if obj_author.email %}
 				<div class="cell input_outer">
 					<label class="label">E-mail</label>
 					
-					<input id="id_skype" name="skype" type="text" value="{{ obj_user_email }}" disabled="disabled" />
+					<input id="id_skype" name="skype" type="text" value="{{ obj_author.email }}" disabled="disabled" />
 				</div>	
 			{% endif %}							
 
