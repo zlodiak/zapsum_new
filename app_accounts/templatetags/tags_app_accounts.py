@@ -7,11 +7,12 @@ register = template.Library()
 	
 @register.inclusion_tag("part_auth_area.html")
 def part_auth_area(user):
-	return {
-		'is_authenticated': user.is_authenticated,
-		'username': user.username,
-		'user_id': user.pk,
-	}	
+	if user:
+		return {
+			'is_authenticated': user.is_authenticated,
+			'username': user.username,
+			'user_id': user.pk,
+		}	
 
 
 

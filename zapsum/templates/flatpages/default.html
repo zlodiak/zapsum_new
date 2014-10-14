@@ -1,0 +1,11 @@
+{% extends "page_base.html" %}
+
+{% block title %}{{ flatpage.title }}{% endblock %}
+
+{% block content %}
+	<div class="page-header">
+		<h2>{{ flatpage.title }}</h2>{{ request.user.pk }}	
+	</div>
+
+	<p class="lead">{{ flatpage.content }}</p>
+{% endblock %}

@@ -2565,3 +2565,1630 @@ Traceback (most recent call last):
   File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
     self.model._meta.object_name)
 app_zapsum.models.DoesNotExist: Diary matching query does not exist.
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/sites/models.py", line 40, in get_current
+    sid = settings.SITE_ID
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/conf/__init__.py", line 55, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'SITE_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/sites.py", line 215, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/sites.py", line 197, in inner
+    return self.login(request)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/sites.py", line 330, in login
+    return login(request, **defaults)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/debug.py", line 75, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/views.py", line 49, in login
+    current_site = get_current_site(request)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/sites/models.py", line 103, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/sites/models.py", line 43, in get_current
+    raise ImproperlyConfigured("You're using the Django \"sites framework\" without having set the SITE_ID setting. Create a site in your database and set the SITE_ID setting to fix this error.")
+django.core.exceptions.ImproperlyConfigured: You're using the Django "sites framework" without having set the SITE_ID setting. Create a site in your database and set the SITE_ID setting to fix this error.
+Internal Server Error: /admin/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/sites/models.py", line 40, in get_current
+    sid = settings.SITE_ID
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/conf/__init__.py", line 55, in __getattr__
+    return getattr(self._wrapped, name)
+AttributeError: 'Settings' object has no attribute 'SITE_ID'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/sites.py", line 215, in wrapper
+    return self.admin_view(view, cacheable)(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/sites.py", line 197, in inner
+    return self.login(request)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/sites.py", line 330, in login
+    return login(request, **defaults)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/debug.py", line 75, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/views/decorators/cache.py", line 52, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/views.py", line 49, in login
+    current_site = get_current_site(request)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/sites/models.py", line 103, in get_current_site
+    current_site = Site.objects.get_current()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/sites/models.py", line 43, in get_current
+    raise ImproperlyConfigured("You're using the Django \"sites framework\" without having set the SITE_ID setting. Create a site in your database and set the SITE_ID setting to fix this error.")
+django.core.exceptions.ImproperlyConfigured: You're using the Django "sites framework" without having set the SITE_ID setting. Create a site in your database and set the SITE_ID setting to fix this error.
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Internal Server Error: /pages/privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 60, in render_flatpage
+    t = loader.get_template(DEFAULT_TEMPLATE)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 138, in get_template
+    template, origin = find_template(template_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader.py", line 131, in find_template
+    raise TemplateDoesNotExist(name)
+django.template.base.TemplateDoesNotExist: flatpages/default.html
+Not Found: /favicon.ico
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /favicon.ico
+Not Found: /privacy_policy/
+Not Found: /favicon.ico
+Not Found: /privacy_policy/
+Not Found: /favicon.ico
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /favicon.ico
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /privacy_policy/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 28, in rules
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'privacy_policy' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Internal Server Error: /privacy_policy/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 199, in get_response
+    response = middleware_method(request, response)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/middleware.py", line 10, in process_response
+    return flatpage(request, request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 45, in flatpage
+    return render_flatpage(request, f)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/decorators.py", line 99, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/flatpages/views.py", line 71, in render_flatpage
+    response = HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 1196, in render
+    _dict = func(*resolved_args, **resolved_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py", line 11, in part_auth_area
+    'is_authenticated': user.is_authenticated,
+AttributeError: 'str' object has no attribute 'is_authenticated'
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Not Found: /privacy_policy/
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 358, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py", line 5, in <module>
+    admin.autodiscover()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1444, in exec_module
+  File "<frozen importlib._bootstrap>", line 1549, in get_code
+  File "<frozen importlib._bootstrap>", line 1509, in source_to_code
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py", line 5
+    class UserAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
+                                                                  ^
+SyntaxError: unexpected EOF while parsing
+Internal Server Error: /admin/app_accounts/userprofile/2/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 358, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py", line 5, in <module>
+    admin.autodiscover()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py", line 5, in <module>
+    class UserProfileAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py", line 6, in UserProfileAdmin
+    other = models.TextField(
+NameError: name 'models' is not defined
+Internal Server Error: /admin/app_accounts/userprofile/2/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 358, in urlconf_module
+    return self._urlconf_module
+AttributeError: 'RegexURLResolver' object has no attribute '_urlconf_module'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 337, in resolve
+    for pattern in self.url_patterns:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 365, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 360, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py", line 5, in <module>
+    admin.autodiscover()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/admin/__init__.py", line 29, in autodiscover
+    import_module('%s.admin' % app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py", line 5, in <module>
+    class UserProfileAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py", line 6, in UserProfileAdmin
+    other = models.TextField(
+NameError: name 'models' is not defined
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 297, in change_avatar
+    entry_user_profile = UserProfile.get_entry(user_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/models.py", line 74, in get_entry
+    result = UserProfile.objects.get(user_ptr_id=user_id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
+Internal Server Error: /change_avatar/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 298, in change_avatar
+    entry_user_profile = UserProfile.objects.get(user_ptr_id=request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_accounts.models.DoesNotExist: UserProfile matching query does not exist.
