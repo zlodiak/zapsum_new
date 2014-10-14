@@ -25,7 +25,7 @@
 			<div class="dates_block">
 				<span class="date">{{ entry.date }}</span>
 
-				<span class="date_mod">Дата редактирования: {{ entry.last_edit_date }}</span>
+				<span class="date_mod">Дата редактирования: {{ entry.date|date:"Y-m-d H:i" }}</span>
 			</div>
 		</article>
 	</section>

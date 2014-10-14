@@ -82,7 +82,7 @@ class addMessageForm(forms.ModelForm):
 		    'width': '670px',
 		    #'height': '200px',	    
 		}),
-	)			
+	)		
 				
 	class Meta:
 		model = Diary

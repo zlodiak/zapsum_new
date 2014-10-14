@@ -16,12 +16,18 @@ from app_zapsum.models import Diary
 from app_zapsum.forms import ChangePasswordForm, ChangeAvatarForm, addMessageForm
 
 def custom_proc(request):
+	"""
+	request object for every pages
+	"""		
 	return{
 		'request': request,
 	}
 
 
 def rules(request):	
+	"""
+	template for rules page
+	"""	
 	t = loader.get_template('page_rules.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
@@ -29,6 +35,9 @@ def rules(request):
 
 
 def search_author(request):	
+	"""
+	data for render search author page
+	"""
 	if request.method == "POST":
 		result = False
 		author = request.POST.get('author', '')	
@@ -48,7 +57,12 @@ def search_author(request):
 	return HttpResponse(t.render(c)) 	
 
 def record(request, id_record):	
+	"""
+	data for render record public page
+	"""	
 	entry = Diary.get_entry_public(id_record=id_record)
+	print(entry.date)
+	print(entry.last_edit_date)
 
 	user_entry = UserProfile.get_entry(user_id=entry.user_id)
 	user_entry.views = user_entry.views + 1
@@ -67,6 +81,9 @@ def record(request, id_record):
 
 
 def diary(request, id_author=None):	
+	"""
+	data for render public records on diary page
+	"""	
 	if id_author:
 		obj_author = UserProfile.get_entry(user_id=id_author)
 		obj_diary = Diary.get_all_user_entries(user_id=id_author)
@@ -103,6 +120,9 @@ def diary(request, id_author=None):
 
 
 def profile(request, id_author=None):	
+	"""
+	data for render public profile page
+	"""	
 	if id_author:
 		obj_author = UserProfile.get_entry(user_id=id_author)
 		obj_user = UserProfile.get_entry(user_id=id_author)
@@ -121,6 +141,9 @@ def profile(request, id_author=None):
 
 
 def search_record(request):	
+	"""
+	data for render search record page
+	"""	
 	if request.method == "POST":
 		result = False
 		record = request.POST.get('record', '')	
@@ -142,6 +165,9 @@ def search_record(request):
 
 
 def most_popular_authors(request):	
+	"""
+	data for render popular author page. paginated
+	"""	
 	popular_authors = UserProfile.get_popular_authors_entries()
 
 	paginator = Paginator(popular_authors, 3)
@@ -171,6 +197,9 @@ def most_popular_authors(request):
 
 
 def last_records(request):	
+	"""
+	data for render last records page. with ajax more-button
+	"""	
 	count_new_records= Diary.get_count_diary_entries()
 
 	if request.method == 'POST' and request.is_ajax():	
@@ -195,6 +224,9 @@ def last_records(request):
 
 
 def new_authors(request):	
+	"""
+	data for render new authors/diary page. with ajax more-button
+	"""		
 	count_new_authors = UserProfile.get_count_authors_entries()
 
 	if request.method == 'POST' and request.is_ajax():	
@@ -220,6 +252,9 @@ def new_authors(request):
 
 @login_required
 def my_records(request):	
+	"""
+	data for render private my records. paginated
+	"""		
 	all_user_entries = Diary.get_all_user_entries(user_id=request.user.pk)
 
 	paginator = Paginator(all_user_entries, 3)
@@ -250,6 +285,9 @@ def my_records(request):
 
 @login_required
 def add_records(request):	
+	"""
+	data for render private add my record
+	"""		
 	form = addMessageForm()
 
 	if request.method == "POST":
@@ -275,6 +313,9 @@ def add_records(request):
 
 @login_required
 def edit_records(request, id_record):	
+	"""
+	data for render private edit my record
+	"""		
 	entry = Diary.get_entry(id_record=id_record, user_id=request.user.pk)
 	form = addMessageForm(instance=entry)
 
@@ -294,6 +335,9 @@ def edit_records(request, id_record):
 
 @login_required
 def change_avatar(request):	
+	"""
+	data for render private change avatar page
+	"""		
 	entry_user_profile = UserProfile.get_entry(user_id=request.user.id)	
 			
 	avatar = entry_user_profile.avatar					
@@ -321,7 +365,10 @@ def change_avatar(request):
 
 
 @login_required
-def delete_record(request):				
+def delete_record(request):		
+	"""
+	data for render private delete record page
+	"""			
 	if request.method == 'POST' and request.is_ajax():	
 		data = {'result': False}		
 		id_delete = request.POST.get('id_delete', '')	
@@ -342,7 +389,10 @@ def delete_record(request):
 
 
 @login_required
-def active_record(request):				
+def active_record(request):		
+	"""
+	data for render private change public acceess record
+	"""			
 	if request.method == 'POST' and request.is_ajax():	
 		data = {'result': False}		
 		id_rec = request.POST.get('id_rec', '')	
@@ -360,6 +410,9 @@ def active_record(request):
 
 @login_required
 def change_password(request):	
+	"""
+	data for render private change password
+	"""		
 	form = ChangePasswordForm(request=request)		
 
 	if request.method == 'POST':								
@@ -380,6 +433,9 @@ def change_password(request):
 
 @login_required
 def change_profile(request):
+	"""
+	data for render private change profile
+	"""		
 	entry_user_profile = UserProfile.get_entry(user_id=request.user.id)	
 
 	avatar = entry_user_profile.avatar
@@ -406,6 +462,9 @@ def change_profile(request):
 
 
 def privacy_policy(request):	
+	"""
+	template for private policy page
+	"""		
 	t = loader.get_template('page_privacy_policy.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	

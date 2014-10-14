@@ -13,12 +13,18 @@ from app_accounts.forms import RegistrationForm, AuthenticationCustomForm
 
 
 def custom_proc(request):
+	"""
+	request object for every pages
+	"""			
 	return{
 		'request': request,
 	}
 
 
 def registration(request):
+	"""
+	data for render registration page
+	"""			
 	form = RegistrationForm()
 	
 	if request.method == 'POST':
@@ -37,6 +43,9 @@ def registration(request):
 
 
 def registration_success(request):	
+	"""
+	tpl for ok registration
+	"""		
 	t = loader.get_template('page_registration_success.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
@@ -44,6 +53,9 @@ def registration_success(request):
 
 
 def authentication(request):
+	"""
+	data for render authentication page
+	"""		
 	form = AuthenticationCustomForm()	
 
 	if(request.method == "POST"):
@@ -66,6 +78,9 @@ def authentication(request):
 
 
 def authentication_success(request):	
+	"""
+	tpl for ok authentication
+	"""		
 	t = loader.get_template('page_authentication_success.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
@@ -73,6 +88,9 @@ def authentication_success(request):
 
 
 def logout(request):
+	"""
+	logout
+	"""		
 	auth.logout(request)
 	t = loader.get_template('page_logout.html')
 	c = RequestContext(request, {}, [custom_proc])	
@@ -81,6 +99,9 @@ def logout(request):
 
 @login_required
 def changed_password(request):	
+	"""
+	tpl for ok change password
+	"""			
 	t = loader.get_template('page_changed_password.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
@@ -151,95 +172,13 @@ def ajax_login_check(request):
 		'error_message_active': error_message_active,		
 	}
 
-	return HttpResponse(json.dumps(data), content_type='application/json')	
-
-
-def ajax_registration_check(request):
-	error_login = False
-	error_message_login = ''
-	error_email = False
-	error_message_email = ''	
-	error_password1 = False
-	error_message_password1 = ''
-	error_password2 = False
-	error_message_password2 = ''			
-
-	if request.method == "POST" and request.is_ajax():
-		username = request.POST.get('username', '')		
-		email = request.POST.get('email', '')		
-		password1 = request.POST.get('password1', '')	
-		password2 = request.POST.get('password2', '')			
-
-		#login check unique
-		username_req = User.objects.filter(username=username)				
-
-		if username_req.exists():
-			error_login = True
-			error_message_login = 'Логин занят'
-
-		#login min_length check
-		if(len(username) < 3):
-			error_login = True
-			error_message_login = 'Имя должно состоять не менее чем из 3 символов'
-
-		#login  max_height check				
-		if(len(username) > 30):
-			error_login = True
-			error_message_login = 'Имя должно состоять не более чем из 30 символов'
-
-		#email check unique
-		email_req = User.objects.filter(email=email)				
-
-		if email_req.exists():
-			error_email = True
-			error_message_email = 'Email занят'		
-
-		#email regex check
-		EMAIL_REGEX = re.compile(r'.*?@.*?\..*?$')
-		if not EMAIL_REGEX.match(email):
-			error_email = True
-			error_message_email = 'Введите корректный email'
-
-		#email min_length check
-		if(len(email) < 6):
-			error_email = True
-			error_message_email = 'Email должен состоять не менее чем из 6 символов'
-
-		#email max_height check				
-		if(len(email) > 30):
-			error_email = True
-			error_message_email = 'Email должен состоять не более чем из 30 символов'	
-
-		#password1 min_length check
-		if(len(password1) < 6):
-			error_password1 = True
-			error_message_password1 = 'Пароль должен состоять не менее чем из 6 символов'
-
-		#password1 max_height check				
-		if(len(password1) > 30):
-			error_password1 = True
-			error_message_password1 = 'Пароль должен состоять не более чем из 30 символов'		
-
-		#password2 compare check				
-		if(password1 != password2):
-			error_password2 = True
-			error_message_password2 = 'Пароли должны совпадать'						
-
-	data = {
-		'error_login': error_login,
-		'error_message_login': error_message_login,	
-		'error_email': error_email,
-		'error_message_email': error_message_email,			
-		'error_password1': error_password1,
-		'error_message_password1': error_message_password1,			
-		'error_password2': error_password2,
-		'error_message_password2': error_message_password2,			
-	}
-
 	return HttpResponse(json.dumps(data), content_type='application/json')				
 
 	
 def delete_profile(request):
+	"""
+	delete profile. change is_delete in DB. to do cron delete entries(month period)
+	"""			
 	result = False
 
 	if request.method == "POST" and request.is_ajax():
