@@ -90,6 +90,7 @@ class addMessageForm(forms.ModelForm):
 			'title', 
 			'date',  
 			'text',
+			#'last_edit_date',
 		)		
 
 	def clean_title(self):

@@ -23,9 +23,10 @@ class Diary(models.Model):
 		max_length=5000, 
 		blank=False,
 	)	
-	last_edit_date = models.DateField(
+	last_edit_date = models.DateTimeField(
 		'Дата последнего редактирования',
-		default=datetime.now(),
+		#default=datetime.now(),
+		auto_now=True,
 	)	
 	is_active = models.BooleanField(default=True)					
 	is_delete = models.BooleanField(default=False)					
