@@ -1,5 +1,5 @@
 $(document).ready(function(){	
-	/********************************************************************************************** more button for new records */
+	/********************************************************************************************* more button for new records */
 	var	count_new_records = parseInt($('#count_new_records').text(), 10)
 		page_new_records = $('.records_line').length;
 
