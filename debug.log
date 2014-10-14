@@ -5622,3 +5622,725 @@ Traceback (most recent call last):
 django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
 =======
 >>>>>>> b65eceb
+Internal Server Error: /record/4/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 80, in record
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /record/4/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 80, in record
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /my_records/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 26, in _wrapped_view
+    resolve_url(login_url or settings.LOGIN_URL))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/shortcuts/__init__.py", line 151, in resolve_url
+    return urlresolvers.reverse(to, args=args, kwargs=kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 34, in rules
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 34, in rules
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 34, in rules
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 34, in rules
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 109, in get_callable
+    lookup_view = getattr(mod, func_name)
+AttributeError: 'module' object has no attribute 'ajax_registration_check'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 34, in rules
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 403, in _reverse_with_prefix
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 290, in _populate
+    for name in pattern.reverse_dict:
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 315, in reverse_dict
+    self._populate()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 303, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
