@@ -25,6 +25,7 @@ class Diary(models.Model):
 	)	
 	last_edit_date = models.DateTimeField(
 		'Дата последнего редактирования',
+		#default=datetime.now(),
 		auto_now=True,
 	)	
 	is_active = models.BooleanField(default=True)					
