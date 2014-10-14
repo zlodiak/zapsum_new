@@ -63,7 +63,7 @@ class Diary(models.Model):
 
 	@classmethod
 	def get_entry_public(self, id_record):
-		return self.objects.get(id=id_record, is_active=True, is_delete=False)	
+		return self.objects.get(pk=id_record, is_active=True, is_delete=False)	
 
 	@classmethod
 	def get_count_diary_entries(self):
