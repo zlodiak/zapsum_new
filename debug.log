@@ -6344,3 +6344,21 @@ Traceback (most recent call last):
 django.core.exceptions.ViewDoesNotExist: Could not import app_accounts.views.ajax_registration_check. View does not exist in module app_accounts.views.
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Not Found: /search_author/getbootstrap.com
+Not Found: /sticky-footer
+Internal Server Error: /record/45/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py", line 63, in record
+    entry = Diary.get_entry_public(id_record=id_record)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py", line 67, in get_entry_public
+    return self.objects.get(pk=id_record, is_active=True, is_delete=False)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/manager.py", line 151, in get
+    return self.get_queryset().get(*args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 310, in get
+    self.model._meta.object_name)
+app_zapsum.models.DoesNotExist: Diary matching query does not exist.
+Forbidden (CSRF token missing or incorrect.): /new_authors/
+Forbidden (CSRF token missing or incorrect.): /new_authors/
+Forbidden (CSRF token missing or incorrect.): /new_authors/

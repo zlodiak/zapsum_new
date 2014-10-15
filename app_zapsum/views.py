@@ -92,7 +92,7 @@ def diary(request, id_author=None):
 		user_entry.views = user_entry.views + 1
 		user_entry.save()		
 
-		paginator = Paginator(obj_diary, 3)
+		paginator = Paginator(obj_diary, 6)
 		list_pages = paginator.page_range
 
 		page = request.GET.get('page')
