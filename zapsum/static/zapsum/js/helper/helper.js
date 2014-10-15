@@ -161,7 +161,7 @@ $(document).ready(function(){
 		});			
 	});	
 		
-	/*********************************************************************************************** ajax search author */
+	/********************************************************************************************** ajax search author */
 	$('#formSearchAuthorSubmit').on('click', function(event){
 		var	block_search = $('.search_author .search_list'),
 			block_search2 = $('.search_author .list_table tbody'),
