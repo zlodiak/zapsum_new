@@ -46,6 +46,7 @@ INSTALLED_APPS = (
 
     'sorl.thumbnail',
     'django_summernote', 
+    'captcha', 
 
     'app_zapsum',
     'app_accounts',
@@ -141,5 +142,9 @@ LOGGING = {
     },
 }
 
+
+SOUTH_MIGRATION_MODULES = {
+    'captcha': 'captcha.south_migrations',
+}
 
 

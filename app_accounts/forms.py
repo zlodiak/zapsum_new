@@ -7,6 +7,7 @@ import re
 from app_accounts.models import UserProfile, Gender
 
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+from captcha.fields import CaptchaField
 
 
 class RegistrationForm(UserCreationForm):	
@@ -36,6 +37,8 @@ class RegistrationForm(UserCreationForm):
 		required=True,
 		widget=forms.PasswordInput,
 	)	
+
+	captcha = CaptchaField()
 
 	class Meta:
 		model = UserProfile
