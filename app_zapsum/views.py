@@ -170,7 +170,7 @@ def most_popular_authors(request):
 	"""	
 	popular_authors = UserProfile.get_popular_authors_entries()
 
-	paginator = Paginator(popular_authors, 3)
+	paginator = Paginator(popular_authors, 6)
 	list_pages = paginator.page_range
 
 	page = request.GET.get('page')
@@ -206,13 +206,13 @@ def last_records(request):
 		page_new_records = int(request.POST.get('page_new_records', ''))
 		count_new_records = int(request.POST.get('count_new_records', ''))
 
-		new_records = Diary.get_new_diary_entries(cut_begin=page_new_records, cut_end=page_new_records + 2)
+		new_records = Diary.get_new_diary_entries(cut_begin=page_new_records, cut_end=page_new_records + 6)
 
 		result = serializers.serialize('json', new_records)
 
 		return HttpResponse(json.dumps(result), content_type='application/json')	
 	else:
-		new_records = Diary.get_new_diary_entries(cut_begin=0, cut_end=2)
+		new_records = Diary.get_new_diary_entries(cut_begin=0, cut_end=6)
 
 		t = loader.get_template('page_last_records.html')
 		c = RequestContext(request, {
@@ -233,13 +233,13 @@ def new_authors(request):
 		page_new_authors = int(request.POST.get('page_new_authors', ''))
 		count_new_authors = int(request.POST.get('count_new_authors', ''))
 
-		new_authors = UserProfile.get_new_authors_entries(cut_begin=page_new_authors, cut_end=page_new_authors + 2)
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=page_new_authors, cut_end=page_new_authors + 6)
 
 		result = serializers.serialize('json', new_authors)
 
 		return HttpResponse(json.dumps(result), content_type='application/json')	
 	else:
-		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=2)
+		new_authors = UserProfile.get_new_authors_entries(cut_begin=0, cut_end=6)
 
 		t = loader.get_template('page_new_authors.html')
 		c = RequestContext(request, {
@@ -257,7 +257,7 @@ def my_records(request):
 	"""		
 	all_user_entries = Diary.get_all_user_entries(user_id=request.user.pk)
 
-	paginator = Paginator(all_user_entries, 3)
+	paginator = Paginator(all_user_entries, 6)
 	list_pages = paginator.page_range
 
 	page = request.GET.get('page')

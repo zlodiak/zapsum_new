@@ -10,7 +10,7 @@ class Diary(models.Model):
 	)		
 	title = models.CharField(
 		'Заголовок записи',
-		max_length=100, 
+		max_length=1000, 
 		blank=False,
 	)			
 	date = models.DateField(
@@ -20,7 +20,7 @@ class Diary(models.Model):
 	)						
 	text = models.TextField(
 		'Содержание записи',
-		max_length=5000, 
+		max_length=50000, 
 		blank=False,
 	)	
 	last_edit_date = models.DateTimeField(

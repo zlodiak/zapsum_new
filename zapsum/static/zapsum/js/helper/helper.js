@@ -17,9 +17,6 @@ $(document).ready(function(){
 
 		page_new_records = $('.record_line').length;
 
-/*		console.log(count_new_records);
-		console.log(page_new_records);*/
-
 		$.ajax({
 			url: "/last_records/",
 			type: 'POST',
@@ -46,9 +43,12 @@ $(document).ready(function(){
 				});	
 			},
 			complete: function(){
-				page_new_records = $('.record_line').length;
-				if(count_new_records <= page_new_records){
-					//console.log('eq');
+				page_new_records = page_new_records + 6;
+
+/*				console.log(count_new_records);
+				console.log(page_new_records);*/
+
+				if(parseInt(count_new_records, 10) <= parseInt(page_new_records, 10)){
 					$('.new_records .more_button').hide();	
 				};			
 			}
@@ -153,9 +153,8 @@ $(document).ready(function(){
 				});	
 			},
 			complete: function(){
-				page_new_authors = $('.author_line').length;
+				page_new_authors = page_new_authors + 6;
 				if(count_new_authors <= page_new_authors){
-					//console.log('eq');
 					$('.new_authors .more_button').hide();	
 				};			
 			}

@@ -100,7 +100,7 @@ class addMessageForm(forms.ModelForm):
 			raise forms.ValidationError("Заголовок не может быть короче 3 символов.")		
 
 		if q_letters > 100:
-			raise forms.ValidationError("Заголовок не может быть длиннее 100 символов.")					
+			raise forms.ValidationError("Заголовок не может быть длиннее 1000 символов.")					
 
 		return title	
 
@@ -111,6 +111,6 @@ class addMessageForm(forms.ModelForm):
 			raise forms.ValidationError("Содержание не может быть короче 3 символов.")		
 
 		if q_letters > 5000:
-			raise forms.ValidationError("Содержание не может быть длиннее 5000 символов.")					
+			raise forms.ValidationError("Содержание не может быть длиннее 50000 символов.")					
 
 		return text								
