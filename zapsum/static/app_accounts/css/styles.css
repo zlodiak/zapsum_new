@@ -9,17 +9,20 @@ form{
 		display: inline-block;
 	}
 
-	form .input_outer .error,
-	form .input_outer .errorlist{
+	form .cell .error,
+	form .cell .errorlist{
 		display: inline-block;
+		margin-left: 3px;
 
 		color: red;
+		vertical-align: top;
 	}
 
 	form .input_outer input{
 		height: 32px;
 		
 	}
+
 
 	form .label{
 		color: #444;

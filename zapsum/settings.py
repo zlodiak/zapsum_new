@@ -50,6 +50,7 @@ INSTALLED_APPS = (
 
     'app_zapsum',
     'app_accounts',
+    'app_messages',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -115,6 +116,7 @@ TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'zapsum/templates/'),
     os.path.join(BASE_DIR, 'app_zapsum/templates/'),
     os.path.join(BASE_DIR, 'app_accounts/templates/'),
+    os.path.join(BASE_DIR, 'app_messages/templates/'),
 )
 
 

@@ -6362,3 +6362,160 @@ app_zapsum.models.DoesNotExist: Diary matching query does not exist.
 Forbidden (CSRF token missing or incorrect.): /new_authors/
 Forbidden (CSRF token missing or incorrect.): /new_authors/
 Forbidden (CSRF token missing or incorrect.): /new_authors/
+Internal Server Error: /messages/messages_sended/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such table: app_messages_message
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 94, in messages_sended
+    exists_sended_messages = Message.exists_sended_messages(request.user.id)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py", line 53, in exists_sended_messages
+    return self.objects.filter(sender=id, sender_show=True).exists()
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/query.py", line 515, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/query.py", line 409, in has_results
+    return bool(compiler.execute_sql(SINGLE))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/models/sql/compiler.py", line 786, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/backends/util.py", line 69, in execute
+    return super(CursorDebugWrapper, self).execute(sql, params)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/utils.py", line 99, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 549, in reraise
+    raise value.with_traceback(tb)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/backends/util.py", line 53, in execute
+    return self.cursor.execute(sql, params)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/db/backends/sqlite3/base.py", line 451, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such table: app_messages_message
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 125, in message_create
+    form = MessageForm()
+NameError: name 'MessageForm' is not defined
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 125, in message_create
+    form = MessageForm()
+NameError: name 'MessageForm' is not defined
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 125, in message_create
+    form = MessageForm()
+NameError: name 'MessageForm' is not defined
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 339, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 339, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 12, in <module>
+    from app_message.forms import MessageForm
+ImportError: No module named 'app_message'
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 149, in message_create
+    'obj_reciever': obj_reciever,
+NameError: name 'obj_reciever' is not defined
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.message_create' with arguments '('',)' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 151, in message_create
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'message_create' with arguments '('',)' and keyword arguments '{}' not found. 1 pattern(s) tried: ['messages/message_create/$']
+Not Found: /message_create/
+Not Found: /message_create/
+Not Found: /message_create/

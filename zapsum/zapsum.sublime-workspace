@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"padd",
+				"padding-bottom"
+			],
+			[
 				"is_",
 				"is_delete"
 			],
@@ -24,67 +28,78 @@
 	"buffers":
 	[
 		{
-			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py",
-			"settings":
-			{
-				"buffer_size": 9818,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_record.html",
-			"settings":
-			{
-				"buffer_size": 554,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_new_authors.html",
-			"settings":
-			{
-				"buffer_size": 1297,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "static/zapsum/js/helper/helper.js",
-			"settings":
-			{
-				"buffer_size": 11647,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/models.py",
-			"settings":
-			{
-				"buffer_size": 1344,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/urls.py",
-			"settings":
-			{
-				"buffer_size": 1535,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "static/zapsum/css/styles.css",
-			"settings":
-			{
-				"buffer_size": 33761,
-				"line_ending": "Windows"
-			}
-		},
-		{
 			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/debug.log",
 			"settings":
 			{
-				"buffer_size": 51594,
+				"buffer_size": 499789,
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "templates/page_base.html",
+			"settings":
+			{
+				"buffer_size": 8311,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/messages_recieved.html",
+			"settings":
+			{
+				"buffer_size": 2702,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py",
+			"settings":
+			{
+				"buffer_size": 4481,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/forms.py",
+			"settings":
+			{
+				"buffer_size": 452,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/message_create.html",
+			"settings":
+			{
+				"buffer_size": 1047,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py",
+			"settings":
+			{
+				"buffer_size": 1864,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/urls.py",
+			"settings":
+			{
+				"buffer_size": 701,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{% extends \"page_base.html\" %}\n\n{% block title %} - Содержание сообщения{% endblock %}\n\n{% block content %}\n	<section class=\"section password_page_changed\">\n		<h2 class=\"h2 my_header\">Содержание сообщения</h2>\n\n		<div class=\"body\">\n			{% if message_obj %}\n				<form class=\"message_create common_form\" action=\"/userprofile/message_create/{{ message_obj.sender.id }}/\" method=\"POST\">\n					{% csrf_token %}\n					\n					<div class=\"cell input_outer\">\n						<label class=\"label\">Дата получения</label>\n\n						<input disabled=\"disabled\" id=\"id_date_send\" name=\"reciever\" type=\"text\" value=\"{{ message_obj.date_send }}\" />\n					</div>			\n					\n					<div class=\"cell input_outer\">\n						<label class=\"label\">Тема</label>\n						\n						{% if message_obj.theme %}\n							<input disabled=\"disabled\" id=\"id_theme\" name=\"reciever\" type=\"text\" value=\"{{ message_obj.theme }}\" />\n						{% else %}\n							<input disabled=\"disabled\" id=\"id_theme\" name=\"reciever\" type=\"text\" value=\"\" />\n						{% endif %}						\n					</div>	\n\n					<div class=\"cell textarea_outer textarea_message\">\n						<label class=\"label\">Содержание</label>\n						\n						{% if message_obj.text %}\n							<textarea disabled=\"disabled\" >{{ message_obj.text }}</textarea>\n						{% else %}\n							<textarea disabled=\"disabled\" ></textarea>\n						{% endif %}							\n					</div>			\n						\n					<div class=\"cell submit_outer\">\n						<input class=\"my_btn radius4 shadow2\" type=\"button\" value=\"Назад\" onclick=\"history.back()\" />\n					</div>\n				</form>\n			{% else %}	\n				<p>Нет сообщения</p>\n			{% endif %}	\n		</div>\n	</section>\n{% endblock %}",
+			"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/messages.html",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 1585,
+				"line_ending": "CR"
 			}
 		}
 	],
@@ -115,61 +130,87 @@
 	},
 	"file_history":
 	[
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_profile.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/app_accounts/css/styles.css",
-		"/home/kalinins/Рабочий стол/resume_kalinin.txt",
-		"/home/kalinins/Рабочий стол/misc.txt",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_my_records.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_diary.html",
-		"/home/kalinins/.cache/.fr-28BqeA/resume_kalinin.txt",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_record.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/zapsum/css/styles.css",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/templates/page_base.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/zapsum/js/helper/helper.js",
+		"/home/kalinins/Рабочий стол/client_bitcoin.mak",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/messages_sended.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/settings.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/urls.py",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_search_author.html",
-		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/upgrade - копия/pass_upgrade.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/django/__NOTES_COLLECTION/django_on_linux/notes.txt",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/django/__NOTES_COLLECTION/django_on_windows/notes_basic.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/app_accounts/css/styles.css",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/forms.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templates/page_registration.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/zapsum/css/styles.css",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass_money.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/templates/page_base.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_privacy_policy.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_most_popular_authors.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_my_records.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/part_pagination.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_last_records.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/zapsum/js/helper/helper.js",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templatetags/tags_app_zapsum.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/fixtures/initial_data.json",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/models.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/forms.py",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_linux/notes.txt",
+		"/home/kalinins/VINT/web/BU/zapsum/3/zapsum/app_zapsum/views.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_record.html",
+		"/home/kalinins/.virtualenvs/drummersaransk/django_projects/drummersaransk_new/app_drummersaransk/models.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/urls.py",
+		"/home/kalinins/VINT/web/BU/zapsum/2/zapsum/app_accounts/views.py",
+		"/home/kalinins/VINT/web/BU/zapsum/3/zapsum/app_zapsum/forms.py",
+		"/home/kalinins/VINT/web/BU/zapsum/3/zapsum/app_zapsum/models.py",
+		"/home/kalinins/VINT/web/BU/zapsum/3/zapsum/app_zapsum/models.pyc",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/models.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_edit_records.html",
+		"/home/kalinins/VINT/web/BU/zapsum/1/zapsum/app_zapsum/views.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py",
+		"/home/kalinins/VINT/web/BU/zapsum/1/zapsum/app_accounts/views.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change_avatar.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/templates/flatpages/default.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_profile.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_new_authors.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templates/part_auth_area.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_search_record.html",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/rut/rut_pass.txt",
+		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups2/markup_boxes/css/style.css",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_search_author.html",
+		"/home/kalinins/Рабочий стол/misc.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_diary.html",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/app_zapsum/js/helper/helper.js",
+		"/media/kalinins/Windows7_OS/VINT/LESSONS_/git/git_for_linux/index.txt",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass.txt",
+		"/home/kalinins/.virtualenvs/zapsum/zapsum/.git/keys/key.pub",
+		"/home/kalinins/Рабочий стол/resume_kalinin.txt",
+		"/home/kalinins/.cache/.fr-28BqeA/resume_kalinin.txt",
+		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/upgrade - копия/pass_upgrade.txt",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change profile.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_privacy_policy.html",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change_email.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/settings.py",
 		"/home/kalinins/VINT/theme/misc.txt",
 		"/home/kalinins/VINT/theme/anketa.txt",
 		"/home/kalinins/VINT/theme/to_alena.txt",
-		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass.txt",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/debug.log",
 		"/home/kalinins/.pip/pip.log",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/linux/lessons_mint/lamp/notes.txt",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py",
 		"/etc/mysql/my.cnf",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/linux/lessons_mint/lamp/Untitled Document",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/linux/lessons_mint/lamp/Установка LAMP-сервера на Linux Mint 15 16 17 - Mr. Allen's Blog.html",
 		"/etc/apache2/apache2.conf",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/db.sqlite3",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/search/search_root.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/forms.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/search/indexes/app_zapsum/note_text.txt",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/search/search.html",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/search_indexes.py",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/urls.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/search_index.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/search/indexes/userprofile_nickname.txt",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/git/git_for_linux/index.txt",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/forms.py",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templates/page_registration.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/fixtures/initial_data.json",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change_profile.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/views.py",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_linux/notes.txt",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/admin.py",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_linux/misc/сериализовать все данные формы/index.txt",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_new_authors.html",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_add_records.html",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/media/django-summernote/2014-09-28/91ba1d0e-c00e-45b5-91d4-3d372fe50286.png",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change_avatar.html",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/utils.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/zapsum/js/bootstrap/bootstrap.js",
 		"/home/kalinins/.cache/media-art/album-08e48d25af01d88681e9bf21f42bf31a.jpg",
@@ -181,17 +222,13 @@
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/app_zapsum/css/styles.css",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_modules_add.txt",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/media/cache/82/83/82832df1859da409d8f702557c0a043a.jpg",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/urls.py",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_changed_password.html",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/static/zapsum/js/jquery_form/jquery_form.js",
 		"/home/kalinins/Рабочий стол/anketa.txt",
 		"/home/kalinins/Рабочий стол/anketa",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_admin.txt",
 		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change_password.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templates/part_auth_area.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templatetags/tags_app_accounts.py",
 		"/home/kalinins/VINT/web/BU/zapsum/2/zapsum/app_zapsum/views.py",
-		"/home/kalinins/VINT/web/BU/zapsum/2/zapsum/app_accounts/views.py",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_windows/notes_basic.txt",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/misc/regex",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/NOTES.txt",
@@ -199,7 +236,6 @@
 		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
 		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/settings.py",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/git/notes.txt",
-		"/media/kalinins/Windows7_OS/VINT/sequrity/pass/my/myPass_money.txt",
 		"/home/kalinins/.virtualenvs/test_git/.git/config",
 		"/home/kalinins/.virtualenvs/test_git/.git/TAG_EDITMSG",
 		"/home/kalinins/Рабочий стол/Машина времени в git   Хабрахабр.html",
@@ -221,32 +257,11 @@
 		"/home/kalinins/.cache/.fr-IybvkH/forms_valid/jquery.validate.js",
 		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups/markup_paxus/index.html",
 		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups/markup_ru_iphone/index.html",
-		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups/landings/landing1/index.html",
-		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups/markup_webapp/index.html",
-		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups/markup_avtoskola/index.html",
-		"/home/kalinins/Рабочий стол/dropped text.txt",
-		"/home/kalinins/VINT/web/misc/zs_act/zapsum/key.pub",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_linux/complete_solutions/active_menu_punkts_on_jquery/js.js",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/NOTES_COLLECTION/django_on_linux/complete_solutions/active_menu_punkts_on_jquery/index.html",
-		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/static/js/helper/helper.js",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_private_policy.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_change_info.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/zapsum/templates/error404.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_search_record.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_rules.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_most_popular_authors.html",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_last_records.html",
-		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/static/css/styles.css",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/auth_registration/accounts/models.py",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/auth_registration/accounts_with_userprofilepage/accounts/models.py",
-		"/media/kalinins/Windows7_OS/VINT/LESSONS_/python/django/auth_registration/accounts_with_userprofilepage/userprofile/models.py",
-		"/home/kalinins/VINT/web/misc/zapsum/key.pub",
-		"/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/templates/logout.html"
+		"/media/kalinins/Windows7_OS/VINT/OPENSERVER/OpenServer/domains/localhost/markups/landings/landing1/index.html"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -260,6 +275,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"==================================================================================================================\n",
+			"regis",
+			"diary",
+			"most",
+			"last_r",
+			"popu",
+			"Я ехал на перекладных из Тифлиса. Вся поклажа моей тележки состояла из одного небольшого чемодана, который до половины был набит путевыми записками о Грузии. Большая часть из них, к счастию для вас, потеряна, а чемодан, с остальными вещами, к счастию для меня, остался цел.\nУж солнце начинало прятаться за снеговой хребет, когда я въехал в Койшаурскую Долину. Осетин-извозчик неутомимо погонял лошадей, чтоб успеть до ночи взобраться на Койшаурскую Гору, и во всё горло распевал песни. Славное место эта долина! Со всех сторон горы неприступные, красноватые скалы, обвешанные зелёным плющом и увенчанные купами чинар, жёлтые обрывы, исчерченные промоинами, а там высоко-высоко золотая бахрома снегов, а внизу Арагва, обнявшись с другой безымённой речкой, шумно-вырывающейся из чёрного, полного мглою ущелья, тянется серебряною нитью и сверкает как змея своею чешуёю.",
+			"книга испытала на себе ещё недавно несчастную доверчивость некоторых читателей и даже журналов к буквальному значению слов. Иные ужасно обиделись, и не шутя, что им ставят в пример такого безнравственного человека, как Герой Нашего Времени; другие же очень тонко замечали, что сочинитель нарисовал свой портрет и портреты своих знакомых… Старая и жалкая шутка! Но видно, Русь так уж сотворена, что всё в ней обновляется, кроме подобных нелепостей. Самая волшебная из волшебных сказок у нас едва ли избегнет упрёка в покушении на оскорбление личности!\nГерой Нашего Времени, милостивые государи мои, точно, портрет, но не одного человека: это портрет, составленный из пороков всего нашего поколения, в полном их развитии. Вы мне опять скажете, что человек не может быть так дурён, а я вам скажу, что ежели вы верили возможности существования всех трагических и романтических злодеев, отчего же вы не веруете в действительность Печорина? Если вы любовались вымыслами гораздо более ужасными и уродливыми, отчего же этот характер, даже как вымысел, не находит у вас пощады? Уж не оттого ли, что в нём больше правды, нежели бы вы того желали?..\nВы скажете, что нравственность от этого не выигрывает? Извините. Довольно людей кормили сластями; у них от этого испортился желудок: нужны горькие лекарства, едкие истины. Но не думайте однако после этого, чтоб автор этой книги имел когда-нибудь гордую мечту сделаться исправителем людских пороков. Боже его избави от такого невежества! Ему просто было весело рисовать современного человека, каким он его понимает и, к его и вашему несчастью, слишком часто встречал. Будет и того, что болезнь указана, а как её излечить — это уж бог знает!",
+			"cap",
+			"ajax",
+			"ajax_",
+			"ajax_r",
+			" \"",
+			"ps",
+			"last_records",
+			"all_user_entries_paginated",
 			"search_list",
 			"foot",
 			"form",
@@ -294,6 +325,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Койшаурскую Гору, и во всё горло распевал песни. Славное место эта долина! Со всех сторон горы неприступные, красноватые скалы, обвешанные зелёным плющом и увенчанные купами чинар, жёлтые обрывы, исчерченные промоинами, а там высоко-высоко золотая бахрома снегов, а внизу Арагва, обнявшись с другой безымённой речкой, шумно-вырывающейся из чёрного, полного мглою ущелья, тянется серебряною нитью и сверкает как змея своею чешуёю.",
+			"Я ехал на перекладных из Тифлиса. Вся поклажа моей тележки состояла из одного небольшого чемодана, который до половины был набит путевыми записками о Грузии. Большая часть из них, к счастию для вас, потеряна, а чемодан, с остальными вещами, к счастию для меня, остался цел.\nУж солнце начинало прятаться за снеговой хребет, когда я въехал в Койшаурскую Долину. Осетин-извозчик неутомимо погонял лошадей, чтоб успеть до ночи взобраться на Койшаурскую Гору, и во всё горло распевал песни. Славное место эта долина! Со всех сторон горы неприступные, красноватые скалы, обвешанные зелёным плющом и увенчанные купами чинар, жёлтые обрывы, исчерченные промоинами, а там высоко-высоко золотая бахрома снегов, а внизу Арагва, обнявшись с другой безымённой речкой, шумно-вырывающейся из чёрного, полного мглою ущелья, тянется серебряною нитью и сверкает как змея своею чешуёю.",
+			"entries_paginated",
 			"a9a9a9"
 		],
 		"reverse": false,
@@ -305,24 +339,140 @@
 	"groups":
 	[
 		{
-			"selected": 7,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/views.py",
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/debug.log",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9818,
+						"buffer_size": 499789,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3921,
-								3921
+								335281,
+								335281
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 83642.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/page_base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3518,
+								3518
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/messages_recieved.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2702,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1746,
+								1746
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 156.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4481,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4259,
+								4259
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1254.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 452,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								261,
+								261
 							]
 						],
 						"settings":
@@ -331,27 +481,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1392.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_record.html",
+					"buffer": 5,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/message_create.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 554,
+						"buffer_size": 1047,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								332,
-								332
+								288,
+								288
 							]
 						],
 						"settings":
@@ -363,24 +513,80 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/templates/page_new_authors.html",
+					"buffer": 6,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1297,
+						"buffer_size": 1864,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								462,
-								462
+								300,
+								300
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/templates/messages.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								72,
+								72
 							]
 						],
 						"settings":
@@ -393,153 +599,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "static/zapsum/js/helper/helper.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11647,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								928,
-								928
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_accounts/models.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1344,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1209,
-								1209
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 209.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/app_zapsum/urls.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1535,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								860,
-								860
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "static/zapsum/css/styles.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 33761,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "/home/kalinins/.virtualenvs/zapsum/zapsum/debug.log",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 51594,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								51594,
-								51594
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 9049.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -583,7 +642,7 @@
 	"project": "zapsum.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 78.0
 	},
 	"save_all_on_build": true,
 	"select_file":

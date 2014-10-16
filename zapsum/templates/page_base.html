@@ -55,35 +55,37 @@
 					</li>
 
 					{% if request.user.is_authenticated %}
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мой профиль<span class="caret"></span></a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мой профиль<span class="caret"></span></a>
 
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="{% url 'change_avatar' %}">Изменить аватар</a></li>
-							<li><a href="{% url 'change_password' %}">Изменить пароль</a></li>					
-							<li><a href="{% url 'change_profile' %}">Изменить профиль</a></li>
-							<li class="divider"></li>	
-							<li><a id="delete_profile" href="#">Удалить профиль</a></li>
-						</ul>
-					</li>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="{% url 'change_avatar' %}">Изменить аватар</a></li>
+								<li><a href="{% url 'change_password' %}">Изменить пароль</a></li>					
+								<li><a href="{% url 'change_profile' %}">Изменить профиль</a></li>
+								<li class="divider"></li>	
+								<li><a id="delete_profile" href="#">Удалить профиль</a></li>
+							</ul>
+						</li>				
 
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мои сообщения<span class="caret"></span></a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мой дневник<span class="caret"></span></a>
 
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="{% url 'change_avatar' %}">Полученные сообщения</a></li>
-							<li><a href="{% url 'change_password' %}">Отправленные сообщения</a></li>					
-						</ul>
-					</li>					
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="{% url 'my_records' %}">Мои записи</a></li>
+								<li><a href="{% url 'add_records' %}">Добавить записи</a></li>					
+							</ul>
+						</li>
 
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мой дневник<span class="caret"></span></a>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Мои сообщения<span class="caret"></span></a>
 
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="{% url 'my_records' %}">Мои записи</a></li>
-							<li><a href="{% url 'add_records' %}">Добавить записи</a></li>					
-						</ul>
-					</li>
+							<ul class="dropdown-menu" role="menu">
+								<li><a href="{% url 'messages_recieve' %}">Полученные сообщения</a></li>
+								<li><a href="{% url 'messages_sended' %}">Отправленные сообщения</a></li>	
+								<li class="divider"></li>	
+								<li><a id="delete_profile" href="{% url 'message_create' %}">Создать сообщение</a></li>												
+							</ul>
+						</li>						
 					{% endif %}
 
 					<li><a href="{% url 'privacy_policy' %}">Политика конфиденциальности</a></li>
