@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 {% load staticfiles %}
 {% load tags_app_accounts %}
+{% load tags_app_zapsum %}
 
 <html lang="ru">
 	<head>
@@ -220,32 +221,7 @@
 		</script>
 
 		<!-- modal windows -->
-		<script>
-			$(document).ready(function(){		
-				var windowTypeLabel,
-					windowType;	
-
-				{% for entry in modal %}
-					{% if action == entry.id %}
-						console.log('{{ entry.window }}')
-						{% if entry.window == 0 %}
-							windowType = $('#infoModal')
-							windowTypeLabel = $('#mySmallModalLabel')
-						{% elif entry.window == 1 %}		
-							windowType = $('#commonModal')
-							windowTypeLabel = $('#commonModalLabel')						
-						{% endif %}		
-
-						windowTypeLabel.text('{{ entry.message }}');
-						windowType.modal('show');
-
-						setTimeout(function(){
-							windowType.modal('hide');
-						}, {{ entry.timeout }});
-					{% endif %}
-				{% endfor %}
-			});
-		</script>	
+		{% part_modal modal action %}
 
 		<!-- helper -->
 		<script src="{% static 'zapsum/js/helper/helper.js' %}"></script>			
