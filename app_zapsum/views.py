@@ -14,13 +14,17 @@ from app_accounts.forms import ProfileForm
 from app_accounts.models import UserProfile, Gender
 from app_zapsum.models import Diary
 from app_zapsum.forms import ChangePasswordForm, ChangeAvatarForm, addMessageForm
+from app_messages.models import Modal
 
 def custom_proc(request):
 	"""
 	request object for every pages
+	also transmitted messages for modal windows
 	"""		
+	modal = Modal.get_entries()
 	return{
 		'request': request,
+		'modal': modal,
 	}
 
 

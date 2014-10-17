@@ -4,7 +4,7 @@
 		"pk": 0,
 		"fields": {
 			"message": "Сообщение отправлено",
-			"timeout": 3000,
+			"timeout": 2000,
 			"window": 0,
 			"cancel_button": "False"
 		}

@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
-from app_messages.models import Message
+from app_messages.models import Modal, Message
 from app_accounts.models import UserProfile
 from app_messages.forms import MessageForm, CreateMessageForm
 
@@ -16,9 +16,12 @@ from app_messages.forms import MessageForm, CreateMessageForm
 def custom_proc(request):
 	"""
 	request object for every pages
+	also transmitted messages for modal windows
 	"""		
+	modal = Modal.get_entries()
 	return{
 		'request': request,
+		'modal': modal,
 	}
 
 
@@ -86,7 +89,9 @@ def messages_recieve(request):
 
 @login_required	
 def messages_sended(request):
-	modal = request.GET.get('modal')	
+	action = None
+	if request.GET.get('action'):
+		action = int(request.GET.get('action'))
 
 	if request.method == 'POST':		
 		delete_id = request.POST.get('delete_id', '')	
@@ -118,7 +123,7 @@ def messages_sended(request):
 		'messages_sended_paginated': messages_sended_paginated,
 		'last_page': last_page,
 		'first_page': first_page,		
-		'modal': modal,		
+		'action': action,		
 	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
@@ -142,7 +147,7 @@ def message_create(request, id_reciever=None):
 				theme=theme,			
 				text=text,				
 			).save()
-			return HttpResponseRedirect('/messages/messages_sended/?modal=0')						
+			return HttpResponseRedirect('/messages/messages_sended/?action=0')						
         		
 	t = loader.get_template('message_create.html')
 	c = RequestContext(request, {

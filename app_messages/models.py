@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Message(models.Model):		
+	"""
+	class for messages
+	"""	
 	sender = models.ForeignKey(
 		User,
 		verbose_name='Отправитель',
@@ -41,10 +44,7 @@ class Message(models.Model):
 	)	
 	reciever_show = models.BooleanField(
 		default=True,
-	)		
-	#test = models.BooleanField(
-		#default=True,
-	#)		
+	)			
 
 	@classmethod
 	def get_sended_messages(self, id):		
@@ -83,6 +83,13 @@ class Message(models.Model):
 
 
 class Modal(models.Model):		
+	"""
+	class for modal windows
+	message: text
+	timeout: time before annihilation window
+	window: type window(0-smsll, 1-large)
+	cancel_button: cancel button visible or not (not used until)
+	"""
 	message = models.CharField(
 		max_length=2000, 
 		blank=False,
@@ -100,3 +107,8 @@ class Modal(models.Model):
 		blank=False,
 		null=False,
 	)			
+
+	@classmethod
+	def get_entries(self):		
+		return self.objects.all()
+

@@ -10,14 +10,18 @@ import os
 from django.conf import settings
 
 from app_accounts.forms import RegistrationForm, AuthenticationCustomForm
+from app_messages.models import Modal
 
 
 def custom_proc(request):
 	"""
 	request object for every pages
-	"""			
+	also transmitted messages for modal windows
+	"""		
+	modal = Modal.get_entries()
 	return{
 		'request': request,
+		'modal': modal,
 	}
 
 
