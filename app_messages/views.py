@@ -91,14 +91,7 @@ def messages_recieve(request):
 def messages_sended(request):
 	action = None
 	if request.GET.get('action'):
-		action = int(request.GET.get('action'))
-
-	if request.method == 'POST':		
-		delete_id = request.POST.get('delete_id', '')	
-		try:
-			Message.delete_message(delete_id)		
-		except:
-			return HttpResponseRedirect('/page_error404/')
+		action = int(request.GET.get('action'))	
 				
 	exists_sended_messages = Message.exists_sended_messages(request.user.id)
 	messages_sended = Message.get_sended_messages(request.user.id)
@@ -156,8 +149,10 @@ def message_create(request, id_reciever=None):
 	
 	return HttpResponse(t.render(c)) 	
 	
-	
-def message_sended(request):
-	t = loader.get_template('message_sended.html')
-	c = RequestContext(request, {}, [custom_proc])	
-	return HttpResponse(t.render(c))
+
+def message_delete(request):
+	if request.method == 'POST':		
+		delete_id = request.POST.get('delete_id', '')	
+		Message.delete_message(delete_id)		
+
+	return HttpResponseRedirect('/messages/messages_sended/?action=1')

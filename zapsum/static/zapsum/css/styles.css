@@ -340,6 +340,25 @@ body > .main_container{
 					margin: 5px 5px 5px 0;
 				}			
 
+				.list_table .cell_actions  .form_but{
+					width: auto;
+					background: none;
+					border: none;
+					overflow: hidden;
+
+				}	
+
+					.list_table .cell_actions  .form_but .btn_sub{
+						padding: 5px 12px 8px;
+						display: inline-block;
+
+						color: red;
+					}
+
+
+
+
+
 /*************************************************************************************************************** GLOBAL_blocks : search_author */
 .search_author{
 
