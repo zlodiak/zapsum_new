@@ -7,6 +7,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
+			"settings":
+			{
+				"buffer_size": 9456,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -201,8 +209,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2124,
+								2124
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 975.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

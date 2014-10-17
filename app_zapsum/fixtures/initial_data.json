@@ -1,5 +1,26 @@
 [
 	{
+		"model": "app_messages.Modal",
+		"pk": 0,
+		"fields": {
+			"message": "Сообщение отправлено",
+			"timeout": 3000,
+			"window": 0,
+			"cancel_button": "False"
+		}
+	},
+	{
+		"model": "app_messages.Modal",
+		"pk": 1,
+		"fields": {
+			"message": "Сообщение отправлено1",
+			"timeout": 1000,
+			"window": 0,
+			"cancel_button": "False"
+		}
+	},	
+
+	{
 		"model": "app_accounts.Gender",
 		"pk": 0,
 		"fields": {

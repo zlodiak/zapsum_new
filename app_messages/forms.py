@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ModelForm
+from django.contrib.auth.models import User
 
 from app_messages.models import Message
 
@@ -23,3 +24,13 @@ class MessageForm(forms.ModelForm):
 			raise forms.ValidationError(error_dict['spaces'])		
 
 		return text		
+
+
+class CreateMessageForm(forms.ModelForm):
+	class Meta:
+		model = Message
+		fields = (
+			'reciever', 
+			'theme', 
+			'text', 
+		)

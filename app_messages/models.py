@@ -4,12 +4,14 @@ from django.contrib.auth.models import User
 class Message(models.Model):		
 	sender = models.ForeignKey(
 		User,
+		verbose_name='Отправитель',
 		related_name='sender',
 		blank=False,
 		null=False,
 	)	
 	reciever = models.ForeignKey(
 		User,
+		verbose_name='Получатель',
 		related_name='recipient',
 		blank=False,
 		null=False,	
@@ -26,7 +28,7 @@ class Message(models.Model):
 	theme = models.CharField(
 		'Тема сообщения',
 		max_length=200, 
-		blank=True,
+		blank=False,
 		null=True,
 	)		
 	text = models.TextField(
@@ -78,3 +80,23 @@ class Message(models.Model):
 	@classmethod
 	def get_new_sends(self, user_pk):		
 		return self.objects.filter(reciever_show=True, reciever=user_pk, date_recieve__isnull=True).count()
+
+
+class Modal(models.Model):		
+	message = models.CharField(
+		max_length=2000, 
+		blank=False,
+		null=False,
+	)	
+	timeout = models.IntegerField(
+		blank=False,
+		null=False,
+	)	
+	window = models.IntegerField(
+		blank=False,
+		null=False,
+	)	
+	cancel_button = models.BooleanField(
+		blank=False,
+		null=False,
+	)			

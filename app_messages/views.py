@@ -9,7 +9,8 @@ from django.contrib.auth.models import User
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from app_messages.models import Message
-from app_messages.forms import MessageForm
+from app_accounts.models import UserProfile
+from app_messages.forms import MessageForm, CreateMessageForm
 
 
 def custom_proc(request):
@@ -84,7 +85,9 @@ def messages_recieve(request):
 	
 
 @login_required	
-def messages_sended(request):	
+def messages_sended(request):
+	modal = request.GET.get('modal')	
+
 	if request.method == 'POST':		
 		delete_id = request.POST.get('delete_id', '')	
 		try:
@@ -115,6 +118,7 @@ def messages_sended(request):
 		'messages_sended_paginated': messages_sended_paginated,
 		'last_page': last_page,
 		'first_page': first_page,		
+		'modal': modal,		
 	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
@@ -123,29 +127,22 @@ def messages_sended(request):
 
 @login_required	
 def message_create(request, id_reciever=None):	
-	form = MessageForm()
-
-	if request.method == 'POST':	
-		pass
+	form = CreateMessageForm()	
 		
-	# obj_reciever = None
-	
-	# if id_reciever:
-	# 	obj_reciever = UserProfile.get_entry(user_id=int(id_reciever))
-		
-	# if request.method == 'POST':											
-	# 	form = MessageForm(request.POST)
-	# 	if form.is_valid():		
-	# 		theme = form.cleaned_data.get('theme') or None
-	# 		text = form.cleaned_data.get('text') or None
+	if request.method == 'POST':											
+		form = CreateMessageForm(request.POST)
+		if form.is_valid():		
+			reciever = form.cleaned_data.get('reciever') or None	
+			theme = form.cleaned_data.get('theme') or None 			
+			text = form.cleaned_data.get('text') or None 			
 								
-	# 		Message(
-	# 			sender=request.user,
-	# 			reciever=obj_reciever,
-	# 			theme=theme,
-	# 			text=text,
-	# 		).save()
-	# 		return HttpResponseRedirect('/userprofile/message_sended/')						
+			Message(
+				sender=request.user,	
+				reciever=reciever,		
+				theme=theme,			
+				text=text,				
+			).save()
+			return HttpResponseRedirect('/messages/messages_sended/?modal=0')						
         		
 	t = loader.get_template('message_create.html')
 	c = RequestContext(request, {
