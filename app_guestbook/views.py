@@ -1,6 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect, Http404, HttpResponseForbidden
 from django.template import loader, RequestContext
 from django.shortcuts import render, render_to_response
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from app_messages.models import Modal
 from app_guestbook.models import GuestbookRecord
@@ -29,6 +30,22 @@ def guestbook_tape(request):
 
 	form = GuestbookRecordForm()	
 
+	guestbook_records = GuestbookRecord.get_all_entries()
+
+	paginator = Paginator(guestbook_records, 10)
+	list_pages = paginator.page_range
+	
+	page = request.GET.get('page')
+	try:
+		guestbook_records_paginated = paginator.page(page)
+	except PageNotAnInteger:
+		guestbook_records_paginated = paginator.page(1)
+	except EmptyPage:
+		guestbook_records_paginated = paginator.page(paginator.num_pages)	
+		
+	last_page = list_pages[-1]	
+	first_page = list_pages[0]		
+
 	if request.method == "POST":
 		form = GuestbookRecordForm(request.POST)	
 
@@ -40,13 +57,14 @@ def guestbook_tape(request):
 			)	
 
 			return HttpResponseRedirect('/guestbook/?action=2')		
-
-	guestbook_records = GuestbookRecord.get_all_entries()
 		
 	t = loader.get_template('page_guestbook_tape.html')
 	c = RequestContext(request, {
-		'guestbook_records': guestbook_records,
 		'form': form,
+		'list_pages': list_pages,
+		'guestbook_records_paginated': guestbook_records_paginated,
+		'last_page': last_page,
+		'first_page': first_page,			
 		'action': action,
 	}, [custom_proc])	
 	return HttpResponse(t.render(c)) 
