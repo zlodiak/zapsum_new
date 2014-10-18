@@ -7,7 +7,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Записки сумасшедшего - {% block title %}{% endblock %}</title>	
+		<title>{{ action }} Записки сумасшедшего - {% block title %}{% endblock %}</title>	
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">		
@@ -18,8 +18,8 @@
 		<link href="{% static 'zapsum/css/bootstrap/sticky-footer-navbar.css' %}" rel="stylesheet">
 		<link href="{% static 'zapsum/css/styles.css' %}" rel="stylesheet">
 
+		<link href="{% static 'app_guestbook/css/styles.css' %}" rel="stylesheet">
 		<link href="{% static 'app_accounts/css/styles.css' %}" rel="stylesheet">
-
 		<link href="{% static 'app_zapsum/css/styles.css' %}" rel="stylesheet">	
 	</head>
 

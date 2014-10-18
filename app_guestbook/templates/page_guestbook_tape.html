@@ -1,0 +1,55 @@
+{% extends "page_base.html" %}
+
+{% block title %}Поиск по записям{% endblock %}
+
+{% block content %}
+	<section class="section guestbook_tape">
+		<div class="page-header">
+			<h2>Книга отзывов</h2>
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				<form id="formGuestbook" action="{% url 'guestbook_tape' %}" method="POST">
+					{% csrf_token %}
+
+					<div class="cell input_outer">	
+						<label class="label">{{ form.username.label }}</label>
+
+						{{ form.username }}
+
+						{{ form.username.errors }}
+					</div>
+
+					<div class="cell input_outer">	
+						<label class="label">{{ form.text.label }}</label>
+
+						{{ form.text }}
+
+						{{ form.text.errors }}
+					</div>					
+
+					<div class="cell submit_outer">
+						<input class="btn btn-default" id="formGuestbookSubmit" type="submit" value="Добавить отзыв" /> 
+					</div>
+				</form>
+			</div>
+
+			<div class="col-md-9">
+				{% for entry in guestbook_records %}
+					<article class="article">
+						<div class="title">
+							<h3 class="h3">{{ entry.username }}</h2>
+
+							<span class="date">{{ entry.date }}</span>
+						</div>
+
+						<div class="body">
+						{{ entry.text }}
+						</div>
+					</article>
+				{% endfor %}				
+			</div>
+		</div>		
+	</section>
+{% endblock %}

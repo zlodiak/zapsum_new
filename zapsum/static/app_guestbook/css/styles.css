@@ -1,0 +1,38 @@
+.guestbook_tape{
+
+}
+
+	.guestbook_tape .article{
+
+	}
+
+		.guestbook_tape .article .title{
+
+		}
+
+			.guestbook_tape .article .title .h3{
+				display: inline-block;
+				margin-bottom: 4px;
+			}
+
+			.guestbook_tape .article .title .date:before{
+				content: '(';
+			}
+
+			.guestbook_tape .article .title .date:after{
+				content: ')';
+			}			
+
+			.guestbook_tape .article .title .date{
+				color: #ccc;
+			}			
+
+		.guestbook_tape .article .body{
+
+		}		
+
+
+	.guestbook_tape .input_outer label{
+		margin-bottom: -5px;
+		display: block;
+	}	

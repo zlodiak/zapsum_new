@@ -275,6 +275,10 @@ body > .main_container{
 
 	}
 
+	#formSearchRecord{
+		padding-bottom: 20px;
+	}
+
 
 /*************************************************************************************************************** GLOBAL_blocks : search_author */
 .search_author{
@@ -283,6 +287,11 @@ body > .main_container{
 	
 	.search_author form .cell input{
 		width: 100%;
+	}
+
+	#formSearchAuthor{
+		padding-bottom: 20px;
+
 	}
 
 /*************************************************************************************************************** GLOBAL_blocks : pager */

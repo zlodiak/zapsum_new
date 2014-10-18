@@ -152,7 +152,7 @@ def message_sended_delete(request):
 		delete_id = request.POST.get('delete_id', '')	
 		Message.delete_sended_message(delete_id)		
 
-	return HttpResponseRedirect('/messages/messages_sended/?action=1')
+		return HttpResponseRedirect('/messages/messages_sended/?action=1')
 
 
 def message_recieve_delete(request):
@@ -160,4 +160,4 @@ def message_recieve_delete(request):
 		delete_id = request.POST.get('delete_id', '')	
 		Message.delete_recieved_message(delete_id)		
 
-	return HttpResponseRedirect('/messages/messages_recieve/?action=1')	
+		return HttpResponseRedirect('/messages/messages_recieve/?action=1')	
