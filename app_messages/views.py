@@ -51,14 +51,10 @@ def messages_recieve_item(request, message_id):
 	
 @login_required	
 def messages_recieve(request):	
-	if request.method == 'POST':		
-		delete_id = request.POST.get('delete_id', '')	
-		try:
-			Message.delete_message(delete_id)		
-		except:
-			return HttpResponseRedirect('/page_error404/')
-			
-		
+	action = None
+	if request.GET.get('action'):
+		action = int(request.GET.get('action'))	
+
 	exists_recieve_messages = Message.exists_recieve_messages(request.user.id)
 	messages_recieve = Message.get_recieve_messages(request.user.id)
 	paginator = Paginator(messages_recieve, 10)
@@ -81,7 +77,8 @@ def messages_recieve(request):
 		'list_pages': list_pages,
 		'messages_recieve_paginated': messages_recieve_paginated,
 		'last_page': last_page,
-		'first_page': first_page,		
+		'first_page': first_page,	
+		'action': action,		
 	}, [custom_proc])	
 	
 	return HttpResponse(t.render(c)) 	
@@ -156,3 +153,11 @@ def message_delete(request):
 		Message.delete_message(delete_id)		
 
 	return HttpResponseRedirect('/messages/messages_sended/?action=1')
+
+
+def message_recieve_delete(request):
+	if request.method == 'POST':		
+		delete_id = request.POST.get('delete_id', '')	
+		Message.delete_message(delete_id)		
+
+	return HttpResponseRedirect('/messages/messages_recieve/?action=1')	

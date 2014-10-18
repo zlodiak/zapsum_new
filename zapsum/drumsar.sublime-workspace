@@ -14,6 +14,14 @@
 				"buffer_size": 9456,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/userprofile/messages_sended.html",
+			"settings":
+			{
+				"buffer_size": 2612,
+				"line_ending": "CR"
+			}
 		}
 	],
 	"build_system": "",
@@ -209,7 +217,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -234,8 +242,37 @@
 							"syntax": "Packages/Python/Python.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
-						"translation.x": -0.0,
+						"translation.x": 0.0,
 						"translation.y": 975.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/userprofile/messages_sended.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2612,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1484,
+								1484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 351.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

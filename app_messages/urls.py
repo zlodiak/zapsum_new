@@ -8,6 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('app_messages',
 	url(r'^message_create/$', 'views.message_create', name='message_create', ),
 	url(r'^message_delete/$', 'views.message_delete', name='message_delete', ),
+	url(r'^message_recieve_delete/$', 'views.message_recieve_delete', name='message_recieve_delete', ),
 	#url(r'^message_sended/$', 'views.message_sended', name='message_sended', ),
 
 	url(r'^messages_sended/$', 'views.messages_sended', name='messages_sended', ),
