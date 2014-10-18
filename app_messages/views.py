@@ -147,10 +147,10 @@ def message_create(request, id_reciever=None):
 	return HttpResponse(t.render(c)) 	
 	
 
-def message_delete(request):
+def message_sended_delete(request):
 	if request.method == 'POST':		
 		delete_id = request.POST.get('delete_id', '')	
-		Message.delete_message(delete_id)		
+		Message.delete_sended_message(delete_id)		
 
 	return HttpResponseRedirect('/messages/messages_sended/?action=1')
 
@@ -158,6 +158,6 @@ def message_delete(request):
 def message_recieve_delete(request):
 	if request.method == 'POST':		
 		delete_id = request.POST.get('delete_id', '')	
-		Message.delete_message(delete_id)		
+		Message.delete_recieved_message(delete_id)		
 
 	return HttpResponseRedirect('/messages/messages_recieve/?action=1')	

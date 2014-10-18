@@ -65,6 +65,22 @@ class Message(models.Model):
 	@classmethod
 	def delete_message(self, delete_id):		
 		return self.objects.get(pk=delete_id).delete()	
+
+	@classmethod
+	def delete_sended_message(self, delete_id):		
+		result = self.objects.get(id=delete_id)	
+		result.sender_show = False
+		result.save()
+
+		return	
+
+	@classmethod
+	def delete_recieved_message(self, delete_id):		
+		result = self.objects.get(id=delete_id)	
+		result.reciever_show = False
+		result.save()
+
+		return			
 		
 	@classmethod
 	def get_message(self, message_id):		

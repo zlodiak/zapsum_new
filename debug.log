@@ -10708,3 +10708,12 @@ Traceback (most recent call last):
 NameError: name 'datetime' is not defined
 Not Found: /messages/messages_recieved/
 Not Found: /messages/messages_recieved/
+Internal Server Error: /messages/message_delete/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 153, in message_delete
+    Message.delete_sended_message(delete_id)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py", line 71, in delete_sended_message
+    result = self.objects.get(id=message_id)
+NameError: name 'message_id' is not defined

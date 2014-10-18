@@ -8,19 +8,19 @@
 	"buffers":
 	[
 		{
-			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
+			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
 			"settings":
 			{
-				"buffer_size": 9456,
+				"buffer_size": 19148,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/userprofile/messages_sended.html",
+			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/models.py",
 			"settings":
 			{
-				"buffer_size": 2612,
-				"line_ending": "CR"
+				"buffer_size": 8972,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -51,6 +51,8 @@
 	},
 	"file_history":
 	[
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
+		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/userprofile/messages_sended.html",
 		"/home/kalinins/VINT/web/sites/deshef/work/carousel.php",
 		"/home/kalinins/VINT/web/sites/deshef/work/kalininCarousel.1.1.js",
 		"/home/kalinins/VINT/web/sites/deshef/work/scripts.php",
@@ -70,7 +72,6 @@
 		"/home/kalinins/VINT/web/sites/deshef/work/bur_sk.php",
 		"/media/kalinins/Windows7_OS/VINT/LESSONS_/django/__NOTES_COLLECTION/django_on_windows/notes_modules_add.txt",
 		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
-		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
 		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/models.py",
 		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/settings.py",
 		"/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/urls.py",
@@ -222,19 +223,48 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/forms.py",
+					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9456,
+						"buffer_size": 19148,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2124,
-								2124
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 663.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/models.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -243,36 +273,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 975.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/templates/userprofile/messages_sended.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2612,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1484,
-								1484
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 351.0,
+						"translation.y": 5191.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
