@@ -129,6 +129,14 @@ body > .main_container{
 
 }
 
+/*************************************************************************************************************** GLOBAL_blocks : nav_top */
+.navbar>.container .navbar-brand{
+	color: #000;
+	font-weight: bolder;
+
+	margin-top: -10px;
+}
+
 /*************************************************************************************************************** GLOBAL_blocks : registration */
 .registration{
 

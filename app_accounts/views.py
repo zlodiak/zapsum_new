@@ -10,7 +10,7 @@ import os
 from django.conf import settings
 
 from app_accounts.forms import RegistrationForm, AuthenticationCustomForm
-from app_messages.models import Modal
+from app_messages.models import Modal, Message
 
 
 def custom_proc(request):
@@ -28,6 +28,7 @@ def custom_proc(request):
 def registration(request):
 	"""
 	data for render registration page
+	TODO: also make message form admin about welcome
 	"""			
 	form = RegistrationForm()
 	

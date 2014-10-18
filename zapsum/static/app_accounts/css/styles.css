@@ -13,6 +13,7 @@ form{
 	form .cell .errorlist{
 		display: inline-block;
 		margin-left: 3px;
+		margin-top: 8px;
 
 		color: red;
 		vertical-align: top;

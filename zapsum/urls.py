@@ -21,3 +21,8 @@ if settings.DEBUG:
         }),
    )
 
+
+urlpatterns += patterns('app_zapsum',	
+	url(r'^.*/', 'views.page_error404', ),
+)    
+

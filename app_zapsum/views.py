@@ -475,5 +475,8 @@ def privacy_policy(request):
 	return HttpResponse(t.render(c)) 	
 
 
-
+def page_error404(request):	
+	t = loader.get_template('page_error404.html')
+	c = RequestContext(request, {}, [custom_proc])	
+	return HttpResponse(t.render(c))
 
