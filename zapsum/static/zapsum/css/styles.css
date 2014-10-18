@@ -111,6 +111,14 @@ input:-moz-placeholder {
 	padding-left: 5px;
 }
 
+.bold_red{
+	font-weight: bold !important;
+	color: red !important;
+}
+
+.bold{
+	font-weight: bold !important;
+}
 
 
 
