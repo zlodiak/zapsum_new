@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 
 from app_messages.models import Message
 
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+
 
 error_dict = {
 	'spaces': 'Поле не может состоять только из пробелов',
@@ -27,6 +29,13 @@ class MessageForm(forms.ModelForm):
 
 
 class CreateMessageForm(forms.ModelForm):
+	text = forms.CharField(
+		widget=SummernoteWidget({
+		    'width': '670px',
+		    #'height': '200px',	    
+		}),
+	)	
+
 	class Meta:
 		model = Message
 		fields = (

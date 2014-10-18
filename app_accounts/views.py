@@ -109,74 +109,7 @@ def changed_password(request):
 	t = loader.get_template('page_changed_password.html')
 	c = RequestContext(request, {}, [custom_proc])	
 	
-	return HttpResponse(t.render(c)) 		
-
-
-def ajax_login_check(request):
-	error_login = False
-	error_message_login = ''
-	error_pass = False
-	error_message_pass = ''	
-	error_active = False
-	error_message_active = ''		
-
-	if request.method == "POST" and request.is_ajax():
-		username = request.POST.get('username', '')		
-		password = request.POST.get('password', '')		
-
-		#login check unique
-		username_req = User.objects.filter(username=username)				
-
-		if not username_req.exists():
-			error_login = True
-			error_message_login = 'Неверный логин'
-
-		#login check active
-		username_req = User.objects.filter(username=username, is_active=1)	
-
-		if not username_req.exists():
-			error_active = True
-			error_message_active = 'Профиль отключен'			
-
-		#min_length check
-		if(len(username) < 3):
-			error_login = True
-			error_message_login = 'Имя должно состоять не менее чем из 3 символов'
-
-		#max_height check				
-		if(len(username) > 30):
-			error_login = True
-			error_message_login = 'Имя должно состоять не более чем из 30 символов'
-
-		#password check
-		user = auth.authenticate(username=username, password=password)
-		if user:
-			pass
-		else:
-			error_pass = True
-			error_message_pass = 'Неверный пароль'
-		logout(request)
-
-		#password min_length check
-		if(len(password) < 3):
-			error_pass = True
-			error_message_pass = 'Пароль должен состоять не менее чем из 6 символов'	
-
-		#password max_height check
-		if(len(password) > 30):
-			error_pass = True
-			error_message_pass = 'Пароль должен состоять не более чем из 30 символов'		
-
-	data = {
-		'error_login': error_login,
-		'error_message_login': error_message_login,
-		'error_pass': error_pass,
-		'error_message_pass': error_message_pass,		
-		'error_active': error_active,
-		'error_message_active': error_message_active,		
-	}
-
-	return HttpResponse(json.dumps(data), content_type='application/json')				
+	return HttpResponse(t.render(c)) 					
 
 	
 def delete_profile(request):

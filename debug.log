@@ -10717,3 +10717,117 @@ Traceback (most recent call last):
   File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py", line 71, in delete_sended_message
     result = self.objects.get(id=message_id)
 NameError: name 'message_id' is not defined
+Internal Server Error: /messages/messages_sended/1/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 30, in messages_sended_item
+    message_obj = Message.get_message(message_id=message_id)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py", line 91, in get_message
+    result.date_recieve = datetime.datetime.now()
+NameError: name 'datetime' is not defined
+Internal Server Error: /messages/messages_sended/1/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 30, in messages_sended_item
+    message_obj = Message.get_message(message_id=message_id)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/models.py", line 91, in get_message
+    result.date_recieve = datetime.datetime.now()
+NameError: name 'datetime' is not defined
+Not Found: /userprofile/message_create/2/
+Not Found: /userprofile/message_create/
+Internal Server Error: /messages/messages_recieve/2/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 441, in render
+    current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'zapsum.messages_recieved' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 112, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/contrib/auth/decorators.py", line 22, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 49, in messages_recieve_item
+    return HttpResponse(t.render(c))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 140, in render
+    return self._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 123, in render
+    return compiled_parent._render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/loader_tags.py", line 62, in render
+    result = block.nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 305, in render
+    return nodelist.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/base.py", line 840, in render
+    bit = self.render_node(node, context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/debug.py", line 78, in render_node
+    return node.render(context)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 447, in render
+    six.reraise(*exc_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/six.py", line 550, in reraise
+    raise value
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/template/defaulttags.py", line 433, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 532, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 452, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'messages_recieved' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+Internal Server Error: /messages/message_create/
+Traceback (most recent call last):
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/handlers/base.py", line 99, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 339, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 339, in resolve
+    sub_match = pattern.resolve(new_path)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 223, in resolve
+    return ResolverMatch(self.callback, args, kwargs, self.name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/utils/functional.py", line 32, in wrapper
+    result = func(*args)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/site-packages/django/core/urlresolvers.py", line 97, in get_callable
+    mod = import_module(mod_name)
+  File "/home/kalinins/.virtualenvs/zapsum/lib/python3.4/importlib/__init__.py", line 109, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 2231, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 2214, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 2203, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 1200, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 1129, in _exec
+  File "<frozen importlib._bootstrap>", line 1448, in exec_module
+  File "<frozen importlib._bootstrap>", line 321, in _call_with_frames_removed
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/views.py", line 13, in <module>
+    from app_messages.forms import MessageForm, CreateMessageForm
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/forms.py", line 29, in <module>
+    class CreateMessageForm(forms.ModelForm):
+  File "/home/kalinins/.virtualenvs/zapsum/zapsum/app_messages/forms.py", line 31, in CreateMessageForm
+    widget=SummernoteWidget({
+NameError: name 'SummernoteWidget' is not defined

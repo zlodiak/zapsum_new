@@ -499,14 +499,15 @@ $(document).ready(function(){
 	var	pathname = location.pathname,
 		pathnameList = pathname.split('/'),
 		slug1 = pathnameList[1],
-		slug2 = pathnameList[2];
+		slug2 = pathnameList[2],
+		coll_first;
 
 	var coll_links,
 		flag_sub,
 		menu_container = $('.nav_top');
 
-	//console.log('slug1::' + slug1);
-	//console.log('slug2::' + slug2);
+	console.log('slug1::' + slug1);
+	console.log('slug2::' + slug2);
 
 	menu_container.find('a').removeClass('active');
 
@@ -514,6 +515,12 @@ $(document).ready(function(){
 		//console.log('main page');
 		menu_container.find('a').eq(1).closest('li').addClass('active');	// for index punkt
 	}
+	else if(slug1 == 'messages'){
+		//console.log('messages page');
+		coll_first = $('.nav_top a[href ^= "/messages"]');
+
+		coll_first.eq(0).closest('.dropdown').addClass('active');
+	}	
 	else if(slug1 != 'accounts'){
 		//console.log('page');
 		coll_links = menu_container.find('a[href="/' + slug1 + '/"]');
@@ -530,7 +537,7 @@ $(document).ready(function(){
 				$(this).closest('li').addClass('active');	// for root punkts
 			}
 		});			
-	}
+	}	
 	else{
 		//console.log('account page');
 		if(slug2 == 'authentication'){
