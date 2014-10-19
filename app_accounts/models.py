@@ -58,6 +58,15 @@ class UserProfile(User):
 	objects = UserManager()
 
 	@classmethod
+	def get_recievers_list(self):
+		recievers_list = list()
+		
+		for values_ins in self.objects.all().values_list('user_ptr_id', 'nickname'):
+			recievers_list.append(values_ins)
+			
+		return recievers_list		
+
+	@classmethod
 	def get_new_authors_entries(self, cut_begin=0, cut_end=2):
 		return self.objects.filter(is_active=1, is_superuser=0)[cut_begin:cut_end]	
 

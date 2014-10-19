@@ -7,6 +7,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/urls.py",
+			"settings":
+			{
+				"buffer_size": 3977,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
+			"settings":
+			{
+				"buffer_size": 19148,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -167,6 +183,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"404",
 			"message_cr",
 			"head",
 			"spaces",
@@ -206,8 +223,67 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/drummersaransk/urls.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3977,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3596,
+								3596
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/kalinins/.virtualenvs/ds_d16/django_projects/drummersaransk_new/app_drummersaransk/views.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 19148,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								15763,
+								15763
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 6722.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
 			]
 		}
 	],

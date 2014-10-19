@@ -128,12 +128,13 @@ def message_create(request, id_reciever=None):
 		form = CreateMessageForm(request.POST)
 		if form.is_valid():		
 			reciever = form.cleaned_data.get('reciever') or None	
+			print(reciever)
 			theme = form.cleaned_data.get('theme') or None 			
 			text = form.cleaned_data.get('text') or None 			
 								
 			Message(
-				sender=request.user,	
-				reciever=reciever,		
+				sender_id=request.user.pk,	
+				reciever_id=reciever,		
 				theme=theme,			
 				text=text,				
 			).save()

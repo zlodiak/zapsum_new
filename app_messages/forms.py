@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from django.contrib.auth.models import User
 
 from app_messages.models import Message
+from app_accounts.models import UserProfile
 
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
@@ -35,11 +36,17 @@ class CreateMessageForm(forms.ModelForm):
 		    #'height': '200px',	    
 		}),
 	)	
+	reciever = forms.ChoiceField(
+		widget=forms.Select, 
+		choices=UserProfile.get_recievers_list(),
+		label='Получатель',
+		required=True,
+	)		
 
 	class Meta:
 		model = Message
 		fields = (
-			'reciever', 
+			#'reciever', 
 			'theme', 
 			'text', 
 		)

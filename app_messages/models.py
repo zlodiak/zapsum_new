@@ -2,19 +2,21 @@ from django.db import models
 from django.contrib.auth.models import User
 import datetime
 
+from app_accounts.models import UserProfile
+
 class Message(models.Model):		
 	"""
 	class for messages
 	"""	
 	sender = models.ForeignKey(
-		User,
+		UserProfile,
 		verbose_name='Отправитель',
 		related_name='sender',
 		blank=False,
 		null=False,
 	)	
 	reciever = models.ForeignKey(
-		User,
+		UserProfile,
 		verbose_name='Получатель',
 		related_name='recipient',
 		blank=False,
